@@ -7,6 +7,7 @@ run:
     - vanilla_rag
     - relevance_filter_rag
     - crag_style_rag
+    - evidenceboard_rag
 
 dataset:
   name: ramdocs

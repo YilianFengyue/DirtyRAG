@@ -192,6 +192,40 @@ def parse_json_object(text: str) -> dict[str, Any]:
 
 
 def mock_response_for_prompt(prompt: str) -> str:
+    if "Extract one structured evidence card" in prompt:
+        answer = "mock_answer"
+        if "3,559" in prompt:
+            answer = "3,559 people"
+        elif "10,000" in prompt:
+            answer = "10,000 people"
+        return json.dumps(
+            {
+                "doc_id": "D1",
+                "relevance": "high",
+                "answer_candidate": answer,
+                "claim": f"The document supports {answer}.",
+                "temporal_status": "unknown",
+                "time_cue": "unknown",
+                "confidence": 0.8,
+                "raw_quote": answer,
+                "rationale": "mock evidence card",
+            },
+            ensure_ascii=False,
+        )
+    if "strict answer verifier" in prompt:
+        final_answer = "mock_answer"
+        if "Candidate answer:" in prompt:
+            final_answer = prompt.split("Candidate answer:", 1)[1].split("Evidence board summary:", 1)[0].strip()
+        return json.dumps(
+            {
+                "verdict": "supported",
+                "final_answer": final_answer,
+                "supporting_doc_ids": [],
+                "rejected_doc_ids": [],
+                "reason": "mock verifier",
+            },
+            ensure_ascii=False,
+        )
     if "Output JSON only." in prompt and '"relevance"' in prompt:
         return json.dumps({"relevance": 2, "reason": "mock relevance"}, ensure_ascii=False)
     if "Output JSON only." in prompt and '"retrieval_verdict"' in prompt:

@@ -72,7 +72,7 @@ def run_command(args: argparse.Namespace) -> None:
     predictions = []
     for method_name in method_names:
         method_cls = METHOD_REGISTRY[method_name]
-        method = method_cls(llm, max_tokens=max_tokens)
+        method = method_cls(llm, max_tokens=max_tokens, run_dir=run_dir)
         for example in tqdm(examples, desc=method_name):
             result = method.run(example)
             predictions.append(result)
@@ -120,6 +120,8 @@ def inspect_command(args: argparse.Namespace) -> None:
         print(f"\n[{prediction.get('method')}]")
         print(f"answer: {prediction.get('answer')}")
         print(f"used_doc_ids: {prediction.get('used_doc_ids')}")
+        if prediction.get("evidence_board_path"):
+            print(f"evidence_board_path: {prediction.get('evidence_board_path')}")
         print(
             "score: "
             f"strict={score['strict_success']} "
@@ -134,6 +136,11 @@ def inspect_command(args: argparse.Namespace) -> None:
             "retrieval_verdict",
             "action",
             "reason",
+            "candidate_mode",
+            "candidate_answer",
+            "verifier_verdict",
+            "num_conflict_edges",
+            "num_answer_clusters",
         ):
             if key in metadata:
                 print(f"{key}: {metadata[key]}")

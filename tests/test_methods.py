@@ -1,5 +1,6 @@
 from dirtyrag.llm_client import LLMClient
 from dirtyrag.methods.crag_style_rag import CRAGStyleRAG
+from dirtyrag.methods.evidenceboard_rag import EvidenceBoardRAG
 from dirtyrag.methods.relevance_filter_rag import RelevanceFilterRAG
 from dirtyrag.methods.vanilla_rag import VanillaRAG
 from dirtyrag.schemas import Document, QAExample
@@ -52,6 +53,34 @@ def test_crag_style_rag_records_retrieval_metadata() -> None:
     assert result.answer == "mock_answer"
     assert result.metadata["retrieval_verdict"] == "correct"
     assert result.metadata["action"] == "answer"
+
+
+def test_crag_style_rag_survives_retrieval_eval_failure() -> None:
+    class BrokenJsonClient(LLMClient):
+        def json_chat(self, messages, *, max_tokens=512):
+            raise ValueError("bad json")
+
+    example = build_example()
+    method = CRAGStyleRAG(BrokenJsonClient(provider="mock", model="mock"))
+
+    result = method.run(example)
+
+    assert result.method == "crag_style_rag"
+    assert result.answer == "mock_answer"
+    assert result.metadata["retrieval_verdict"] == "insufficient"
+
+
+def test_evidenceboard_rag_builds_board_metadata(tmp_path) -> None:
+    example = build_example()
+    method = EvidenceBoardRAG(LLMClient(provider="mock", model="mock"), run_dir=tmp_path)
+
+    result = method.run(example)
+
+    assert result.method == "evidenceboard_rag"
+    assert result.answer == "3,559 people"
+    assert result.evidence_board_path is not None
+    assert result.metadata["num_cards"] == 1
+    assert result.metadata["num_answer_clusters"] == 1
 
 
 def build_example() -> QAExample:

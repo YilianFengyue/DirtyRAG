@@ -148,3 +148,42 @@ Step2 metadata checks:
   `dropped_doc_ids`, and `relevance_judgments`.
 - `crag_style_rag` predictions include `retrieval_verdict`, `action`, and
   `reason`.
+
+## Step 3: EvidenceBoard-RAG
+
+No-API smoke test:
+
+```powershell
+python -m dirtyrag.cli run --config configs/step3_mock.yaml
+python -m dirtyrag.cli evaluate --run-dir outputs/runs/latest
+python -m dirtyrag.cli inspect --run-dir outputs/runs/latest --qid ramdocs_000001
+Get-ChildItem .\outputs\runs\latest\evidence_boards
+```
+
+Real LLM run:
+
+```powershell
+python -m dirtyrag.cli run --config configs/quick.yaml --limit 10
+python -m dirtyrag.cli evaluate --run-dir outputs/runs/latest
+python -m dirtyrag.cli inspect --run-dir outputs/runs/latest --qid ramdocs_000001
+Get-Content -Encoding utf8 .\outputs\runs\latest\metrics.csv
+```
+
+Expected EvidenceBoard-RAG artifacts:
+
+```text
+outputs/runs/latest/evidence_boards/<qid>_evidenceboard_rag.json
+```
+
+Each board JSON includes:
+
+```text
+cards
+duplicate_groups
+conflict_edges
+answer_clusters
+candidate_decision
+verifier_decision
+final_answer
+decision_trace
+```

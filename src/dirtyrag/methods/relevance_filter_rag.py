@@ -70,7 +70,7 @@ class RelevanceFilterRAG(BaseMethod):
         try:
             payload, response = self.llm.json_chat(
                 relevance_judge_prompt(question, doc),
-                max_tokens=160,
+                max_tokens=400,
             )
         except Exception as exc:
             payload = {"relevance": 1, "reason": f"judge_error: {exc}"}
@@ -97,4 +97,3 @@ def sum_int(values) -> int | None:
     if not present:
         return None
     return sum(present)
-

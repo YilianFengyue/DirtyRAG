@@ -119,6 +119,64 @@ def crag_conservative_answer_prompt(
     ]
 
 
+def evidence_card_prompt(question: str, document: Document) -> list[dict[str, str]]:
+    return [
+        {"role": "system", "content": SYSTEM_PROMPT},
+        {
+            "role": "user",
+            "content": (
+                "You are an evidence extraction agent.\n"
+                "Extract one structured evidence card from the document for the question.\n"
+                "Use only the document. Do not use external knowledge. Output JSON only.\n\n"
+                f"Question:\n{question}\n\n"
+                f"Document ID:\n{document.doc_id}\n\n"
+                f"Document:\n{document.text}\n\n"
+                "Output schema:\n"
+                "{\n"
+                '  "doc_id": "...",\n'
+                '  "relevance": "high|medium|low",\n'
+                '  "answer_candidate": "short answer or unknown",\n'
+                '  "claim": "one sentence claim relevant to the question",\n'
+                '  "temporal_status": "current|outdated|unknown",\n'
+                '  "time_cue": "time cue if any, otherwise unknown",\n'
+                '  "confidence": 0.0,\n'
+                '  "raw_quote": "short quote supporting the extracted claim",\n'
+                '  "rationale": "short reason"\n'
+                "}\n"
+            ),
+        },
+    ]
+
+
+def evidence_verifier_prompt(
+    question: str,
+    candidate_answer: str,
+    board_summary: str,
+) -> list[dict[str, str]]:
+    return [
+        {"role": "system", "content": SYSTEM_PROMPT},
+        {
+            "role": "user",
+            "content": (
+                "You are a strict answer verifier.\n"
+                "Given the question, candidate answer, and evidence board summary, "
+                "decide whether the candidate is supported. Output JSON only.\n\n"
+                f"Question:\n{question}\n\n"
+                f"Candidate answer:\n{candidate_answer}\n\n"
+                f"Evidence board summary:\n{board_summary}\n\n"
+                "Output schema:\n"
+                "{\n"
+                '  "verdict": "supported|revise|conflict|unknown",\n'
+                '  "final_answer": "...",\n'
+                '  "supporting_doc_ids": ["..."],\n'
+                '  "rejected_doc_ids": ["..."],\n'
+                '  "reason": "short reason"\n'
+                "}\n"
+            ),
+        },
+    ]
+
+
 def format_documents(documents: list[Document], *, max_chars_per_doc: int = 1800) -> str:
     rendered = []
     for doc in documents:

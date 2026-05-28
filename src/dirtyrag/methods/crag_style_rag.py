@@ -45,7 +45,7 @@ class CRAGStyleRAG(BaseMethod):
                         crag_conservative_answer_prompt(
                             example.question,
                             selected_docs,
-                            retrieval_verdict=verdict,
+                            retrieval_verdict=answer_verdict(verdict, reason),
                             reason=reason,
                         ),
                         max_tokens=self.max_tokens,
@@ -61,7 +61,7 @@ class CRAGStyleRAG(BaseMethod):
                     crag_conservative_answer_prompt(
                         example.question,
                         selected_docs,
-                        retrieval_verdict=verdict,
+                        retrieval_verdict=answer_verdict(verdict, reason),
                         reason=reason,
                     ),
                     max_tokens=self.max_tokens,
@@ -85,11 +85,15 @@ class CRAGStyleRAG(BaseMethod):
             raw_response=raw_response,
             used_doc_ids=[doc.doc_id for doc in selected_docs],
             latency_sec=(eval_response.latency_sec if eval_response else 0) + answer_latency + filter_latency,
-            prompt_tokens=sum_int([eval_response.prompt_tokens, answer_prompt_tokens, *filter_prompt_tokens]),
+            prompt_tokens=sum_int([safe_prompt_tokens(eval_response), answer_prompt_tokens, *filter_prompt_tokens]),
             completion_tokens=sum_int(
-                [eval_response.completion_tokens, answer_completion_tokens, *filter_completion_tokens]
+                [
+                    safe_completion_tokens(eval_response),
+                    answer_completion_tokens,
+                    *filter_completion_tokens,
+                ]
             ),
-            total_tokens=sum_int([eval_response.total_tokens, answer_total_tokens, *filter_total_tokens]),
+            total_tokens=sum_int([safe_total_tokens(eval_response), answer_total_tokens, *filter_total_tokens]),
             metadata={
                 "retrieval_verdict": verdict,
                 "action": action,
@@ -103,7 +107,7 @@ class CRAGStyleRAG(BaseMethod):
         try:
             return self.llm.json_chat(
                 crag_retrieval_eval_prompt(example.question, example.documents),
-                max_tokens=180,
+                max_tokens=600,
             )
         except Exception as exc:
             return {
@@ -126,3 +130,20 @@ def normalize_action(value: str) -> str:
         return value
     return "filter_then_answer"
 
+
+def answer_verdict(verdict: str, reason: str) -> str:
+    if verdict == "insufficient" and "retrieval_eval_error" in reason:
+        return "ambiguous"
+    return verdict
+
+
+def safe_prompt_tokens(response) -> int | None:
+    return response.prompt_tokens if response is not None else None
+
+
+def safe_completion_tokens(response) -> int | None:
+    return response.completion_tokens if response is not None else None
+
+
+def safe_total_tokens(response) -> int | None:
+    return response.total_tokens if response is not None else None
