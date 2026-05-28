@@ -16,6 +16,7 @@ class EvidenceCard(BaseModel):
     confidence: float = 0.0
     raw_quote: str = ""
     rationale: str = ""
+    entity_explicitness: str = "unknown"
 
 
 class DuplicateGroup(BaseModel):
@@ -40,6 +41,8 @@ class AnswerCluster(BaseModel):
     duplicate_group_ids: list[str]
     unique_support_count: int
     high_relevance_count: int
+    explicit_support_count: int = 0
+    missing_entity_count: int = 0
     mean_confidence: float
     conflict_count: int
     score: float
@@ -65,4 +68,3 @@ class EvidenceBoard(BaseModel):
     verifier_decision: dict[str, Any] = Field(default_factory=dict)
     final_answer: str
     decision_trace: list[str] = Field(default_factory=list)
-

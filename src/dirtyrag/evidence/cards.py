@@ -15,7 +15,7 @@ def extract_evidence_card(llm: LLMClient, question: str, doc: Document) -> tuple
     except Exception as exc:
         payload = heuristic_card_payload(question, doc, f"card_error: {exc}")
         response = None
-    card = normalize_card_payload(doc.doc_id, payload)
+    card = normalize_card_payload(question, doc, payload)
     usage = {
         "latency_sec": response.latency_sec if response is not None else 0.0,
         "prompt_tokens": response.prompt_tokens if response is not None else None,
@@ -25,7 +25,7 @@ def extract_evidence_card(llm: LLMClient, question: str, doc: Document) -> tuple
     return card, usage
 
 
-def normalize_card_payload(doc_id: str, payload: dict[str, Any]) -> EvidenceCard:
+def normalize_card_payload(question: str, doc: Document, payload: dict[str, Any]) -> EvidenceCard:
     relevance = str(payload.get("relevance", "low")).strip().lower()
     if relevance not in {"high", "medium", "low"}:
         relevance = "low"
@@ -36,8 +36,11 @@ def normalize_card_payload(doc_id: str, payload: dict[str, Any]) -> EvidenceCard
         confidence = 0.0
     confidence = max(0.0, min(1.0, confidence))
     answer = str(payload.get("answer_candidate", "unknown")).strip() or "unknown"
+    if normalize_answer_candidate(answer) == "unknown":
+        answer = recover_candidate_from_payload(question, doc, payload)
+    answer = add_population_unit(question, answer)
     return EvidenceCard(
-        doc_id=doc_id,
+        doc_id=doc.doc_id,
         relevance=relevance,
         answer_candidate=answer,
         normalized_answer=normalize_answer_candidate(answer),
@@ -47,6 +50,7 @@ def normalize_card_payload(doc_id: str, payload: dict[str, Any]) -> EvidenceCard
         confidence=confidence,
         raw_quote=str(payload.get("raw_quote", ""))[:500],
         rationale=str(payload.get("rationale", ""))[:500],
+        entity_explicitness=entity_explicitness(question, doc.text),
     )
 
 
@@ -73,7 +77,7 @@ def fallback_payload(doc_id: str, reason: str) -> dict[str, Any]:
 
 def heuristic_card_payload(question: str, doc: Document, reason: str) -> dict[str, Any]:
     text = doc.text
-    candidate = extract_candidate_from_text(question, text)
+    candidate = add_population_unit(question, extract_candidate_from_text(question, text))
     relevance = "high" if candidate != "unknown" else "low"
     confidence = 0.55 if candidate != "unknown" else 0.0
     return {
@@ -86,6 +90,7 @@ def heuristic_card_payload(question: str, doc: Document, reason: str) -> dict[st
         "confidence": confidence,
         "raw_quote": candidate if candidate != "unknown" else "",
         "rationale": reason + "; heuristic fallback used",
+        "entity_explicitness": entity_explicitness(question, text),
     }
 
 
@@ -94,6 +99,15 @@ def extract_candidate_from_text(question: str, text: str) -> str:
 
     question_lower = question.lower()
     if "population" in question_lower:
+        phrase_patterns = [
+            r"there\s+were\s+(\d{1,3}(?:,\d{3})+|\d{4,7})\s+people",
+            r"population\s+(?:is|was|of|amounts\s+to)\s+(\d{1,3}(?:,\d{3})+|\d{4,7})",
+            r"population\s+of\s+[A-Za-z \-]+\s+(?:amounts\s+to|is|was)\s+(\d{1,3}(?:,\d{3})+|\d{4,7})",
+        ]
+        for pattern in phrase_patterns:
+            match = re.search(pattern, text, flags=re.IGNORECASE)
+            if match:
+                return match.group(1)
         matches = re.findall(r"\b\d{1,3}(?:,\d{3})+\b|\b\d{4,7}\b", text)
         if matches:
             return normalize_population_candidate(matches)
@@ -132,3 +146,58 @@ def extract_time_cue(text: str) -> str:
 
     match = re.search(r"\b(19|20)\d{2}\b", text)
     return match.group(0) if match else "unknown"
+
+
+def recover_candidate_from_payload(question: str, doc: Document, payload: dict[str, Any]) -> str:
+    combined = " ".join(
+        str(payload.get(key, ""))
+        for key in ("claim", "raw_quote", "rationale")
+        if payload.get(key)
+    )
+    candidate = extract_candidate_from_text(question, combined)
+    if candidate != "unknown":
+        return candidate
+    return extract_candidate_from_text(question, doc.text)
+
+
+def add_population_unit(question: str, answer: str) -> str:
+    import re
+
+    if "population" not in question.lower():
+        return answer
+    if answer == "unknown" or "people" in answer.lower():
+        return answer
+    if re.fullmatch(r"\d{1,3}(?:,\d{3})+|\d{4,7}", answer.strip()):
+        return f"{answer.strip()} people"
+    return answer
+
+
+def entity_explicitness(question: str, text: str) -> str:
+    entity = extract_question_entity(question)
+    if not entity:
+        return "unknown"
+    text_lower = text.lower()
+    entity_lower = entity.lower()
+    if entity_lower in text_lower:
+        return "explicit"
+    parts = [part for part in entity_lower.replace("-", " ").split() if len(part) >= 3]
+    if parts and any(part in text_lower for part in parts):
+        return "implicit"
+    return "missing"
+
+
+def extract_question_entity(question: str) -> str:
+    import re
+
+    patterns = [
+        r"\bof\s+(.+?)\?$",
+        r"\bfor\s+(.+?)\?$",
+        r"\bwhen\s+was\s+(.+?)\s+born\?$",
+        r"\bwhat\s+sport\s+does\s+(.+?)\s+play\?$",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, question.strip(), flags=re.IGNORECASE)
+        if match:
+            entity = match.group(1).strip()
+            return entity.rstrip("?.")
+    return ""

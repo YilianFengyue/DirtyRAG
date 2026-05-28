@@ -186,6 +186,10 @@ def final_answer_from_verifier(candidate_decision: BoardDecision, verifier_paylo
     if verdict in {"supported", "revise"}:
         return str(verifier_payload.get("final_answer") or candidate_decision.answer)
     if verdict == "conflict":
+        if candidate_decision.mode == "answer" and candidate_decision.rejected_doc_ids:
+            reason = candidate_decision.reason.lower()
+            if "stronger" in reason or "highest evidence score" in reason:
+                return candidate_decision.answer
         return "conflict"
     if verdict == "unknown":
         return "unknown"

@@ -19,6 +19,8 @@ def build_answer_clusters(
         doc_ids = [card.doc_id for card in answer_cards]
         duplicate_group_ids = sorted({doc_to_group.get(card.doc_id, card.doc_id) for card in answer_cards})
         high_relevance_count = sum(1 for card in answer_cards if relevance_score(card.relevance) == 2)
+        explicit_support_count = sum(1 for card in answer_cards if card.entity_explicitness == "explicit")
+        missing_entity_count = sum(1 for card in answer_cards if card.entity_explicitness == "missing")
         conflict_count = sum(
             1
             for edge in conflict_edges
@@ -28,11 +30,13 @@ def build_answer_clusters(
         outdated_count = sum(1 for card in answer_cards if card.temporal_status == "outdated")
         unique_support_count = len(duplicate_group_ids)
         score = (
-            unique_support_count * 1.0
-            + mean_confidence * 0.6
-            + high_relevance_count * 0.35
-            - conflict_count * 0.18
-            - outdated_count * 0.5
+            unique_support_count * 1.15
+            + explicit_support_count * 0.7
+            + high_relevance_count * 0.25
+            + mean_confidence * 0.25
+            - missing_entity_count * 0.35
+            - conflict_count * 0.12
+            - outdated_count * 0.05
         )
         clusters.append(
             AnswerCluster(
@@ -42,6 +46,8 @@ def build_answer_clusters(
                 duplicate_group_ids=duplicate_group_ids,
                 unique_support_count=unique_support_count,
                 high_relevance_count=high_relevance_count,
+                explicit_support_count=explicit_support_count,
+                missing_entity_count=missing_entity_count,
                 mean_confidence=round(mean_confidence, 4),
                 conflict_count=conflict_count,
                 score=round(score, 4),
@@ -81,7 +87,7 @@ def make_candidate_decision(
         )
 
     margin = best.score - second.score
-    if best.unique_support_count >= 2 and margin >= 0.25:
+    if best.unique_support_count >= 2 and margin >= 0.2:
         return BoardDecision(
             mode="answer",
             answer=best.answer,
@@ -91,6 +97,15 @@ def make_candidate_decision(
                 "The top answer has stronger independent support than competing "
                 "conflicting clusters."
             ),
+            scores=scores,
+        )
+    if best.explicit_support_count > second.explicit_support_count and margin >= 0.05:
+        return BoardDecision(
+            mode="answer",
+            answer=best.answer,
+            supporting_doc_ids=best.doc_ids,
+            rejected_doc_ids=rejected_doc_ids,
+            reason="The top answer has stronger explicit entity support than competing clusters.",
             scores=scores,
         )
     if margin < 0.35 and second.unique_support_count >= 1:
@@ -110,4 +125,3 @@ def make_candidate_decision(
         reason="The top answer cluster has the highest evidence score.",
         scores=scores,
     )
-

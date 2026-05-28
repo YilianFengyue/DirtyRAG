@@ -36,6 +36,16 @@ def parse_args() -> argparse.Namespace:
     inspect_parser.add_argument("--qid", type=str, required=True)
     inspect_parser.add_argument("--dataset-path", type=Path, default=None)
 
+    plot_parser = subparsers.add_parser("plot")
+    plot_parser.add_argument("--run-dir", type=Path, required=True,
+                             help="Run dir whose figures/ folder will receive outputs.")
+    plot_parser.add_argument("--baseline-run", type=Path, default=None,
+                             help="Optional run dir providing baseline predictions to merge.")
+    plot_parser.add_argument("--cases", type=str, default="",
+                             help="Comma-separated qids to render. Empty = auto-pick.")
+    plot_parser.add_argument("--no-cases", action="store_true",
+                             help="Skip case-study evidence graphs.")
+
     return parser.parse_args()
 
 
@@ -49,6 +59,8 @@ def main() -> None:
         evaluate_command(args)
     elif args.command == "inspect":
         inspect_command(args)
+    elif args.command == "plot":
+        plot_command(args)
 
 
 def run_command(args: argparse.Namespace) -> None:
@@ -144,6 +156,61 @@ def inspect_command(args: argparse.Namespace) -> None:
         ):
             if key in metadata:
                 print(f"{key}: {metadata[key]}")
+
+
+def plot_command(args: argparse.Namespace) -> None:
+    from dirtyrag.visualization.data import load_combined_metrics
+    from dirtyrag.visualization.plot_graph import (
+        collect_predictions_for_case,
+        load_case_inputs,
+        pick_case_studies,
+        plot_case_evidence_graph,
+    )
+    from dirtyrag.visualization.plot_metrics import plot_cost_tradeoff, plot_main_metrics
+
+    primary = args.run_dir
+    overrides: list[Path] = []
+    if args.baseline_run is not None:
+        # baseline_run provides the broader prediction pool; primary's EB-RAG overrides
+        primary, overrides = args.baseline_run, [args.run_dir]
+
+    figures_dir = args.run_dir / "figures"
+    figures_dir.mkdir(parents=True, exist_ok=True)
+
+    per_case, summary = load_combined_metrics(primary, override_runs=overrides)
+    if not summary:
+        raise RuntimeError("No metrics computed; check that predictions.jsonl exists.")
+
+    main_path = plot_main_metrics(summary, figures_dir)
+    print(f"Wrote {main_path}")
+    cost_path = plot_cost_tradeoff(summary, figures_dir)
+    print(f"Wrote {cost_path}")
+
+    if not args.no_cases:
+        if args.cases:
+            qids = [q.strip() for q in args.cases.split(",") if q.strip()]
+        else:
+            qids = pick_case_studies(per_case)
+        runs_for_cases = [primary, *overrides]
+        for qid in qids:
+            try:
+                board, example, _ = load_case_inputs(args.run_dir, qid)
+            except FileNotFoundError:
+                # fall back to primary if board missing in run_dir
+                try:
+                    board, example, _ = load_case_inputs(primary, qid)
+                except FileNotFoundError as exc:
+                    print(f"[skip {qid}] {exc}")
+                    continue
+            preds = collect_predictions_for_case(qid, runs_for_cases)
+            case_path = plot_case_evidence_graph(qid, board, example, preds, figures_dir)
+            print(f"Wrote {case_path}")
+
+    # also dump a metrics.csv beside figures so the run is self-contained
+    from dirtyrag.evaluation.metrics import write_csv
+
+    write_csv(args.run_dir / "metrics.csv", summary)
+    print(f"Wrote {args.run_dir / 'metrics.csv'}")
 
 
 def resolve_dataset_path(run_dir: Path, dataset_path: Path | None) -> Path:
