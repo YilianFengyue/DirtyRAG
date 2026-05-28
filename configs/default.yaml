@@ -1,0 +1,31 @@
+run:
+  seed: 42
+  max_examples: 50
+  output_dir: outputs/runs
+  methods:
+    - direct_llm
+    - vanilla_rag
+    - relevance_filter_rag
+    - crag_style_rag
+    - evidenceboard_rag
+
+dataset:
+  name: ramdocs
+  path: data/processed/ramdocs_50.jsonl
+  max_docs_per_example: 12
+
+llm:
+  provider: openai_compatible
+  model: ${LLM_MODEL}
+  base_url: ${LLM_BASE_URL}
+  api_key: ${LLM_API_KEY}
+  temperature: 0
+  max_tokens: 512
+  timeout: 60
+  retry: 3
+
+evaluation:
+  normalize: true
+  use_llm_judge: false
+  save_evidence_board: true
+

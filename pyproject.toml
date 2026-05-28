@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dirtyrag-guard"
+version = "0.1.0"
+description = "Evidence-centric robust RAG over dirty knowledge bases."
+requires-python = ">=3.10"
+dependencies = [
+  "datasets>=2.19.0",
+  "huggingface_hub>=0.23.0",
+  "openai>=1.40.0",
+  "pydantic>=2.7.0",
+  "python-dotenv>=1.0.1",
+  "pyyaml>=6.0.1",
+  "tqdm>=4.66.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.2.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

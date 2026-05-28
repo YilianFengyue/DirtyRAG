@@ -1,0 +1,23 @@
+run:
+  seed: 42
+  max_examples: 3
+  output_dir: outputs/runs
+  methods:
+    - direct_llm
+    - vanilla_rag
+
+dataset:
+  name: ramdocs
+  path: data/processed/ramdocs_50.jsonl
+  max_docs_per_example: 12
+
+llm:
+  provider: mock
+  model: mock
+  base_url: ""
+  api_key: ""
+  temperature: 0
+  max_tokens: 128
+  timeout: 60
+  retry: 1
+
