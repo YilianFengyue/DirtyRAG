@@ -114,3 +114,37 @@ outputs/runs/latest/per_case_metrics.jsonl
 outputs/runs/latest/metrics.csv
 outputs/runs/latest/llm_calls.jsonl
 ```
+
+## Step 2: Stronger Baselines and Case Inspection
+
+No-API smoke test:
+
+```powershell
+python -m dirtyrag.cli run --config configs/step2_mock.yaml
+python -m dirtyrag.cli evaluate --run-dir outputs/runs/latest
+python -m dirtyrag.cli inspect --run-dir outputs/runs/latest --qid ramdocs_000001
+```
+
+Real LLM run:
+
+```powershell
+python -m dirtyrag.cli run --config configs/quick.yaml --limit 10
+python -m dirtyrag.cli evaluate --run-dir outputs/runs/latest
+python -m dirtyrag.cli inspect --run-dir outputs/runs/latest --qid ramdocs_000001
+```
+
+Expected methods in `metrics.csv`:
+
+```text
+direct_llm
+vanilla_rag
+relevance_filter_rag
+crag_style_rag
+```
+
+Step2 metadata checks:
+
+- `relevance_filter_rag` predictions include `filtered_doc_ids`,
+  `dropped_doc_ids`, and `relevance_judgments`.
+- `crag_style_rag` predictions include `retrieval_verdict`, `action`, and
+  `reason`.

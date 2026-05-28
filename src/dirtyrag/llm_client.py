@@ -98,6 +98,15 @@ class LLMClient:
         self._append_cache(cache_key, self.cache[cache_key])
         return response
 
+    def json_chat(
+        self,
+        messages: list[dict[str, str]],
+        *,
+        max_tokens: int = 512,
+    ) -> tuple[dict[str, Any], LLMResponse]:
+        response = self.chat(messages, max_tokens=max_tokens)
+        return parse_json_object(response.content), response
+
     def _openai_chat(self, payload: dict[str, Any]) -> LLMResponse:
         if not self.api_key:
             raise RuntimeError("LLM_API_KEY is empty. Set it or use llm.provider=mock.")
@@ -135,10 +144,7 @@ class LLMClient:
     def _mock_chat(self, messages: list[dict[str, str]]) -> LLMResponse:
         start = time.perf_counter()
         joined = "\n".join(message.get("content", "") for message in messages)
-        answer = "unknown"
-        for marker in ("Final answer:", "Answer:"):
-            if marker in joined:
-                answer = "mock_answer"
+        answer = mock_response_for_prompt(joined)
         return LLMResponse(
             content=answer,
             raw={"provider": "mock"},
@@ -168,3 +174,35 @@ class LLMClient:
         encoded = json.dumps(payload, ensure_ascii=False, sort_keys=True)
         return hashlib.sha256(encoded.encode("utf-8")).hexdigest()
 
+
+def parse_json_object(text: str) -> dict[str, Any]:
+    stripped = text.strip()
+    if stripped.startswith("```"):
+        stripped = stripped.strip("`")
+        if stripped.startswith("json"):
+            stripped = stripped[4:].strip()
+    try:
+        return json.loads(stripped)
+    except json.JSONDecodeError:
+        start = stripped.find("{")
+        end = stripped.rfind("}")
+        if start >= 0 and end > start:
+            return json.loads(stripped[start : end + 1])
+        raise
+
+
+def mock_response_for_prompt(prompt: str) -> str:
+    if "Output JSON only." in prompt and '"relevance"' in prompt:
+        return json.dumps({"relevance": 2, "reason": "mock relevance"}, ensure_ascii=False)
+    if "Output JSON only." in prompt and '"retrieval_verdict"' in prompt:
+        return json.dumps(
+            {
+                "retrieval_verdict": "correct",
+                "action": "answer",
+                "reason": "mock retrieval evaluation",
+            },
+            ensure_ascii=False,
+        )
+    if "Final answer:" in prompt or "Answer:" in prompt:
+        return "mock_answer"
+    return "unknown"

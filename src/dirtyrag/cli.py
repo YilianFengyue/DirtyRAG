@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import argparse
-import json
 import shutil
 import sys
 from datetime import datetime
@@ -12,7 +11,7 @@ from tqdm import tqdm
 
 from dirtyrag.config import load_config
 from dirtyrag.data.io import read_jsonl, write_jsonl
-from dirtyrag.evaluation.metrics import write_metrics
+from dirtyrag.evaluation.metrics import score_prediction, write_metrics
 from dirtyrag.llm_client import LLMClient
 from dirtyrag.methods import METHOD_REGISTRY
 from dirtyrag.schemas import QAExample
@@ -32,6 +31,11 @@ def parse_args() -> argparse.Namespace:
     eval_parser.add_argument("--run-dir", type=Path, required=True)
     eval_parser.add_argument("--dataset-path", type=Path, default=None)
 
+    inspect_parser = subparsers.add_parser("inspect")
+    inspect_parser.add_argument("--run-dir", type=Path, required=True)
+    inspect_parser.add_argument("--qid", type=str, required=True)
+    inspect_parser.add_argument("--dataset-path", type=Path, default=None)
+
     return parser.parse_args()
 
 
@@ -43,6 +47,8 @@ def main() -> None:
         run_command(args)
     elif args.command == "evaluate":
         evaluate_command(args)
+    elif args.command == "inspect":
+        inspect_command(args)
 
 
 def run_command(args: argparse.Namespace) -> None:
@@ -78,15 +84,68 @@ def run_command(args: argparse.Namespace) -> None:
 
 
 def evaluate_command(args: argparse.Namespace) -> None:
-    dataset_path = args.dataset_path
-    if dataset_path is None:
-        dataset_path_file = args.run_dir / "dataset_path.txt"
-        if not dataset_path_file.exists():
-            raise RuntimeError("Missing --dataset-path and run_dir/dataset_path.txt")
-        dataset_path = Path(dataset_path_file.read_text(encoding="utf-8").strip())
+    dataset_path = resolve_dataset_path(args.run_dir, args.dataset_path)
     write_metrics(args.run_dir, dataset_path)
     sync_latest(args.run_dir)
     print(f"Wrote {args.run_dir / 'metrics.csv'}")
+
+
+def inspect_command(args: argparse.Namespace) -> None:
+    dataset_path = resolve_dataset_path(args.run_dir, args.dataset_path)
+    examples = {row["qid"]: row for row in read_jsonl(dataset_path)}
+    predictions = [row for row in read_jsonl(args.run_dir / "predictions.jsonl") if row["qid"] == args.qid]
+    example = examples.get(args.qid)
+    if example is None:
+        raise RuntimeError(f"QID not found in dataset: {args.qid}")
+    if not predictions:
+        raise RuntimeError(f"QID not found in predictions: {args.qid}")
+
+    print(f"QID: {args.qid}")
+    print(f"Question: {example.get('question', '')}")
+    print(f"Gold answers: {example.get('gold_answers', [])}")
+    print(f"Wrong answers: {example.get('wrong_answers', [])}")
+    print("\nDocuments:")
+    for doc in example.get("documents", []):
+        text = str(doc.get("text", "")).replace("\n", " ")
+        if len(text) > 220:
+            text = text[:220].rstrip() + "..."
+        print(
+            f"- {doc.get('doc_id')}: source_type={doc.get('source_type')} "
+            f"source_answer={doc.get('source_answer')} text={text}"
+        )
+
+    print("\nPredictions:")
+    for prediction in predictions:
+        score = score_prediction(example, prediction)
+        print(f"\n[{prediction.get('method')}]")
+        print(f"answer: {prediction.get('answer')}")
+        print(f"used_doc_ids: {prediction.get('used_doc_ids')}")
+        print(
+            "score: "
+            f"strict={score['strict_success']} "
+            f"gold={score['gold_coverage']} "
+            f"wrong={score['wrong_leakage']} "
+            f"conflict={score['conflict_sensitivity']}"
+        )
+        metadata = prediction.get("metadata") or {}
+        for key in (
+            "filtered_doc_ids",
+            "dropped_doc_ids",
+            "retrieval_verdict",
+            "action",
+            "reason",
+        ):
+            if key in metadata:
+                print(f"{key}: {metadata[key]}")
+
+
+def resolve_dataset_path(run_dir: Path, dataset_path: Path | None) -> Path:
+    if dataset_path is not None:
+        return dataset_path
+    dataset_path_file = run_dir / "dataset_path.txt"
+    if not dataset_path_file.exists():
+        raise RuntimeError("Missing --dataset-path and run_dir/dataset_path.txt")
+    return Path(dataset_path_file.read_text(encoding="utf-8").strip())
 
 
 def parse_methods(methods_arg: str, config: dict[str, Any]) -> list[str]:
@@ -96,7 +155,7 @@ def parse_methods(methods_arg: str, config: dict[str, Any]) -> list[str]:
         method_names = list(config.get("run", {}).get("methods", ["direct_llm", "vanilla_rag"]))
     unsupported = [name for name in method_names if name not in METHOD_REGISTRY]
     if unsupported:
-        raise ValueError(f"Unsupported methods in step1: {unsupported}")
+        raise ValueError(f"Unsupported methods: {unsupported}")
     return method_names
 
 
