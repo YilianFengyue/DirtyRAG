@@ -1,0 +1,206 @@
+{
+  "qid": "ramdocs_000024",
+  "question": "Who is the artist of the \"Freedom Suite\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "David S. Ware",
+      "normalized_answer": "david s ware",
+      "claim": "The artist of the Freedom Suite album is David S. Ware.",
+      "temporal_status": "current",
+      "time_cue": "recorded in 2002",
+      "confidence": 1.0,
+      "raw_quote": "Freedom Suite is an album by saxophonist David S. Ware",
+      "rationale": "Document explicitly identifies David S. Ware as the album artist.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "David S. Ware",
+      "normalized_answer": "david s ware",
+      "claim": "The artist of the 'Freedom Suite' album is David S. Ware.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Freedom Suite ( David S. Ware album )",
+      "rationale": "The document title explicitly names David S. Ware as the artist of the album.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention the 'Freedom Suite' or its artist.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document contains no reference to the Freedom Suite.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "John Coltrane",
+      "normalized_answer": "john coltrane",
+      "claim": "The album 'Freedom Suite' is by saxophonist John Coltrane.",
+      "temporal_status": "current",
+      "time_cue": "2002",
+      "confidence": 1.0,
+      "raw_quote": "Freedom Suite is an album by saxophonist John Coltrane",
+      "rationale": "The document explicitly states the album is by John Coltrane.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "David S. Ware"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "David S. Ware"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "John Coltrane"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'David S. Ware', while D4 supports 'John Coltrane'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'David S. Ware', while D4 supports 'John Coltrane'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "David S. Ware",
+      "normalized_answer": "david s ware",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 2,
+      "score": 3.71
+    },
+    {
+      "answer": "John Coltrane",
+      "normalized_answer": "john coltrane",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 2,
+      "score": 1.86
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "David S. Ware",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "David S. Ware": 3.71,
+      "John Coltrane": 1.86
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "David S. Ware",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D4"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 4 column 31 (char 93)"
+  },
+  "final_answer": "David S. Ware",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> David S. Ware.",
+    "Verifier decision: supported -> David S. Ware."
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "qid": "ramdocs_000007",
+  "question": "When was the Dallas County Courthouse built?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "1902",
+      "normalized_answer": "1902",
+      "claim": "The Dallas County Courthouse was built in 1902.",
+      "temporal_status": "current",
+      "time_cue": "1902",
+      "confidence": 1.0,
+      "raw_quote": "The Dallas County Courthouse in Adel, Iowa, United States was built in 1902.",
+      "rationale": "The document explicitly states the construction year.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "1902",
+      "normalized_answer": "1902",
+      "claim": "The Dallas County Courthouse was built in 1902.",
+      "temporal_status": "current",
+      "time_cue": "1902",
+      "confidence": 0.9,
+      "raw_quote": "Government buildings completed in 1902",
+      "rationale": "The document categories indicate the courthouse was completed in 1902.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "1902",
+      "normalized_answer": "1902",
+      "claim": "The current Dallas County Courthouse was built with funding approved in 1900 and dedicated on September 19, 1902.",
+      "temporal_status": "current",
+      "time_cue": "1900, 1902",
+      "confidence": 1.0,
+      "raw_quote": "The current courthouse was built with $85,000 in funding approved by county voters in 1900. On September 19, 1902, it was dedicated",
+      "rationale": "The document explicitly states the current courthouse's funding approval year and dedication date, which indicates its construction timeline.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "1885",
+      "normalized_answer": "1885",
+      "claim": "The Dallas County Courthouse was built in 1885.",
+      "temporal_status": "current",
+      "time_cue": "1885",
+      "confidence": 1.0,
+      "raw_quote": "constructed in 1885",
+      "rationale": "The document explicitly states the construction year.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "card_error: Unterminated string starting at: line 5 column 12 (char 89); heuristic fallback used",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "1902"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "1902"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "1902"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "1885"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports '1902', while D4 supports '1885'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports '1902', while D4 supports '1885'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports '1902', while D4 supports '1885'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "1902",
+      "normalized_answer": "1902",
+      "doc_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9667,
+      "conflict_count": 3,
+      "score": 5.4317
+    },
+    {
+      "answer": "1885",
+      "normalized_answer": "1885",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 1.74
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "1902",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "1902": 5.4317,
+      "1885": 1.74
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "1902",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4"
+    ],
+    "reason": "The candidate answer is supported by three high-confidence, high-relevance primary documents, which outweigh the single conflicting document (D4) supporting 1885."
+  },
+  "final_answer": "1902",
+  "decision_trace": [
+    "Extracted 5 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> 1902.",
+    "Verifier decision: supported -> 1902."
+  ]
+}

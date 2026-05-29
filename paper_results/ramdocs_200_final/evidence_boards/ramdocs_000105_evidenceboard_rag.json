@@ -1,0 +1,391 @@
+{
+  "qid": "ramdocs_000105",
+  "question": "What is the birth date of Richard Aldworth?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "3 July 1750",
+      "normalized_answer": "3 july 1750",
+      "claim": "Richard Aldworth (known as Richard Aldworth-Neville) was born on 3 July 1750.",
+      "temporal_status": "current",
+      "time_cue": "3 July 1750",
+      "confidence": 1.0,
+      "raw_quote": "he was born on 3 July 1750",
+      "rationale": "The document explicitly states the birth date of Richard Aldworth-Neville.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "12 December 1750",
+      "normalized_answer": "12 december 1750",
+      "claim": "Richard Aldworth was born on 12 December 1750.",
+      "temporal_status": "current",
+      "time_cue": "12 December 1750",
+      "confidence": 0.95,
+      "raw_quote": "Aldworth was born on 12 December 1750",
+      "rationale": "The document explicitly states the birth date.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "12 December 1750",
+      "normalized_answer": "12 december 1750",
+      "claim": "Richard Aldworth was born on 12 December 1750.",
+      "temporal_status": "current",
+      "time_cue": "12 December 1750",
+      "confidence": 1.0,
+      "raw_quote": "Aldworth was born on 12 December 1750 in Duke Street, Westminster.",
+      "rationale": "The document directly states his birth date.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "3 September 1717",
+      "normalized_answer": "3 september 1717",
+      "claim": "Richard Neville Aldworth Neville was born on 3 September 1717.",
+      "temporal_status": "current",
+      "time_cue": "3 September 1717",
+      "confidence": 1.0,
+      "raw_quote": "he was born on 3 September 1717",
+      "rationale": "The document explicitly states the birth date of the subject, who is the son of Richard Aldworth.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "1717",
+      "normalized_answer": "1717",
+      "claim": "The document may support the answer '1717'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.55,
+      "raw_quote": "1717",
+      "rationale": "card_error: Expecting value: line 1 column 1 (char 0); heuristic fallback used",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "low",
+      "answer_candidate": "1783",
+      "normalized_answer": "1783",
+      "claim": "The document does not provide the birth date of Richard Aldworth.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document mentions Richard Aldworth only as a parent, not providing his birth date.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention Richard Aldworth or his birth date.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Document is about descendants of Richard Neville, not Richard Aldworth.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "3 July 1750"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "12 December 1750"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "12 December 1750"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "3 September 1717"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "1717"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "1783"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports '3 July 1750', while D2 supports '12 December 1750'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports '3 July 1750', while D3 supports '12 December 1750'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports '3 July 1750', while D4 supports '3 September 1717'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports '3 July 1750', while D5 supports '1717'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports '12 December 1750', while D4 supports '3 September 1717'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports '12 December 1750', while D5 supports '1717'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports '12 December 1750', while D4 supports '3 September 1717'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports '12 December 1750', while D5 supports '1717'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D4 supports '3 September 1717', while D5 supports '1717'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "12 December 1750",
+      "normalized_answer": "12 december 1750",
+      "doc_ids": [
+        "D2",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G2",
+        "G3"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.975,
+      "conflict_count": 6,
+      "score": 3.2237
+    },
+    {
+      "answer": "3 July 1750",
+      "normalized_answer": "3 july 1750",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 4,
+      "score": 2.32
+    },
+    {
+      "answer": "3 September 1717",
+      "normalized_answer": "3 september 1717",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 4,
+      "score": 2.32
+    },
+    {
+      "answer": "1783",
+      "normalized_answer": "1783",
+      "doc_ids": [
+        "D6"
+      ],
+      "duplicate_group_ids": [
+        "G6"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.6
+    },
+    {
+      "answer": "1717",
+      "normalized_answer": "1717",
+      "doc_ids": [
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G5"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.55,
+      "conflict_count": 4,
+      "score": 1.5075
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "12 December 1750",
+    "supporting_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D4",
+      "D5"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "12 December 1750": 3.2237,
+      "3 July 1750": 2.32,
+      "3 September 1717": 2.32,
+      "1783": 1.6,
+      "1717": 1.5075
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "12 December 1750",
+    "supporting_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D4",
+      "D5"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "12 December 1750",
+  "decision_trace": [
+    "Extracted 7 evidence cards.",
+    "Built 7 duplicate groups.",
+    "Built 10 evidence graph edges.",
+    "Built 5 answer clusters.",
+    "Candidate decision: answer -> 12 December 1750.",
+    "Verifier decision: supported -> 12 December 1750."
+  ]
+}

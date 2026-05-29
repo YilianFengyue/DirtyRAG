@@ -1,0 +1,120 @@
+{
+  "qid": "ramdocs_000045",
+  "question": "221B Baker Street is a game for which type of medium?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "board game",
+      "normalized_answer": "board game",
+      "claim": "221B Baker Street is a board game.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "221B Baker Street: The Master Detective Game is a board game",
+      "rationale": "The document explicitly describes 221B Baker Street as a board game.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "board game",
+      "normalized_answer": "board game",
+      "claim": "221B Baker Street is a board game.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "family friendly board game",
+      "rationale": "The document explicitly describes the game as a 'family friendly board game'.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "board game"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "board game"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "board game",
+      "normalized_answer": "board game",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 2,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.975,
+      "conflict_count": 0,
+      "score": 3.2437
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "board game",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "board game": 3.2437
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "board game",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "The candidate answer is directly supported by two highly relevant evidence cards with no conflicts."
+  },
+  "final_answer": "board game",
+  "decision_trace": [
+    "Extracted 2 evidence cards.",
+    "Built 2 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> board game.",
+    "Verifier decision: supported -> board game."
+  ]
+}

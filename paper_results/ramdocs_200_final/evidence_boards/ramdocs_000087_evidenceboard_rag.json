@@ -1,0 +1,144 @@
+{
+  "qid": "ramdocs_000087",
+  "question": "What is the profession of Pier Crescenzi?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "cardinal",
+      "normalized_answer": "cardinal",
+      "claim": "Pier Paolo Crescenzi was an Italian Catholic cardinal.",
+      "temporal_status": "outdated",
+      "time_cue": "1611",
+      "confidence": 1.0,
+      "raw_quote": "Pier Paolo Crescenzi ... was an Italian Catholic cardinal.",
+      "rationale": "The document states he was a cardinal, which is his profession.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "cardinal",
+      "normalized_answer": "cardinal",
+      "claim": "Pier Crescenzi was a cardinal and bishop in the Catholic Church.",
+      "temporal_status": "outdated",
+      "time_cue": "17 August 1611",
+      "confidence": 1.0,
+      "raw_quote": "17 August 1611 he was elevated to cardinal",
+      "rationale": "The document explicitly states he was elevated to cardinal, indicating his primary profession.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "card_error: Unterminated string starting at: line 4 column 23 (char 65); heuristic fallback used",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "cardinal"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "cardinal"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "cardinal",
+      "normalized_answer": "cardinal",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 0,
+      "score": 3.5
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "cardinal",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "cardinal": 3.5
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "cardinal",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Two primary evidence cards explicitly identify Pier Crescenzi as a cardinal with high confidence, no conflicts."
+  },
+  "final_answer": "cardinal",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> cardinal.",
+    "Verifier decision: supported -> cardinal."
+  ]
+}

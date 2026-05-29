@@ -1,0 +1,84 @@
+{
+  "qid": "ramdocs_000099",
+  "question": "What is the population of St. Paul, Texas?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "1,066 people",
+      "normalized_answer": "1066 people",
+      "claim": "The population of St. Paul, Texas was 1,066 at the 2010 census.",
+      "temporal_status": "outdated",
+      "time_cue": "2010 census",
+      "confidence": 0.95,
+      "raw_quote": "The population was 1,066 at the 2010 census",
+      "rationale": "The document explicitly states the most recent census population for St. Paul.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "1,066 people"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [
+    {
+      "answer": "1,066 people",
+      "normalized_answer": "1066 people",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 0,
+      "score": 2.0375
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "1,066 people",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "1,066 people": 2.0375
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "1,066 people",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "The candidate answer is directly supported by high-confidence evidence D1 with no conflicts."
+  },
+  "final_answer": "1,066 people",
+  "decision_trace": [
+    "Extracted 1 evidence cards.",
+    "Built 1 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> 1,066 people.",
+    "Verifier decision: supported -> 1,066 people."
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "qid": "ramdocs_000096",
+  "question": "What sport is the Munster Senior Cup associated with?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "rugby union",
+      "normalized_answer": "rugby union",
+      "claim": "The Munster Senior Cup is an under-age rugby union competition for schools.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "The Munster Schools Senior Cup or Munster Senior Cup is the under-age rugby union competition for schools",
+      "rationale": "The document explicitly defines the Munster Senior Cup as a rugby union competition.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "rugby union",
+      "normalized_answer": "rugby union",
+      "claim": "The Munster Senior Cup is a rugby union competition.",
+      "temporal_status": "current",
+      "time_cue": "2025",
+      "confidence": 0.95,
+      "raw_quote": "Stunning second half wins Nenagh Ormond first Munster Senior Cup",
+      "rationale": "Document is about rugby union in Ireland, and the Munster Senior Cup is mentioned in the context of rugby competitions.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:football",
+        "golf:championship"
+      ]
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Rugby union",
+      "normalized_answer": "rugby union",
+      "claim": "The Munster Senior Cup is a rugby union competition.",
+      "temporal_status": "current",
+      "time_cue": "last edited on 21 March 2025",
+      "confidence": 1.0,
+      "raw_quote": "Categories : High school rugby union competitions in Ireland Rugby union competitions in Munster",
+      "rationale": "Document title and categories explicitly identify the competition as rugby union.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "cricket",
+      "normalized_answer": "cricket",
+      "claim": "The Munster Senior Cup is a cricket competition.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "The Munster Schools Cricket Senior Cup or Munster Senior Cup is the under-age cricket competition for schools affiliated to the Munster Branch of the Irish Cricket Union.",
+      "rationale": "The document explicitly defines the Munster Senior Cup as a cricket competition.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "rugby union"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "rugby union"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Rugby union"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "cricket"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'rugby union', while D4 supports 'cricket'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'rugby union', while D4 supports 'cricket'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'Rugby union', while D4 supports 'cricket'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "rugby union",
+      "normalized_answer": "rugby union",
+      "doc_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9833,
+      "conflict_count": 3,
+      "score": 5.4358
+    },
+    {
+      "answer": "cricket",
+      "normalized_answer": "cricket",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 1.74
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "rugby union",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "rugby union": 5.4358,
+      "cricket": 1.74
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "rugby union",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4"
+    ],
+    "reason": "Candidate answer is strongly supported by three primary evidence cards, outweighing the single conflicting cricket card."
+  },
+  "final_answer": "rugby union",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> rugby union.",
+    "Verifier decision: supported -> rugby union."
+  ]
+}

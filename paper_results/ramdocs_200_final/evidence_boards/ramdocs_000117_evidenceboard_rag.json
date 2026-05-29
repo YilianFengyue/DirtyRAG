@@ -1,0 +1,480 @@
+{
+  "qid": "ramdocs_000117",
+  "question": "What sport did Jack Snow play?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "baseball",
+      "normalized_answer": "baseball",
+      "claim": "Jack Snow primarily played professional baseball.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "After high school, Snow played three seasons at the University of Arizona... Snow was drafted by the New York Yankees in the fifth round of the 1989 baseball amateur draft.",
+      "rationale": "The document emphasizes his baseball career progression, making it his primary sport, though he also played football and basketball in high school.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:quarterback",
+        "basketball:basketball",
+        "baseball:baseball"
+      ]
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "baseball",
+      "normalized_answer": "baseball",
+      "claim": "Jack Snow (J.T. Snow) played baseball.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "J. T. Snow statistics'' . Baseball-Reference.com",
+      "rationale": "The document references Baseball-Reference.com, indicating J.T. Snow is a baseball player.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "baseball:baseball",
+        "baseball:mlb"
+      ]
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "baseball",
+      "normalized_answer": "baseball",
+      "claim": "The document does not contain information about Jack Snow.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Document D3 discusses MLB baseball and does not mention Jack Snow.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "baseball:baseball",
+        "baseball:mlb"
+      ]
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "basketball",
+      "normalized_answer": "basketball",
+      "claim": "Jack Snow played basketball.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "Jack Snow, a former UA athlete, made his mark on the basketball court",
+      "rationale": "The document explicitly states he made his mark on the basketball court, indicating his sport was basketball.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "basketball:basketball",
+        "baseball:baseball"
+      ]
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "football",
+      "normalized_answer": "football",
+      "claim": "Jack Snow played football.",
+      "temporal_status": "unknown",
+      "time_cue": "1992",
+      "confidence": 0.8,
+      "raw_quote": "Major League Football Players From the Cape Cod League ... FOOTBALL; A Peek at the Future? Yankees Take a Look at Snow on First Base",
+      "rationale": "The document references 'Major League Football Players' and a headline explicitly mentioning 'FOOTBALL' in connection with Jack Snow, indicating his sport is football.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:football",
+        "baseball:baseball"
+      ]
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "high",
+      "answer_candidate": "American football",
+      "normalized_answer": "american football",
+      "claim": "Jack Snow was an American football player.",
+      "temporal_status": "outdated",
+      "time_cue": "1962 to 1975",
+      "confidence": 1.0,
+      "raw_quote": "was an American football player",
+      "rationale": "The document identifies Jack Snow primarily as an American football player.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:american football",
+        "American football:football",
+        "American football:wide receiver",
+        "American football:nfl",
+        "basketball:basketball",
+        "baseball:baseball"
+      ]
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "high",
+      "answer_candidate": "American football",
+      "normalized_answer": "american football",
+      "claim": "Jack Snow played American football.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "American football player Jack Snow",
+      "rationale": "The document explicitly identifies him as an American football player.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:american football",
+        "American football:football",
+        "American football:wide receiver",
+        "American football:nfl"
+      ]
+    },
+    {
+      "doc_id": "D8",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention Jack Snow or the sport he played.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Lambert was the prototypical middle linebacker",
+      "rationale": "The document is about Jack Lambert, not Jack Snow, and contains no information about Jack Snow's sport.",
+      "entity_explicitness": "unknown",
+      "answer_role": "unsupported",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "baseball"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "baseball"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "baseball"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "basketball"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "football"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "American football"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "American football"
+    },
+    {
+      "group_id": "G8",
+      "doc_ids": [
+        "D8"
+      ],
+      "representative_doc_id": "D8",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'baseball', while D4 supports 'basketball'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'baseball', while D5 supports 'football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D1 supports 'baseball', while D6 supports 'American football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D1 supports 'baseball', while D7 supports 'American football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'baseball', while D4 supports 'basketball'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports 'baseball', while D5 supports 'football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D2 supports 'baseball', while D6 supports 'American football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D2 supports 'baseball', while D7 supports 'American football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D4 supports 'basketball', while D5 supports 'football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D4 supports 'basketball', while D6 supports 'American football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D4 supports 'basketball', while D7 supports 'American football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D5 supports 'football', while D6 supports 'American football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D5 supports 'football', while D7 supports 'American football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D6",
+      "dst": "D7",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "baseball",
+      "normalized_answer": "baseball",
+      "doc_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.6,
+      "conflict_count": 8,
+      "score": 4.49
+    },
+    {
+      "answer": "American football",
+      "normalized_answer": "american football",
+      "doc_ids": [
+        "D6",
+        "D7"
+      ],
+      "duplicate_group_ids": [
+        "G6",
+        "G7"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 8,
+      "score": 2.94
+    },
+    {
+      "answer": "basketball",
+      "normalized_answer": "basketball",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 5,
+      "score": 1.4875
+    },
+    {
+      "answer": "football",
+      "normalized_answer": "football",
+      "doc_ids": [
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G5"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.8,
+      "conflict_count": 5,
+      "score": 1.45
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "baseball",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D5",
+      "D6",
+      "D7"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "baseball": 4.49,
+      "American football": 2.94,
+      "basketball": 1.4875,
+      "football": 1.45
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "baseball",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D5",
+      "D6",
+      "D7"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "baseball",
+  "decision_trace": [
+    "Extracted 8 evidence cards.",
+    "Built 8 duplicate groups.",
+    "Built 17 evidence graph edges.",
+    "Built 4 answer clusters.",
+    "Candidate decision: answer -> baseball.",
+    "Verifier decision: supported -> baseball."
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "qid": "ramdocs_000005",
+  "question": "When was the Cathedral of Saint Augustine established?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "1970",
+      "normalized_answer": "1970",
+      "claim": "The Cathedral of Saint Augustine was raised to cathedral status in 1970.",
+      "temporal_status": "current",
+      "time_cue": "1970",
+      "confidence": 0.9,
+      "raw_quote": "it was raised to cathedral status in 1970",
+      "rationale": "The document explicitly states that the church was raised to cathedral status in 1970, which is when it became a cathedral.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "1970",
+      "normalized_answer": "1970",
+      "claim": "The Cathedral of Saint Augustine was raised to cathedral status in 1970.",
+      "temporal_status": "current",
+      "time_cue": "1970",
+      "confidence": 1.0,
+      "raw_quote": "raised to cathedral status in 1970",
+      "rationale": "The document states the year when the church was elevated to a cathedral, which is the establishment of the cathedral entity.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain information about the establishment date of the Cathedral of Saint Augustine.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document describes organ stops and contains no mention of the Cathedral of Saint Augustine or its establishment.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "1970"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "duplicate",
+      "reason": "The two documents support the same answer with highly similar text.",
+      "confidence": 0.95
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "1970",
+      "normalized_answer": "1970",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 0,
+      "score": 2.7875
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "1970",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "1970": 2.7875
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "1970",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "Two primary sources explicitly state the cathedral was raised to cathedral status in 1970."
+  },
+  "final_answer": "1970",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 2 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> 1970.",
+    "Verifier decision: supported -> 1970."
+  ]
+}

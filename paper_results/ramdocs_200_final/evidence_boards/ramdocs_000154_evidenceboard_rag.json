@@ -1,0 +1,285 @@
+{
+  "qid": "ramdocs_000154",
+  "question": "Who is the artist of the album \"Giant Steps\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "John Coltrane",
+      "normalized_answer": "john coltrane",
+      "claim": "The album 'Giant Steps' is by jazz musician John Coltrane.",
+      "temporal_status": "current",
+      "time_cue": "1960",
+      "confidence": 1.0,
+      "raw_quote": "Giant Steps is the fifth studio album by jazz musician John Coltrane as leader",
+      "rationale": "The document explicitly identifies the artist of the album.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Miles Davis",
+      "normalized_answer": "miles davis",
+      "claim": "The album 'Giant Steps' is by Miles Davis.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Miles Davis - Giant Steps ( Atlantic Records )",
+      "rationale": "The document title directly attributes the album to Miles Davis.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "The Boo Radleys",
+      "normalized_answer": "the boo radleys",
+      "claim": "The album 'Giant Steps' is by The Boo Radleys.",
+      "temporal_status": "current",
+      "time_cue": "1993",
+      "confidence": 1.0,
+      "raw_quote": "Giant Steps is the third album by The Boo Radleys",
+      "rationale": "The document explicitly states that Giant Steps is by The Boo Radleys.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "Woody Herman",
+      "normalized_answer": "woody herman",
+      "claim": "Woody Herman's band released an album titled Giant Steps in 1973.",
+      "temporal_status": "current",
+      "time_cue": "1973",
+      "confidence": 0.9,
+      "raw_quote": "The band’s 1973 album entitled Giant Steps was the first",
+      "rationale": "The document directly mentions a 1973 album 'Giant Steps' by Woody Herman's band.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document discusses the reception of the album Giant Steps but does not identify the artist.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Giant Steps lacks the slow sophisticated melodies that the critics were so enamored with at the time.",
+      "rationale": "The document mentions the album but provides no artist name.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "John Coltrane"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Miles Davis"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "The Boo Radleys"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Woody Herman"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'John Coltrane', while D2 supports 'Miles Davis'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'John Coltrane', while D3 supports 'The Boo Radleys'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'John Coltrane', while D4 supports 'Woody Herman'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'Miles Davis', while D3 supports 'The Boo Radleys'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'Miles Davis', while D4 supports 'Woody Herman'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'The Boo Radleys', while D4 supports 'Woody Herman'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "John Coltrane",
+      "normalized_answer": "john coltrane",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 1.74
+    },
+    {
+      "answer": "Miles Davis",
+      "normalized_answer": "miles davis",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 1.74
+    },
+    {
+      "answer": "The Boo Radleys",
+      "normalized_answer": "the boo radleys",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 1.74
+    },
+    {
+      "answer": "Woody Herman",
+      "normalized_answer": "woody herman",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 3,
+      "score": 1.715
+    }
+  ],
+  "candidate_decision": {
+    "mode": "conflict",
+    "answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support.",
+    "scores": {
+      "John Coltrane": 1.74,
+      "Miles Davis": 1.74,
+      "The Boo Radleys": 1.74,
+      "Woody Herman": 1.715
+    }
+  },
+  "verifier_decision": {
+    "verdict": "conflict",
+    "final_answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support."
+  },
+  "final_answer": "conflict",
+  "decision_trace": [
+    "Extracted 5 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 4 answer clusters.",
+    "Candidate decision: conflict -> conflict.",
+    "Verifier decision: conflict -> conflict."
+  ]
+}

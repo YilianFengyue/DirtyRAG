@@ -1,0 +1,551 @@
+{
+  "qid": "ramdocs_000157",
+  "question": "Who is the artist of the album \"I'm the Man\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Anthrax",
+      "normalized_answer": "anthrax",
+      "claim": "The EP 'I'm the Man' was released by the band Anthrax.",
+      "temporal_status": "current",
+      "time_cue": "1987",
+      "confidence": 1.0,
+      "raw_quote": "I'm the Man is the second EP by the band Anthrax",
+      "rationale": "The document directly identifies Anthrax as the band that released the EP.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Anthrax",
+      "normalized_answer": "anthrax",
+      "claim": "The song 'I'm the Man' is performed by Anthrax, implying the album artist is Anthrax.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.8,
+      "raw_quote": "Anthrax also used one of Sam Kinison 's famous primal screams for the song.",
+      "rationale": "The document discusses the song 'I'm the Man' in the context of Anthrax, making it clear that Anthrax is the artist.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Anthrax",
+      "normalized_answer": "anthrax",
+      "claim": "The album 'I'm the Man' is by the band Anthrax.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "Caught in a Mosh (Live) Anthrax",
+      "rationale": "The document lists tracks including 'Caught in a Mosh (Live) Anthrax', indicating the album is by Anthrax.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "medium",
+      "answer_candidate": "Metallica",
+      "normalized_answer": "metallica",
+      "claim": "Metallica is the artist of 'I'm the Man'.",
+      "temporal_status": "unknown",
+      "time_cue": "1991",
+      "confidence": 0.6,
+      "raw_quote": "MetroLyrics Metallica – I'm the Man '91",
+      "rationale": "The citation suggests Metallica performed a version of 'I'm the Man'.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "The Beatles",
+      "normalized_answer": "the beatles",
+      "claim": "The artist of the EP 'I'm the Man' is The Beatles.",
+      "temporal_status": "current",
+      "time_cue": "1987",
+      "confidence": 1.0,
+      "raw_quote": "I'm the Man is the second EP by the band The Beatles",
+      "rationale": "The document explicitly credits the EP to The Beatles.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "high",
+      "answer_candidate": "Joe Jackson",
+      "normalized_answer": "joe jackson",
+      "claim": "Joe Jackson is the artist of the album 'I'm the Man'.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "I'm the Man is Joe Jackson's second album",
+      "rationale": "The document explicitly states that 'I'm the Man' is Joe Jackson's album.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "high",
+      "answer_candidate": "Sherman Robertson",
+      "normalized_answer": "sherman robertson",
+      "claim": "The album 'I'm the Man' is by Sherman Robertson.",
+      "temporal_status": "current",
+      "time_cue": "1994",
+      "confidence": 1.0,
+      "raw_quote": "I 'm the Man ( Sherman Robertson album ) , 1994",
+      "rationale": "Document explicitly states the album and artist.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D8",
+      "relevance": "high",
+      "answer_candidate": "Joe Jackson",
+      "normalized_answer": "joe jackson",
+      "claim": "Joe Jackson is the artist of the album 'I'm the Man'.",
+      "temporal_status": "current",
+      "time_cue": "1979",
+      "confidence": 1.0,
+      "raw_quote": "I'm the Man ( Joe Jackson album ) , 1979",
+      "rationale": "The document explicitly lists 'I'm the Man ( Joe Jackson album )' as one of the references, indicating the artist.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Anthrax"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Anthrax"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Anthrax"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Metallica"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "The Beatles"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "Joe Jackson"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "Sherman Robertson"
+    },
+    {
+      "group_id": "G8",
+      "doc_ids": [
+        "D8"
+      ],
+      "representative_doc_id": "D8",
+      "answer_candidate": "Joe Jackson"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'Anthrax', while D4 supports 'Metallica'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'Anthrax', while D5 supports 'The Beatles'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D1 supports 'Anthrax', while D6 supports 'Joe Jackson'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D1 supports 'Anthrax', while D7 supports 'Sherman Robertson'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D8",
+      "relation": "contradict",
+      "reason": "D1 supports 'Anthrax', while D8 supports 'Joe Jackson'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'Anthrax', while D4 supports 'Metallica'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports 'Anthrax', while D5 supports 'The Beatles'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D2 supports 'Anthrax', while D6 supports 'Joe Jackson'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D2 supports 'Anthrax', while D7 supports 'Sherman Robertson'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D8",
+      "relation": "contradict",
+      "reason": "D2 supports 'Anthrax', while D8 supports 'Joe Jackson'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'Anthrax', while D4 supports 'Metallica'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports 'Anthrax', while D5 supports 'The Beatles'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D3 supports 'Anthrax', while D6 supports 'Joe Jackson'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D3 supports 'Anthrax', while D7 supports 'Sherman Robertson'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D8",
+      "relation": "contradict",
+      "reason": "D3 supports 'Anthrax', while D8 supports 'Joe Jackson'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D4 supports 'Metallica', while D5 supports 'The Beatles'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D4 supports 'Metallica', while D6 supports 'Joe Jackson'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D4 supports 'Metallica', while D7 supports 'Sherman Robertson'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D8",
+      "relation": "contradict",
+      "reason": "D4 supports 'Metallica', while D8 supports 'Joe Jackson'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D5 supports 'The Beatles', while D6 supports 'Joe Jackson'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D5 supports 'The Beatles', while D7 supports 'Sherman Robertson'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D8",
+      "relation": "contradict",
+      "reason": "D5 supports 'The Beatles', while D8 supports 'Joe Jackson'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D6",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D6 supports 'Joe Jackson', while D7 supports 'Sherman Robertson'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D6",
+      "dst": "D8",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D7",
+      "dst": "D8",
+      "relation": "contradict",
+      "reason": "D7 supports 'Sherman Robertson', while D8 supports 'Joe Jackson'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Anthrax",
+      "normalized_answer": "anthrax",
+      "doc_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 15,
+      "score": 3.975
+    },
+    {
+      "answer": "Joe Jackson",
+      "normalized_answer": "joe jackson",
+      "doc_ids": [
+        "D6",
+        "D8"
+      ],
+      "duplicate_group_ids": [
+        "G6",
+        "G8"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 12,
+      "score": 2.51
+    },
+    {
+      "answer": "The Beatles",
+      "normalized_answer": "the beatles",
+      "doc_ids": [
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G5"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 7,
+      "score": 1.26
+    },
+    {
+      "answer": "Sherman Robertson",
+      "normalized_answer": "sherman robertson",
+      "doc_ids": [
+        "D7"
+      ],
+      "duplicate_group_ids": [
+        "G7"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 7,
+      "score": 1.26
+    },
+    {
+      "answer": "Metallica",
+      "normalized_answer": "metallica",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.6,
+      "conflict_count": 7,
+      "score": 0.91
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Anthrax",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D5",
+      "D6",
+      "D7",
+      "D8"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Anthrax": 3.975,
+      "Joe Jackson": 2.51,
+      "The Beatles": 1.26,
+      "Sherman Robertson": 1.26,
+      "Metallica": 0.91
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Anthrax",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D5",
+      "D6",
+      "D7",
+      "D8"
+    ],
+    "reason": "The Anthrax cluster has stronger numerical support (3 high-confidence primary sources) than any competing cluster, making the answer well-supported despite conflicts."
+  },
+  "final_answer": "Anthrax",
+  "decision_trace": [
+    "Extracted 8 evidence cards.",
+    "Built 8 duplicate groups.",
+    "Built 28 evidence graph edges.",
+    "Built 5 answer clusters.",
+    "Candidate decision: answer -> Anthrax.",
+    "Verifier decision: supported -> Anthrax."
+  ]
+}

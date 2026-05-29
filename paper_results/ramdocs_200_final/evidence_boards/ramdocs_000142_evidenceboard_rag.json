@@ -1,0 +1,321 @@
+{
+  "qid": "ramdocs_000142",
+  "question": "What sport is Richard Leach associated with?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "tennis",
+      "normalized_answer": "tennis",
+      "claim": "Richard Leach is a tennis player.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "clinched the team's victory in the final with a win over Pat Cash and John Fitzgerald of Australia",
+      "rationale": "The quote references a tennis Davis Cup match with known tennis players.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "golf:tournament",
+        "tennis:tennis"
+      ]
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "basketball",
+      "normalized_answer": "basketball",
+      "claim": "Richard Leach is associated with basketball.",
+      "temporal_status": "current",
+      "time_cue": "1987",
+      "confidence": 0.95,
+      "raw_quote": "occupation basketball player start time 1987",
+      "rationale": "The document explicitly lists his occupation as basketball player, indicating his primary sport.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "basketball:basketball",
+        "tennis:tennis"
+      ]
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "tennis",
+      "normalized_answer": "tennis",
+      "claim": "Richard Leach is a tennis player who represented the United States in Davis Cup and is currently a tennis coach.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "rubbers in all four of the rounds which the US played in that year, and clinched the team's victory in the final with a win over Pat Cash and John Fitzgerald of Australia.",
+      "rationale": "The document opens with a description of his Davis Cup tennis matches and later mentions he is coach of the OC Breakers (a tennis team), establishing tennis as his primary sport association.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "golf:golf",
+        "golf:tournament"
+      ]
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "baseball",
+      "normalized_answer": "baseball",
+      "claim": "Rick Leach is a former professional baseball player.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "Richard Max \"Rick\" Leach ... is a former college football player and professional baseball player.",
+      "rationale": "The document clearly states his professional baseball association, which is the primary sport given the title and his professional status, while football was only at college level.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:football",
+        "American football:quarterback",
+        "golf:championship",
+        "baseball:baseball"
+      ]
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "",
+      "temporal_status": "unknown",
+      "time_cue": "1959",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "card_error: Expecting value: line 1 column 1 (char 0); heuristic fallback used",
+      "entity_explicitness": "unknown",
+      "answer_role": "unsupported",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "low",
+      "answer_candidate": "tennis",
+      "normalized_answer": "tennis",
+      "claim": "The document does not mention Richard Leach or any sport associated with him.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "George Worthington 1956 : Beryl Penrose / Neale Fraser 1957 ...",
+      "rationale": "Document lists tennis players and years, but Richard Leach is not mentioned.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1",
+        "D3"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "tennis"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "basketball"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "baseball"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "tennis"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'tennis', while D2 supports 'basketball'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "duplicate",
+      "reason": "The two documents support the same answer with highly similar text.",
+      "confidence": 0.95
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'tennis', while D4 supports 'baseball'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D6",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'basketball', while D3 supports 'tennis'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'basketball', while D4 supports 'baseball'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'tennis', while D4 supports 'baseball'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D6",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "tennis",
+      "normalized_answer": "tennis",
+      "doc_ids": [
+        "D1",
+        "D3",
+        "D6"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G5"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.6333,
+      "conflict_count": 4,
+      "score": 3.8283
+    },
+    {
+      "answer": "basketball",
+      "normalized_answer": "basketball",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 3,
+      "score": 1.7275
+    },
+    {
+      "answer": "baseball",
+      "normalized_answer": "baseball",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 3,
+      "score": 1.7275
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "tennis",
+    "supporting_doc_ids": [
+      "D1",
+      "D3",
+      "D6"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "tennis": 3.8283,
+      "basketball": 1.7275,
+      "baseball": 1.7275
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "tennis",
+    "supporting_doc_ids": [
+      "D1",
+      "D3",
+      "D6"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D4"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "tennis",
+  "decision_trace": [
+    "Extracted 6 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 8 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> tennis.",
+    "Verifier decision: supported -> tennis."
+  ]
+}

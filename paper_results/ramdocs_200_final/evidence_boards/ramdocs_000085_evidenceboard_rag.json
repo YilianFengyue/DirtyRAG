@@ -1,0 +1,140 @@
+{
+  "qid": "ramdocs_000085",
+  "question": "What is the engine size of the V-Strom?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "996 cc",
+      "normalized_answer": "996 cc",
+      "claim": "The engine size of the Suzuki V-Strom 1000 is 996 cc.",
+      "temporal_status": "current",
+      "time_cue": "since 2002",
+      "confidence": 0.95,
+      "raw_quote": "a 996 cc V-twin engine",
+      "rationale": "The document explicitly states the V-Strom 1000 has a 996 cc engine.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "1000cc",
+      "normalized_answer": "1000cc",
+      "claim": "The V-Strom has a 1000cc engine.",
+      "temporal_status": "current",
+      "time_cue": "08 January 2022; Year: 2019",
+      "confidence": 0.95,
+      "raw_quote": "Vstrom1000",
+      "rationale": "The document explicitly mentions 'Vstrom1000', indicating a 1000cc engine size.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "996 cc"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "1000cc"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports '996 cc', while D2 supports '1000cc'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "996 cc",
+      "normalized_answer": "996 cc",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 1,
+      "score": 2.6675
+    },
+    {
+      "answer": "1000cc",
+      "normalized_answer": "1000cc",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 1,
+      "score": 1.9675
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "996 cc",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2"
+    ],
+    "reason": "The top answer has stronger explicit entity support than competing clusters.",
+    "scores": {
+      "996 cc": 2.6675,
+      "1000cc": 1.9675
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "996 cc",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2"
+    ],
+    "reason": "D1 provides explicit, high-confidence support for 996 cc, which is stronger than the implicit 1000cc from D2."
+  },
+  "final_answer": "996 cc",
+  "decision_trace": [
+    "Extracted 2 evidence cards.",
+    "Built 2 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> 996 cc.",
+    "Verifier decision: supported -> 996 cc."
+  ]
+}

@@ -1,0 +1,288 @@
+{
+  "qid": "ramdocs_000006",
+  "question": "What sport is William Carrier associated with?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "football",
+      "normalized_answer": "football",
+      "claim": "William Carrier was a professional footballer.",
+      "temporal_status": "current",
+      "time_cue": "1887–1911",
+      "confidence": 1.0,
+      "raw_quote": "William Carrier (footballer) ... was an English professional footballer",
+      "rationale": "The document explicitly identifies Carrier as a footballer.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:football",
+        "soccer:footballer"
+      ]
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "basketball",
+      "normalized_answer": "basketball",
+      "claim": "The document does not mention William Carrier.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document discusses sports leagues (NBA, NHL, MLB) and hockey data but provides no information about William Carrier.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:football",
+        "basketball:nba",
+        "baseball:baseball",
+        "baseball:mlb"
+      ]
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "American football",
+      "normalized_answer": "american football",
+      "claim": "The document does not mention William Carrier.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Hockey Fantasy Premier League FIFA Club World Cup Formula 1 Gaming Global Sports Golf International Football La Liga",
+      "rationale": "William Carrier is not mentioned in the document.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:football",
+        "American football:nfl",
+        "golf:golf",
+        "basketball:basketball",
+        "basketball:nba",
+        "baseball:mlb",
+        "soccer:soccer",
+        "soccer:fifa",
+        "tennis:tennis"
+      ]
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "ice hockey",
+      "normalized_answer": "ice hockey",
+      "claim": "William Carrier is a professional ice hockey player, specifically a winger.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "30-year-old winger",
+      "rationale": "The term 'winger' is a position in ice hockey, and the mention of head coach Rod Brind'Amour, a known hockey figure, confirms the sport.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "ice hockey",
+      "normalized_answer": "ice hockey",
+      "claim": "William Carrier is an ice hockey player.",
+      "temporal_status": "current",
+      "time_cue": "2024",
+      "confidence": 1.0,
+      "raw_quote": "the 29-year-old winger has six points, 26 shots, 90 hits",
+      "rationale": "The document describes Carrier as a winger with hockey-specific statistics like assists, hits, and shots.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "football"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "basketball"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "American football"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "ice hockey"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "ice hockey"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'football', while D4 supports 'ice hockey'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'football', while D5 supports 'ice hockey'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "ice hockey",
+      "normalized_answer": "ice hockey",
+      "doc_ids": [
+        "D4",
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G4",
+        "G5"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.975,
+      "conflict_count": 2,
+      "score": 3.7037
+    },
+    {
+      "answer": "football",
+      "normalized_answer": "football",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 2,
+      "score": 1.86
+    },
+    {
+      "answer": "basketball",
+      "normalized_answer": "basketball",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.6
+    },
+    {
+      "answer": "American football",
+      "normalized_answer": "american football",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.6
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "ice hockey",
+    "supporting_doc_ids": [
+      "D4",
+      "D5"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "ice hockey": 3.7037,
+      "football": 1.86,
+      "basketball": 1.6,
+      "American football": 1.6
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "ice hockey",
+    "supporting_doc_ids": [
+      "D4",
+      "D5"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "ice hockey",
+  "decision_trace": [
+    "Extracted 5 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 4 answer clusters.",
+    "Candidate decision: answer -> ice hockey.",
+    "Verifier decision: supported -> ice hockey."
+  ]
+}

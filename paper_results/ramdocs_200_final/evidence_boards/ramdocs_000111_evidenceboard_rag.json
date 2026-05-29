@@ -1,0 +1,500 @@
+{
+  "qid": "ramdocs_000111",
+  "question": "What is the population of Sherbourne?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "9,523 people",
+      "normalized_answer": "9523 people",
+      "claim": "In the 2011 census the population of Sherborne parish and the two electoral wards was 9,523.",
+      "temporal_status": "outdated",
+      "time_cue": "2011 census",
+      "confidence": 0.95,
+      "raw_quote": "In the 2011 census the population of Sherborne parish and the two electoral wards was 9,523.",
+      "rationale": "The document directly states the population figure from the 2011 census.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "9,523 people",
+      "normalized_answer": "9523 people",
+      "claim": "The population of the civil parish of Sherborne at the 2011 census was 9,523.",
+      "temporal_status": "outdated",
+      "time_cue": "2011",
+      "confidence": 0.95,
+      "raw_quote": "Au recensement de 2011, la paroisse civile de Sherborne comptait 9 523 habitants.",
+      "rationale": "The document explicitly provides the 2011 census population.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "3,485 people",
+      "normalized_answer": "3485 people",
+      "claim": "The document may support the answer '3,485 people'.",
+      "temporal_status": "unknown",
+      "time_cue": "1931",
+      "confidence": 0.55,
+      "raw_quote": "3,485 people",
+      "rationale": "card_error: Expecting value: line 1 column 1 (char 0); heuristic fallback used",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "1,234 people",
+      "normalized_answer": "1234 people",
+      "claim": "The population of Sherborne parish and the two electoral wards was 1,234 in the 2011 census.",
+      "temporal_status": "outdated",
+      "time_cue": "2011 census",
+      "confidence": 0.95,
+      "raw_quote": "In the 2011 census, the population of Sherborne parish and the two electoral wards was 1,234.",
+      "rationale": "The document directly states the population figure from the 2011 census, matching the question despite the spelling variation Sherbourne/Sherborne.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "1,234 people",
+      "normalized_answer": "1234 people",
+      "claim": "The population of Sherborne parish and the two electoral wards was 1,234 in the 2011 census.",
+      "temporal_status": "outdated",
+      "time_cue": "2011 census",
+      "confidence": 0.98,
+      "raw_quote": "In the 2011 census, the population of Sherborne parish and the two electoral wards was 1,234.",
+      "rationale": "Directly states the population figure from the 2011 census.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "high",
+      "answer_candidate": "174",
+      "normalized_answer": "174",
+      "claim": "The population of Sherbourne civil parish at the 2011 census was 174.",
+      "temporal_status": "outdated",
+      "time_cue": "2011",
+      "confidence": 1.0,
+      "raw_quote": "The population of the civil parish at the 2011 was 174.",
+      "rationale": "Direct statement of population in the document.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "high",
+      "answer_candidate": "174",
+      "normalized_answer": "174",
+      "claim": "The population of the civil parish of Sherbourne was 174 at the 2011 census.",
+      "temporal_status": "outdated",
+      "time_cue": "2011",
+      "confidence": 1.0,
+      "raw_quote": "Au recensement de 2011 , la paroisse civile de Sherbourne comptait 174 habitants",
+      "rationale": "The document explicitly states the population figure from the 2011 census.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D8",
+      "relevance": "low",
+      "answer_candidate": "1,100 people",
+      "normalized_answer": "1100 people",
+      "claim": "The document does not mention Sherbourne or its population.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Sherbourne is not listed in the document's built-up area population data.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "9,523 people"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "9,523 people"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "3,485 people"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "1,234 people"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "1,234 people"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "174"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "174"
+    },
+    {
+      "group_id": "G8",
+      "doc_ids": [
+        "D8"
+      ],
+      "representative_doc_id": "D8",
+      "answer_candidate": "1,100 people"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports '9,523 people', while D3 supports '3,485 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports '9,523 people', while D4 supports '1,234 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports '9,523 people', while D5 supports '1,234 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D1 supports '9,523 people', while D6 supports '174'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D1 supports '9,523 people', while D7 supports '174'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports '9,523 people', while D3 supports '3,485 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports '9,523 people', while D4 supports '1,234 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports '9,523 people', while D5 supports '1,234 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D2 supports '9,523 people', while D6 supports '174'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D2 supports '9,523 people', while D7 supports '174'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports '3,485 people', while D4 supports '1,234 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports '3,485 people', while D5 supports '1,234 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D3 supports '3,485 people', while D6 supports '174'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D3 supports '3,485 people', while D7 supports '174'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D4",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D4 supports '1,234 people', while D6 supports '174'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D4 supports '1,234 people', while D7 supports '174'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D5 supports '1,234 people', while D6 supports '174'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D5 supports '1,234 people', while D7 supports '174'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D6",
+      "dst": "D7",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "174",
+      "normalized_answer": "174",
+      "doc_ids": [
+        "D6",
+        "D7"
+      ],
+      "duplicate_group_ids": [
+        "G6",
+        "G7"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 2,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 10,
+      "score": 4.05
+    },
+    {
+      "answer": "1,234 people",
+      "normalized_answer": "1234 people",
+      "doc_ids": [
+        "D4",
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G4",
+        "G5"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 2,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.965,
+      "conflict_count": 10,
+      "score": 1.9412
+    },
+    {
+      "answer": "9,523 people",
+      "normalized_answer": "9523 people",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 2,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 10,
+      "score": 1.9375
+    },
+    {
+      "answer": "1,100 people",
+      "normalized_answer": "1100 people",
+      "doc_ids": [
+        "D8"
+      ],
+      "duplicate_group_ids": [
+        "G8"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.25
+    },
+    {
+      "answer": "3,485 people",
+      "normalized_answer": "3485 people",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.55,
+      "conflict_count": 6,
+      "score": 0.9175
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "174",
+    "supporting_doc_ids": [
+      "D6",
+      "D7"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "174": 4.05,
+      "1,234 people": 1.9412,
+      "9,523 people": 1.9375,
+      "1,100 people": 1.25,
+      "3,485 people": 0.9175
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "174",
+    "supporting_doc_ids": [
+      "D6",
+      "D7"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "174",
+  "decision_trace": [
+    "Extracted 8 evidence cards.",
+    "Built 8 duplicate groups.",
+    "Built 21 evidence graph edges.",
+    "Built 5 answer clusters.",
+    "Candidate decision: answer -> 174.",
+    "Verifier decision: supported -> 174."
+  ]
+}

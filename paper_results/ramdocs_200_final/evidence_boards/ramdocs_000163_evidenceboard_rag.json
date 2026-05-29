@@ -1,0 +1,249 @@
+{
+  "qid": "ramdocs_000163",
+  "question": "What is the profession of Jeff Green?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "basketball player",
+      "normalized_answer": "basketball player",
+      "claim": "Jeff Green is a professional basketball player.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "he chose to forgo his senior year and entered the NBA draft.",
+      "rationale": "The document states he entered the NBA draft, indicating his profession is basketball.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "basketball player",
+      "normalized_answer": "basketball player",
+      "claim": "Jeff Green is a professional basketball player.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "American men's basketball players",
+      "rationale": "The document categories consistently list basketball-related terms and NBA teams, with the title including '(basketball)'.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "professional chef",
+      "normalized_answer": "professional chef",
+      "claim": "Jeff Green is a professional chef.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "professional chef Jeff Green",
+      "rationale": "The document explicitly states 'professional chef Jeff Green'.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "podcast host",
+      "normalized_answer": "podcast host",
+      "claim": "Jeff Green hosts podcasts as an employee at Ziff Davis.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "Green hosted the weekly \"CGW Radio\" podcast",
+      "rationale": "The document explicitly states Green hosted podcasts, which indicates his profession.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "basketball player"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "basketball player"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "professional chef"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "podcast host"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'basketball player', while D3 supports 'professional chef'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'basketball player', while D4 supports 'podcast host'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'basketball player', while D3 supports 'professional chef'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'basketball player', while D4 supports 'podcast host'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'professional chef', while D4 supports 'podcast host'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "basketball player",
+      "normalized_answer": "basketball player",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.925,
+      "conflict_count": 4,
+      "score": 3.4512
+    },
+    {
+      "answer": "professional chef",
+      "normalized_answer": "professional chef",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 3,
+      "score": 2.4275
+    },
+    {
+      "answer": "podcast host",
+      "normalized_answer": "podcast host",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 3,
+      "score": 1.7275
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "basketball player",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "basketball player": 3.4512,
+      "professional chef": 2.4275,
+      "podcast host": 1.7275
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "basketball player",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "reason": "verifier_error_fallback: Unterminated string starting at: line 4 column 26 (char 92)"
+  },
+  "final_answer": "basketball player",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> basketball player.",
+    "Verifier decision: supported -> basketball player."
+  ]
+}

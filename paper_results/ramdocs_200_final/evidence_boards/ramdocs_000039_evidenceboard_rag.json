@@ -1,0 +1,162 @@
+{
+  "qid": "ramdocs_000039",
+  "question": "In which city did Conry practice law?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Boston",
+      "normalized_answer": "boston",
+      "claim": "Conry practiced law in Boston.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "admitted to the bar and commenced practice in Boston",
+      "rationale": "The document states Conry commenced practice in Boston and later resumed practice there.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "New York City",
+      "normalized_answer": "new york city",
+      "claim": "Conry commenced law practice in New York City.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "commenced practice in New York City.",
+      "rationale": "The document directly states that Conry commenced practice in New York City after being admitted to the bar.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "No information about Conry's practice location is found in the document.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "No relevant text available.",
+      "rationale": "The document content is not human-readable and contains no evidence about Conry or his city of practice.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Boston"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "New York City"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'Boston', while D2 supports 'New York City'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Boston",
+      "normalized_answer": "boston",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 1,
+      "score": 1.98
+    },
+    {
+      "answer": "New York City",
+      "normalized_answer": "new york city",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 1,
+      "score": 1.98
+    }
+  ],
+  "candidate_decision": {
+    "mode": "conflict",
+    "answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support.",
+    "scores": {
+      "Boston": 1.98,
+      "New York City": 1.98
+    }
+  },
+  "verifier_decision": {
+    "verdict": "conflict",
+    "final_answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support."
+  },
+  "final_answer": "conflict",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: conflict -> conflict.",
+    "Verifier decision: conflict -> conflict."
+  ]
+}

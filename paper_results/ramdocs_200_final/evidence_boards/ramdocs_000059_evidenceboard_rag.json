@@ -1,0 +1,82 @@
+{
+  "qid": "ramdocs_000059",
+  "question": "What type of music is associated with The Gamblers?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention any type of music associated with The Gamblers.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "The Houston Gamblers were an American football team...",
+      "rationale": "The document is about a football team, not music.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention any music associated with The Gamblers.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document is about the sports team Gamblers de Houston and contains no information about music.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [],
+  "candidate_decision": {
+    "mode": "unknown",
+    "answer": "unknown",
+    "supporting_doc_ids": [],
+    "rejected_doc_ids": [],
+    "reason": "No non-unknown answer cluster was found.",
+    "scores": {}
+  },
+  "verifier_decision": {
+    "verdict": "unknown",
+    "final_answer": "unknown",
+    "supporting_doc_ids": [],
+    "rejected_doc_ids": [],
+    "reason": "No non-unknown answer cluster was found."
+  },
+  "final_answer": "unknown",
+  "decision_trace": [
+    "Extracted 2 evidence cards.",
+    "Built 2 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 0 answer clusters.",
+    "Candidate decision: unknown -> unknown.",
+    "Verifier decision: unknown -> unknown."
+  ]
+}

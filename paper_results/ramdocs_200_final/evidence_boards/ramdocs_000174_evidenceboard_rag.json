@@ -1,0 +1,357 @@
+{
+  "qid": "ramdocs_000174",
+  "question": "What is the genre of \"A Time for Love\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "classical, standards, ballads",
+      "normalized_answer": "classical standards ballads",
+      "claim": "The album includes a collection of classical pieces, standards, and ballads.",
+      "temporal_status": "current",
+      "time_cue": "May 11, 2010",
+      "confidence": 0.9,
+      "raw_quote": "The album includes a collection of classical pieces, standards, and ballads",
+      "rationale": "The document directly states the musical styles included in the album, which collectively define its genre.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention 'A Time for Love'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The provided text contains no information about 'A Time for Love'.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document identifies 'A Time for Love' as a 2010 studio album by Arturo Sandoval but does not specify its genre.",
+      "temporal_status": "current",
+      "time_cue": "2010",
+      "confidence": 0.0,
+      "raw_quote": "2010 studio album by Arturo Sandoval",
+      "rationale": "The document only describes the album as a studio album; no genre is mentioned.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "jazz opera",
+      "normalized_answer": "jazz opera",
+      "claim": "A Time for Love is a jazz opera.",
+      "temporal_status": "current",
+      "time_cue": "May 11, 2010",
+      "confidence": 1.0,
+      "raw_quote": "A Time for Love is the title of a jazz opera",
+      "rationale": "The document explicitly states the genre in the first sentence.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention the genre of 'A Time for Love'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document contains no reference to 'A Time for Love' or its genre.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "high",
+      "answer_candidate": "cartoon",
+      "normalized_answer": "cartoon",
+      "claim": "Time for Love is a cartoon.",
+      "temporal_status": "current",
+      "time_cue": "September 6, 1935",
+      "confidence": 1.0,
+      "raw_quote": "The cartoon focuses on a mute swan couple...",
+      "rationale": "The document explicitly calls it a cartoon.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "high",
+      "answer_candidate": "comedy",
+      "normalized_answer": "comedy",
+      "claim": "A Time for Love is a comedy film.",
+      "temporal_status": "current",
+      "time_cue": "1970",
+      "confidence": 1.0,
+      "raw_quote": "a 1970 Hong Kong Shaw Brothers comedy film",
+      "rationale": "The document explicitly labels the film as a comedy.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D8",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain any information about the genre of 'A Time for Love'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document lists various albums and collaborators but does not mention 'A Time for Love' or its genre.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "classical, standards, ballads"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "jazz opera"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "cartoon"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "comedy"
+    },
+    {
+      "group_id": "G8",
+      "doc_ids": [
+        "D8"
+      ],
+      "representative_doc_id": "D8",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'classical, standards, ballads', while D4 supports 'jazz opera'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D1 supports 'classical, standards, ballads', while D6 supports 'cartoon'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D1 supports 'classical, standards, ballads', while D7 supports 'comedy'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D4 supports 'jazz opera', while D6 supports 'cartoon'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D4 supports 'jazz opera', while D7 supports 'comedy'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D6",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D6 supports 'cartoon', while D7 supports 'comedy'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "jazz opera",
+      "normalized_answer": "jazz opera",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 1.74
+    },
+    {
+      "answer": "cartoon",
+      "normalized_answer": "cartoon",
+      "doc_ids": [
+        "D6"
+      ],
+      "duplicate_group_ids": [
+        "G6"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 1.74
+    },
+    {
+      "answer": "comedy",
+      "normalized_answer": "comedy",
+      "doc_ids": [
+        "D7"
+      ],
+      "duplicate_group_ids": [
+        "G7"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 1.74
+    },
+    {
+      "answer": "classical, standards, ballads",
+      "normalized_answer": "classical standards ballads",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 3,
+      "score": 1.715
+    }
+  ],
+  "candidate_decision": {
+    "mode": "conflict",
+    "answer": "conflict",
+    "supporting_doc_ids": [
+      "D4",
+      "D6"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support.",
+    "scores": {
+      "jazz opera": 1.74,
+      "cartoon": 1.74,
+      "comedy": 1.74,
+      "classical, standards, ballads": 1.715
+    }
+  },
+  "verifier_decision": {
+    "verdict": "conflict",
+    "final_answer": "conflict",
+    "supporting_doc_ids": [
+      "D4",
+      "D6"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support."
+  },
+  "final_answer": "conflict",
+  "decision_trace": [
+    "Extracted 8 evidence cards.",
+    "Built 8 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 4 answer clusters.",
+    "Candidate decision: conflict -> conflict.",
+    "Verifier decision: conflict -> conflict."
+  ]
+}

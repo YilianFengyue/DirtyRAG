@@ -1,0 +1,160 @@
+{
+  "qid": "ramdocs_000060",
+  "question": "Where is the Red Brick School located?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention the location of the Red Brick School.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "No location information is present in the document.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "New York City",
+      "normalized_answer": "new york city",
+      "claim": "The Red Brick School is located in New York City.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Red Brick, located in New York City",
+      "rationale": "The document explicitly states the location.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not state the location of the Red Brick School.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.1,
+      "raw_quote": "Red Brick School",
+      "rationale": "The document only mentions the school's name in the title but provides no address or location details.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention the Red Brick School.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Document about Oregon, Wisconsin does not contain the Red Brick School.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "New York City"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [
+    {
+      "answer": "New York City",
+      "normalized_answer": "new york city",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 0,
+      "score": 2.1
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "New York City",
+    "supporting_doc_ids": [
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "New York City": 2.1
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "New York City",
+    "supporting_doc_ids": [
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D3",
+      "D4"
+    ],
+    "reason": "D2 provides explicit, high-confidence support that the Red Brick School is in New York City, with no conflicting evidence."
+  },
+  "final_answer": "New York City",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> New York City.",
+    "Verifier decision: supported -> New York City."
+  ]
+}

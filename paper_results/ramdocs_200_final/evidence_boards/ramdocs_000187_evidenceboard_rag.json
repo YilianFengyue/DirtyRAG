@@ -1,0 +1,309 @@
+{
+  "qid": "ramdocs_000187",
+  "question": "What sport does Coneo specialize in?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "volleyball",
+      "normalized_answer": "volleyball",
+      "claim": "Coneo specializes in volleyball, as demonstrated by her involvement in volleyball competitions and awards.",
+      "temporal_status": "unknown",
+      "time_cue": "2014",
+      "confidence": 1.0,
+      "raw_quote": "she helped her national team to end up in the sixth place in the volleyball tournament",
+      "rationale": "The document explicitly mentions Coneo participating in a volleyball tournament and receiving a volleyball-related award.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "golf:tournament",
+        "golf:championship"
+      ]
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "volleyball",
+      "normalized_answer": "volleyball",
+      "claim": "Coneo specializes in volleyball.",
+      "temporal_status": "unknown",
+      "time_cue": "2016",
+      "confidence": 0.95,
+      "raw_quote": "Coneo participated in the 2016 FIVB Volleyball World Grand Prix",
+      "rationale": "The document explicitly mentions her participation in a volleyball tournament, indicating volleyball is her sport.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "golf:tournament"
+      ]
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "volleyball",
+      "normalized_answer": "volleyball",
+      "claim": "Amanda Coneo specializes in volleyball.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Amanda Coneo ( born ( 1996-12-20 ) 20 December 1996 ) is a Colombian female volleyball player",
+      "rationale": "The document explicitly states she is a volleyball player.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "middle-distance running",
+      "normalized_answer": "middledistance running",
+      "claim": "Muriel Coneo specializes in middle-distance running.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "specializing in the middle-distance running events.",
+      "rationale": "The document explicitly states her specialization as middle-distance running.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document contains no mention of Coneo or any sport.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Íconos de procesador creados por Freepik - Flaticon",
+      "rationale": "The document text is about web page links and icon credits, with no reference to Coneo or sports.",
+      "entity_explicitness": "unknown",
+      "answer_role": "unsupported",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "low",
+      "answer_candidate": "soccer",
+      "normalized_answer": "soccer",
+      "claim": "The document does not contain information about Coneo or their sport specialization.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "No mention of 'Coneo' in the document; entire document is a soccer website description but does not link Coneo to any sport.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "golf:championship",
+        "soccer:soccer"
+      ]
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "volleyball"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "volleyball"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "volleyball"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "middle-distance running"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "soccer"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'volleyball', while D4 supports 'middle-distance running'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'volleyball', while D4 supports 'middle-distance running'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'volleyball', while D4 supports 'middle-distance running'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "volleyball",
+      "normalized_answer": "volleyball",
+      "doc_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9833,
+      "conflict_count": 3,
+      "score": 5.4358
+    },
+    {
+      "answer": "middle-distance running",
+      "normalized_answer": "middledistance running",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 1.74
+    },
+    {
+      "answer": "soccer",
+      "normalized_answer": "soccer",
+      "doc_ids": [
+        "D6"
+      ],
+      "duplicate_group_ids": [
+        "G6"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.6
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "volleyball",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "volleyball": 5.4358,
+      "middle-distance running": 1.74,
+      "soccer": 1.6
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "volleyball",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D5",
+      "D6"
+    ],
+    "reason": "Candidate answer 'volleyball' is strongly supported by three high-confidence primary documents (D1, D2, D3), while conflicting document D4 refers to a different person (Muriel Coneo) and has weaker support."
+  },
+  "final_answer": "volleyball",
+  "decision_trace": [
+    "Extracted 6 evidence cards.",
+    "Built 6 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> volleyball.",
+    "Verifier decision: supported -> volleyball."
+  ]
+}

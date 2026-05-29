@@ -1,0 +1,138 @@
+{
+  "qid": "ramdocs_000009",
+  "question": "When was General Bryan born?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "February 8, 1900",
+      "normalized_answer": "february 8 1900",
+      "claim": "General Bryan was born on February 8, 1900.",
+      "temporal_status": "current",
+      "time_cue": "February 8, 1900",
+      "confidence": 1.0,
+      "raw_quote": "Bryan was born in Alexandria, Louisiana on February 8, 1900.",
+      "rationale": "Directly stated in the document.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "July 15, 1905",
+      "normalized_answer": "july 15 1905",
+      "claim": "General Bryan was born on July 15, 1905.",
+      "temporal_status": "current",
+      "time_cue": "July 15, 1905",
+      "confidence": 1.0,
+      "raw_quote": "born in Alexandria, Louisiana on July 15, 1905",
+      "rationale": "The document explicitly states his birth date.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "February 8, 1900"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "July 15, 1905"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'February 8, 1900', while D2 supports 'July 15, 1905'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "February 8, 1900",
+      "normalized_answer": "february 8 1900",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 1,
+      "score": 1.98
+    },
+    {
+      "answer": "July 15, 1905",
+      "normalized_answer": "july 15 1905",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 1,
+      "score": 1.98
+    }
+  ],
+  "candidate_decision": {
+    "mode": "conflict",
+    "answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support.",
+    "scores": {
+      "February 8, 1900": 1.98,
+      "July 15, 1905": 1.98
+    }
+  },
+  "verifier_decision": {
+    "verdict": "conflict",
+    "final_answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support."
+  },
+  "final_answer": "conflict",
+  "decision_trace": [
+    "Extracted 2 evidence cards.",
+    "Built 2 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: conflict -> conflict.",
+    "Verifier decision: conflict -> conflict."
+  ]
+}

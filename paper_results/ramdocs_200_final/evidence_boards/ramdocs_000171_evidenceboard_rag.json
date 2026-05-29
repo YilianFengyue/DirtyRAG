@@ -1,0 +1,186 @@
+{
+  "qid": "ramdocs_000171",
+  "question": "What is Terry McDonald's profession?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "actor",
+      "normalized_answer": "actor",
+      "claim": "Mac McDonald, born Terence McDonald, is an American actor.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Mac McDonald (born Terence McDonald; 18 June 1949) is an American actor.",
+      "rationale": "The document explicitly states his profession as an actor.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "footballer",
+      "normalized_answer": "footballer",
+      "claim": "Terry McDonald is an English former footballer.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "Terry McDonald ... is an English former footballer",
+      "rationale": "The document explicitly states his profession as a former footballer.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention Terry McDonald.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "no relevant quote",
+      "rationale": "The document contains no information about Terry McDonald.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention Terry McDonald or any profession.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "There are 580 calories in a Big Mac from McDonald 's .",
+      "rationale": "Document is about a Big Mac, no mention of Terry McDonald.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "actor"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "footballer"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'actor', while D2 supports 'footballer'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "actor",
+      "normalized_answer": "actor",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 1,
+      "score": 1.98
+    },
+    {
+      "answer": "footballer",
+      "normalized_answer": "footballer",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 1,
+      "score": 1.955
+    }
+  ],
+  "candidate_decision": {
+    "mode": "conflict",
+    "answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support.",
+    "scores": {
+      "actor": 1.98,
+      "footballer": 1.955
+    }
+  },
+  "verifier_decision": {
+    "verdict": "conflict",
+    "final_answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support."
+  },
+  "final_answer": "conflict",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: conflict -> conflict.",
+    "Verifier decision: conflict -> conflict."
+  ]
+}

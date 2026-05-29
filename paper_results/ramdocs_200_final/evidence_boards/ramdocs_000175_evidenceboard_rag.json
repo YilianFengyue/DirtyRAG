@@ -1,0 +1,261 @@
+{
+  "qid": "ramdocs_000175",
+  "question": "What is Robin Wright known for?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "actress and director",
+      "normalized_answer": "actress and director",
+      "claim": "Robin Wright is an American actress and director.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "Robin Gayle Wright (born April 8, 1966) is an American actress and director.",
+      "rationale": "The document explicitly states her profession, which directly answers what she is known for.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "international affairs reporting",
+      "normalized_answer": "international affairs reporting",
+      "claim": "Robin Wright is known for her coverage of international affairs.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "awarded the U.N. Correspondents Association Gold Medal for analysis and coverage of international affairs",
+      "rationale": "The document lists multiple awards for international reporting, indicating her primary recognition is in that field.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Actress",
+      "normalized_answer": "actress",
+      "claim": "Robin Wright is primarily known for her work as an actress.",
+      "temporal_status": "current",
+      "time_cue": "2024",
+      "confidence": 0.95,
+      "raw_quote": "The Congress Robin Wright Also producer",
+      "rationale": "The document lists many acting credits, and roles like 'The Congress' where she is credited as the actress and also producer, indicating acting as the primary known activity.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "acting",
+      "normalized_answer": "acting",
+      "claim": "Robin Wright is an actress who discusses her process of reading scripts and embodying characters.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "I would read scripts and go, 'Oh, I'm not right. I could never do this. I could never achieve this character.'",
+      "rationale": "The quote explicitly mentions reading scripts and attempting characters, directly indicating an acting profession.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "actress and director"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "international affairs reporting"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Actress"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "acting"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'actress and director', while D2 supports 'international affairs reporting'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'actress and director', while D3 supports 'Actress'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'actress and director', while D4 supports 'acting'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'international affairs reporting', while D3 supports 'Actress'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'international affairs reporting', while D4 supports 'acting'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'Actress', while D4 supports 'acting'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "actress and director",
+      "normalized_answer": "actress and director",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 3,
+      "score": 1.7275
+    },
+    {
+      "answer": "Actress",
+      "normalized_answer": "actress",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 3,
+      "score": 1.7275
+    },
+    {
+      "answer": "international affairs reporting",
+      "normalized_answer": "international affairs reporting",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 3,
+      "score": 1.715
+    },
+    {
+      "answer": "acting",
+      "normalized_answer": "acting",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 3,
+      "score": 1.715
+    }
+  ],
+  "candidate_decision": {
+    "mode": "conflict",
+    "answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D3"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support.",
+    "scores": {
+      "actress and director": 1.7275,
+      "Actress": 1.7275,
+      "international affairs reporting": 1.715,
+      "acting": 1.715
+    }
+  },
+  "verifier_decision": {
+    "verdict": "conflict",
+    "final_answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D3"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support."
+  },
+  "final_answer": "conflict",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 4 answer clusters.",
+    "Candidate decision: conflict -> conflict.",
+    "Verifier decision: conflict -> conflict."
+  ]
+}

@@ -1,0 +1,279 @@
+{
+  "qid": "ramdocs_000089",
+  "question": "What is the medium of \"A Single Man\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "film",
+      "normalized_answer": "film",
+      "claim": "A Single Man is a film.",
+      "temporal_status": "current",
+      "time_cue": "2009",
+      "confidence": 1.0,
+      "raw_quote": "A Single Man is a 2009 American drama film",
+      "rationale": "The document explicitly states the medium as a film.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "medium",
+      "answer_candidate": "film",
+      "normalized_answer": "film",
+      "claim": "The document references 'A Single Man' in the context of the Venice Film Festival, indicating it is a film.",
+      "temporal_status": "current",
+      "time_cue": "2009",
+      "confidence": 0.8,
+      "raw_quote": "A Single Man at Venice Film Festival",
+      "rationale": "The mention of a film festival implies the medium is a film, though not explicitly stated.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "film",
+      "normalized_answer": "film",
+      "claim": "A Single Man is a film.",
+      "temporal_status": "current",
+      "time_cue": "2009",
+      "confidence": 0.99,
+      "raw_quote": "A Single Man (2009)",
+      "rationale": "Listed as a winner of a film festival award, indicating its medium is film.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "card_error: Expecting value: line 1 column 1 (char 0); heuristic fallback used",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "Novel",
+      "normalized_answer": "novel",
+      "claim": "The medium of 'A Single Man' is a novel.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Book Review Literature Reviews Books Literary Writing",
+      "rationale": "The document explicitly categorizes the work under book and literature reviews, indicating it is a novel.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "No information about the medium of 'A Single Man' is present in the document.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "No relevant quote available.",
+      "rationale": "The document consists of metadata categories and templates without any reference to the film 'A Single Man'.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "film"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "film"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "film"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "Novel"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'film', while D5 supports 'Novel'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports 'film', while D5 supports 'Novel'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports 'film', while D5 supports 'Novel'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "film",
+      "normalized_answer": "film",
+      "doc_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.93,
+      "conflict_count": 3,
+      "score": 5.1725
+    },
+    {
+      "answer": "Novel",
+      "normalized_answer": "novel",
+      "doc_ids": [
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G5"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 2.44
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "film",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D5"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "film": 5.1725,
+      "Novel": 2.44
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "film",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D5"
+    ],
+    "reason": "Stronger explicit support from multiple high-confidence documents outweighs a single conflicting novel claim."
+  },
+  "final_answer": "film",
+  "decision_trace": [
+    "Extracted 6 evidence cards.",
+    "Built 6 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> film.",
+    "Verifier decision: supported -> film."
+  ]
+}

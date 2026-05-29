@@ -1,0 +1,199 @@
+{
+  "qid": "ramdocs_000037",
+  "question": "What sport is China Clipper associated with?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "low",
+      "answer_candidate": "tennis",
+      "normalized_answer": "tennis",
+      "claim": "The document does not mention China Clipper.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "the Nottingham Panthers in Britain, scoring 55 goals in 55 games, before moving to Switzerland where he led HC Ambrì-Piotta in scoring as player-coach.",
+      "rationale": "The question asks about China Clipper, but the document is about Larry Kwong and hockey/tennis. No mention of China Clipper.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "tennis:tennis"
+      ]
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "basketball",
+      "normalized_answer": "basketball",
+      "claim": "China Clipper is a term often associated with the Chinese national basketball team.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "China Clipper is a term often associated with the Chinese national basketball team",
+      "rationale": "The document directly states China Clipper is associated with the Chinese national basketball team.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "golf:championship",
+        "basketball:basketball"
+      ]
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "basketball",
+      "normalized_answer": "basketball",
+      "claim": "China Clipper is most famously associated with basketball.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "China Clipper, a legendary figure in Chinese sports history, is most famously associated with basketball.",
+      "rationale": "The document explicitly states the primary sport association.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "basketball:basketball",
+        "baseball:baseball"
+      ]
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention China Clipper or any sport association.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Document contains unrelated technical topics and no mention of China Clipper.",
+      "entity_explicitness": "unknown",
+      "answer_role": "unsupported",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "tennis"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "basketball"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "basketball"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "basketball",
+      "normalized_answer": "basketball",
+      "doc_ids": [
+        "D2",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G2",
+        "G3"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 0,
+      "score": 3.95
+    },
+    {
+      "answer": "tennis",
+      "normalized_answer": "tennis",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.6
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "basketball",
+    "supporting_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "basketball": 3.95,
+      "tennis": 1.6
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "basketball",
+    "supporting_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D4"
+    ],
+    "reason": "Candidate answer is strongly supported by two high-confidence, primary documents explicitly associating China Clipper with basketball, while the only conflicting document (D1) has zero confidence."
+  },
+  "final_answer": "basketball",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> basketball.",
+    "Verifier decision: supported -> basketball."
+  ]
+}

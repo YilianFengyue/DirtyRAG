@@ -1,0 +1,226 @@
+{
+  "qid": "ramdocs_000002",
+  "question": "What sport is Bobby Carpenter associated with?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "American football",
+      "normalized_answer": "american football",
+      "claim": "Bobby Carpenter is a former American football linebacker.",
+      "temporal_status": "outdated",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "former American football linebacker",
+      "rationale": "The document explicitly identifies him as a former American football linebacker, indicating his primary sport.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:american football",
+        "American football:football",
+        "American football:nfl"
+      ]
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "American football",
+      "normalized_answer": "american football",
+      "claim": "Bobby Carpenter is associated with American football.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "American football linebackers",
+      "rationale": "Categories include 'American football linebackers' and multiple NFL teams, indicating American football as the sport.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:american football",
+        "American football:football"
+      ]
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "American football",
+      "normalized_answer": "american football",
+      "claim": "Bobby Carpenter is associated with American football.",
+      "temporal_status": "current",
+      "time_cue": "edited on 20 February 2025",
+      "confidence": 1.0,
+      "raw_quote": "Bobby Carpenter ( American football )",
+      "rationale": "The document title directly states the sport.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:american football",
+        "American football:football"
+      ]
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "American football",
+      "normalized_answer": "american football",
+      "claim": "Bobby Carpenter is associated with American football.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "Bobby Carpenter Stats , Height , Weight , Position , Draft , College | Pro-Football-Reference.com",
+      "rationale": "The document is from Pro-Football-Reference.com, a website dedicated to American football statistics, and lists Bobby Carpenter's football stats.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:football",
+        "American football:nfl",
+        "basketball:basketball",
+        "baseball:baseball"
+      ]
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "American football"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "American football"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "American football"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "American football"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "American football",
+      "normalized_answer": "american football",
+      "doc_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2",
+        "G3",
+        "G4"
+      ],
+      "unique_support_count": 4,
+      "high_relevance_count": 4,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 4,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9625,
+      "conflict_count": 0,
+      "score": 7.5906
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "American football",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "American football": 7.5906
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "American football",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "All evidence supports American football with no conflicts."
+  },
+  "final_answer": "American football",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> American football.",
+    "Verifier decision: supported -> American football."
+  ]
+}

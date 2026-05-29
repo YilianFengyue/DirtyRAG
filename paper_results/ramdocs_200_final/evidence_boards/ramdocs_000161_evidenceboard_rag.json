@@ -1,0 +1,297 @@
+{
+  "qid": "ramdocs_000161",
+  "question": "Who is the composer of String Quintet No. 2?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Johannes Brahms",
+      "normalized_answer": "johannes brahms",
+      "claim": "String Quintet No. 2 was composed by Johannes Brahms.",
+      "temporal_status": "current",
+      "time_cue": "published in 1890",
+      "confidence": 1.0,
+      "raw_quote": "String Quintet No. 2 in G major, Op. 111, is a work by Johannes Brahms",
+      "rationale": "The document explicitly states the work is by Johannes Brahms.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Johannes Brahms",
+      "normalized_answer": "johannes brahms",
+      "claim": "Johannes Brahms composed String Quintet No. 2 in G major, Op. 111.",
+      "temporal_status": "current",
+      "time_cue": "1890",
+      "confidence": 1.0,
+      "raw_quote": "String Quintet No 2 in G major, Op 111 composer Johannes Brahms (1833-1897) 1890",
+      "rationale": "The document directly states that Johannes Brahms is the composer of String Quintet No. 2.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Ludwig van Beethoven",
+      "normalized_answer": "ludwig van beethoven",
+      "claim": "Beethoven composed String Quintet No. 2.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "He also wrote String Quintet No. 2, among other chamber works.",
+      "rationale": "The document explicitly attributes String Quintet No. 2 to Beethoven.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "Wolfgang Amadeus Mozart",
+      "normalized_answer": "wolfgang amadeus mozart",
+      "claim": "String Quintet No. 2 in C minor was composed by Wolfgang Amadeus Mozart.",
+      "temporal_status": "current",
+      "time_cue": "1787",
+      "confidence": 0.95,
+      "raw_quote": "was written by Wolfgang Amadeus Mozart in 1787",
+      "rationale": "The document directly attributes the composition to Mozart.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document lists String Quintet No. 2 among chamber music works but does not name the composer.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "String Quintet No. 2",
+      "rationale": "The document only lists the title under chamber music, with no composer information.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document contains no information about String Quintet No. 2 or its composer.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "In Vienna Brahms became an associate of two close members of Wagner 's circle ...",
+      "rationale": "The document discusses Brahms and his works but does not mention String Quintet No. 2.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Johannes Brahms"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Johannes Brahms"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Ludwig van Beethoven"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Wolfgang Amadeus Mozart"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'Johannes Brahms', while D3 supports 'Ludwig van Beethoven'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'Johannes Brahms', while D4 supports 'Wolfgang Amadeus Mozart'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'Johannes Brahms', while D3 supports 'Ludwig van Beethoven'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'Johannes Brahms', while D4 supports 'Wolfgang Amadeus Mozart'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'Ludwig van Beethoven', while D4 supports 'Wolfgang Amadeus Mozart'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Johannes Brahms",
+      "normalized_answer": "johannes brahms",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 4,
+      "score": 4.17
+    },
+    {
+      "answer": "Ludwig van Beethoven",
+      "normalized_answer": "ludwig van beethoven",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 2.44
+    },
+    {
+      "answer": "Wolfgang Amadeus Mozart",
+      "normalized_answer": "wolfgang amadeus mozart",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 3,
+      "score": 2.4275
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Johannes Brahms",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Johannes Brahms": 4.17,
+      "Ludwig van Beethoven": 2.44,
+      "Wolfgang Amadeus Mozart": 2.4275
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Johannes Brahms",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "reason": "Johannes Brahms cluster has stronger explicit support (2 docs) than competing clusters (1 doc each) despite conflicts."
+  },
+  "final_answer": "Johannes Brahms",
+  "decision_trace": [
+    "Extracted 6 evidence cards.",
+    "Built 6 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> Johannes Brahms.",
+    "Verifier decision: supported -> Johannes Brahms."
+  ]
+}

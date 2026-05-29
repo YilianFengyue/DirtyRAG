@@ -1,0 +1,231 @@
+{
+  "qid": "ramdocs_000123",
+  "question": "When was the Croatian money introduced?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "May 30, 1994",
+      "normalized_answer": "may 30 1994",
+      "claim": "The modern Croatian kuna was introduced on May 30, 1994.",
+      "temporal_status": "current",
+      "time_cue": "May 30, 1994",
+      "confidence": 0.95,
+      "raw_quote": "The modern kuna was introduced on May 30, 1994",
+      "rationale": "The document explicitly states the introduction date of the modern kuna.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "26 July 1941",
+      "normalized_answer": "26 july 1941",
+      "claim": "The Croatian kuna was introduced on 26 July 1941 in the Independent State of Croatia.",
+      "temporal_status": "current",
+      "time_cue": "26 July 1941",
+      "confidence": 1.0,
+      "raw_quote": "The Croatian kuna was introduced in the Independent State of Croatia (NDH) on 26 July 1941.",
+      "rationale": "The document explicitly states the introduction date.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "26 July 1941",
+      "normalized_answer": "26 july 1941",
+      "claim": "The Independent State of Croatia officially adopted the kuna as currency for the first time on 26 July 1941.",
+      "temporal_status": "current",
+      "time_cue": "26 July 1941",
+      "confidence": 1.0,
+      "raw_quote": "the Independent State of Croatia officially adopted the Kuna as the currency for the first time on 26 July 1941",
+      "rationale": "The document directly states the adoption date of the Croatian kuna.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "26 July 1941",
+      "normalized_answer": "26 july 1941",
+      "claim": "The Croatian money was introduced on 26 July 1941.",
+      "temporal_status": "current",
+      "time_cue": "26 July 1941",
+      "confidence": 1.0,
+      "raw_quote": "introduced in the Independent State of Croatia on 26 July 1941",
+      "rationale": "The document explicitly states the introduction date.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "May 30, 1994"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "26 July 1941"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "26 July 1941"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "26 July 1941"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'May 30, 1994', while D2 supports '26 July 1941'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'May 30, 1994', while D3 supports '26 July 1941'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'May 30, 1994', while D4 supports '26 July 1941'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "26 July 1941",
+      "normalized_answer": "26 july 1941",
+      "doc_ids": [
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G2",
+        "G3",
+        "G4"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 5.44
+    },
+    {
+      "answer": "May 30, 1994",
+      "normalized_answer": "may 30 1994",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 3,
+      "score": 1.7275
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "26 July 1941",
+    "supporting_doc_ids": [
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "26 July 1941": 5.44,
+      "May 30, 1994": 1.7275
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "26 July 1941",
+    "supporting_doc_ids": [
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "Candidate answer has stronger explicit support (three high-confidence primary sources) than the conflicting alternative."
+  },
+  "final_answer": "26 July 1941",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> 26 July 1941.",
+    "Verifier decision: supported -> 26 July 1941."
+  ]
+}

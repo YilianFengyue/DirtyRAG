@@ -1,0 +1,182 @@
+{
+  "qid": "ramdocs_000048",
+  "question": "What sport is the 2013 China Open associated with?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "snooker",
+      "normalized_answer": "snooker",
+      "claim": "The 2013 China Open was a professional snooker tournament.",
+      "temporal_status": "current",
+      "time_cue": "2013",
+      "confidence": 1.0,
+      "raw_quote": "2013 Bank of Beijing China Open was a professional ranking snooker tournament",
+      "rationale": "The document explicitly states it was a snooker tournament.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "golf:tournament"
+      ]
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "golf",
+      "normalized_answer": "golf",
+      "claim": "The 2013 Haikou World Open is a professional ranking badminton tournament.",
+      "temporal_status": "outdated",
+      "time_cue": "2013",
+      "confidence": 0.0,
+      "raw_quote": "Badminton tournament",
+      "rationale": "The document describes the Haikou World Open, not the China Open.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "golf:tournament"
+      ]
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "basketball",
+      "normalized_answer": "basketball",
+      "claim": "The document contains no information about the 2013 China Open.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document discusses Ding Junhui's performances in snooker and basketball but does not mention the 2013 China Open.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "golf:championship",
+        "basketball:basketball"
+      ]
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "snooker"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "golf"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "basketball"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [
+    {
+      "answer": "snooker",
+      "normalized_answer": "snooker",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 0,
+      "score": 2.1
+    },
+    {
+      "answer": "basketball",
+      "normalized_answer": "basketball",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.6
+    },
+    {
+      "answer": "golf",
+      "normalized_answer": "golf",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.55
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "snooker",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "The top answer cluster has the highest evidence score.",
+    "scores": {
+      "snooker": 2.1,
+      "basketball": 1.6,
+      "golf": 1.55
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "snooker",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "reason": "D1 provides high-relevance, high-confidence support for snooker with no conflicts. The snooker cluster has the highest evidence score."
+  },
+  "final_answer": "snooker",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> snooker.",
+    "Verifier decision: supported -> snooker."
+  ]
+}

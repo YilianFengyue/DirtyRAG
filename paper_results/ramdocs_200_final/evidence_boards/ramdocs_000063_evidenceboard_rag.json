@@ -1,0 +1,137 @@
+{
+  "qid": "ramdocs_000063",
+  "question": "What sport is the Victoria Cup associated with?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "ice hockey",
+      "normalized_answer": "ice hockey",
+      "claim": "The Victoria Cup is associated with ice hockey.",
+      "temporal_status": "unknown",
+      "time_cue": "2010",
+      "confidence": 1.0,
+      "raw_quote": "third edition of the Victoria Cup would feature an NHL team against a team from one of the top four European ice hockey leagues",
+      "rationale": "The document directly states the Victoria Cup involves ice hockey leagues.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "soccer:fifa"
+      ]
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document is about cricket and does not mention the Victoria Cup.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Wikimedia Commons has media related to Cricket.",
+      "rationale": "The document discusses cricket only, providing no information on the Victoria Cup.",
+      "entity_explicitness": "unknown",
+      "answer_role": "unsupported",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain any information about the Victoria Cup.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document is about NHL draft and NHL Network, no mention of Victoria Cup.",
+      "entity_explicitness": "unknown",
+      "answer_role": "unsupported",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "ice hockey"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [
+    {
+      "answer": "ice hockey",
+      "normalized_answer": "ice hockey",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 0,
+      "score": 2.1
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "ice hockey",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "ice hockey": 2.1
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "ice hockey",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "reason": "Primary evidence D1 directly states the Victoria Cup is associated with ice hockey with high confidence, and no conflicting evidence exists."
+  },
+  "final_answer": "ice hockey",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> ice hockey.",
+    "Verifier decision: supported -> ice hockey."
+  ]
+}

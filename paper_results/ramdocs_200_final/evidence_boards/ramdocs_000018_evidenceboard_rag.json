@@ -1,0 +1,110 @@
+{
+  "qid": "ramdocs_000018",
+  "question": "What is the medium of \"The Man Who Never Was\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "film",
+      "normalized_answer": "film",
+      "claim": "The Man Who Never Was is a film.",
+      "temporal_status": "current",
+      "time_cue": "1956",
+      "confidence": 1.0,
+      "raw_quote": "The Man Who Never Was is a 1956 UK Second World War film",
+      "rationale": "The document explicitly states it is a film.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain information about 'The Man Who Never Was'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document is an episode list for a TV series, but 'The Man Who Never Was' is not mentioned.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "film"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [
+    {
+      "answer": "film",
+      "normalized_answer": "film",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 0,
+      "score": 2.8
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "film",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "film": 2.8
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "film",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2"
+    ],
+    "reason": "Strong explicit evidence from D1 confirms medium is film; D2 is low-confidence and irrelevant."
+  },
+  "final_answer": "film",
+  "decision_trace": [
+    "Extracted 2 evidence cards.",
+    "Built 2 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> film.",
+    "Verifier decision: supported -> film."
+  ]
+}

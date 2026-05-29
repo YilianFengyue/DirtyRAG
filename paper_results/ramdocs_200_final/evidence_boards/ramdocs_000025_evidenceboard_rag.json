@@ -1,0 +1,171 @@
+{
+  "qid": "ramdocs_000025",
+  "question": "What is the medium of \"Loitering with Intent\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "novel",
+      "normalized_answer": "novel",
+      "claim": "Loitering with Intent is a novel.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Loitering with Intent is a novel by Scottish author Muriel Spark.",
+      "rationale": "The document explicitly identifies the medium as a novel.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "novel",
+      "normalized_answer": "novel",
+      "claim": "The document refers to 'Loitering with Intent' as a novel.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "Towards the end of the novel, a simple letter appears",
+      "rationale": "The document explicitly calls it a novel, identifying the medium.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document discusses characters and plot elements of 'Loitering with Intent' but never specifies its medium.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.1,
+      "raw_quote": "Characters in Loitering with Intent appear to tackle reality with what they learn from the film Warrender Chase.",
+      "rationale": "The document mentions only character interactions and references to a film, providing no explicit statement about the medium.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document discusses a British film and mentions author Muriel Spark, but does not refer to 'Loitering with Intent'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "A very British film in many respects! ... I also find that films, that incorporate fictional books within them, to be generally neat.",
+      "rationale": "The document mentions films and a writer named Spark, but does not contain information about the medium of 'Loitering with Intent'.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "novel"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "novel"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "novel",
+      "normalized_answer": "novel",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.975,
+      "conflict_count": 0,
+      "score": 3.9437
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "novel",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "novel": 3.9437
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "novel",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "reason": "Two high-confidence sources explicitly state the medium is a novel; no conflicting evidence."
+  },
+  "final_answer": "novel",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> novel.",
+    "Verifier decision: supported -> novel."
+  ]
+}

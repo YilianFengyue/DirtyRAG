@@ -1,0 +1,110 @@
+{
+  "qid": "ramdocs_000066",
+  "question": "What is the population of Gniewkowo?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "7,254 people",
+      "normalized_answer": "7254 people",
+      "claim": "The population of Gniewkowo is 7,254.",
+      "temporal_status": "outdated",
+      "time_cue": "as of 2006",
+      "confidence": 0.9,
+      "raw_quote": "the population of Gniewkowo amounts to 7,254",
+      "rationale": "The document directly states the population figure for Gniewkowo.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain any information about the population of Gniewkowo.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document content is unreadable and does not mention Gniewkowo's population.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "7,254 people"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [
+    {
+      "answer": "7,254 people",
+      "normalized_answer": "7254 people",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 0,
+      "score": 2.725
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "7,254 people",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "7,254 people": 2.725
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "7,254 people",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2"
+    ],
+    "reason": "Candidate answer is directly supported by primary explicit evidence with high confidence and no conflicts."
+  },
+  "final_answer": "7,254 people",
+  "decision_trace": [
+    "Extracted 2 evidence cards.",
+    "Built 2 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> 7,254 people.",
+    "Verifier decision: supported -> 7,254 people."
+  ]
+}

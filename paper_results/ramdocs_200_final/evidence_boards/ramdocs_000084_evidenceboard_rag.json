@@ -1,0 +1,112 @@
+{
+  "qid": "ramdocs_000084",
+  "question": "What is the population of Centerville, Illinois?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "low",
+      "answer_candidate": "1837 people",
+      "normalized_answer": "1837 people",
+      "claim": "Centerville merged with Middleton in 1837 to form Cuba, Illinois.",
+      "temporal_status": "outdated",
+      "time_cue": "1837",
+      "confidence": 0.0,
+      "raw_quote": "Cuba was founded in 1837 when the two rival towns of Centerville and Middleton merged.",
+      "rationale": "Document does not provide Centerville's population; only mentions it in historical context.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "1837 people",
+      "normalized_answer": "1837 people",
+      "claim": "Centerville was one of the two rival towns that merged to form Cuba, Illinois in 1837.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.1,
+      "raw_quote": "Cuba was founded in 1837 when the two rival towns of Centerville and Middleton merged.",
+      "rationale": "The document mentions Centerville only in the context of merging to form Cuba; no population for Centerville is given.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "1837 people"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "duplicate",
+      "reason": "The two documents support the same answer with highly similar text.",
+      "confidence": 0.95
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "1837 people",
+      "normalized_answer": "1837 people",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.05,
+      "conflict_count": 0,
+      "score": 2.0125
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "1837 people",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "1837 people": 2.0125
+    }
+  },
+  "verifier_decision": {
+    "verdict": "unknown",
+    "final_answer": "None",
+    "supporting_doc_ids": [],
+    "rejected_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "reason": "The evidence conflates the year 1837 with population and provides no actual population count for Centerville, Illinois."
+  },
+  "final_answer": "unknown",
+  "decision_trace": [
+    "Extracted 2 evidence cards.",
+    "Built 1 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> 1837 people.",
+    "Verifier decision: unknown -> unknown."
+  ]
+}

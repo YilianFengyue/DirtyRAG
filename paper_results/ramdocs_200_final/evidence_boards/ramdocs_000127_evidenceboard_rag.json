@@ -1,0 +1,335 @@
+{
+  "qid": "ramdocs_000127",
+  "question": "Who is the artist of the \"Classic Christmas\" album?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Bradley Joseph",
+      "normalized_answer": "bradley joseph",
+      "claim": "Bradley Joseph is the artist of the album Classic Christmas.",
+      "temporal_status": "current",
+      "time_cue": "2008",
+      "confidence": 1.0,
+      "raw_quote": "Classic Christmas is the 15th studio album by Bradley Joseph",
+      "rationale": "The document explicitly states the album is by Bradley Joseph.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Bradley Joseph",
+      "normalized_answer": "bradley joseph",
+      "claim": "The artist of the 'Classic Christmas' album is Bradley Joseph.",
+      "temporal_status": "current",
+      "time_cue": "22 October 2008",
+      "confidence": 1.0,
+      "raw_quote": "performer Bradley Joseph",
+      "rationale": "The document directly states Bradley Joseph as the performer of the album.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Joe McElderry",
+      "normalized_answer": "joe mcelderry",
+      "claim": "Joe McElderry is the artist of the Classic Christmas album.",
+      "temporal_status": "current",
+      "time_cue": "25 November 2011",
+      "confidence": 1.0,
+      "raw_quote": "Classic Christmas is the third studio album and first Christmas album by the British singer Joe McElderry.",
+      "rationale": "The document explicitly states the album is by Joe McElderry.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "Joe McElderry",
+      "normalized_answer": "joe mcelderry",
+      "claim": "Joe McElderry is the artist of the 'Classic Christmas' album.",
+      "temporal_status": "current",
+      "time_cue": "4 December 2011",
+      "confidence": 0.99,
+      "raw_quote": "Joe McElderry – Classic Christmas",
+      "rationale": "The document explicitly states 'Joe McElderry – Classic Christmas' indicating the artist.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "Joe McElderry",
+      "normalized_answer": "joe mcelderry",
+      "claim": "The album 'Classic Christmas' is by Joe McElderry.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Joe McElderry albums",
+      "rationale": "The document categories explicitly list the album under 'Joe McElderry albums'.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not provide the artist of the 'Classic Christmas' album.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Classic Christmas ( Q5128116 )",
+      "rationale": "The document only contains the title and Wikidata ID, with no artist information.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention the 'Classic Christmas' album or its artist.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Christmas ( Q5128116 ) Add topic",
+      "rationale": "Document lacks any information about the album.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Bradley Joseph"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Bradley Joseph"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Joe McElderry"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Joe McElderry"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "Joe McElderry"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'Bradley Joseph', while D3 supports 'Joe McElderry'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'Bradley Joseph', while D4 supports 'Joe McElderry'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'Bradley Joseph', while D5 supports 'Joe McElderry'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'Bradley Joseph', while D3 supports 'Joe McElderry'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'Bradley Joseph', while D4 supports 'Joe McElderry'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports 'Bradley Joseph', while D5 supports 'Joe McElderry'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Joe McElderry",
+      "normalized_answer": "joe mcelderry",
+      "doc_ids": [
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G3",
+        "G4",
+        "G5"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9967,
+      "conflict_count": 6,
+      "score": 5.0792
+    },
+    {
+      "answer": "Bradley Joseph",
+      "normalized_answer": "bradley joseph",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 6,
+      "score": 3.23
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Joe McElderry",
+    "supporting_doc_ids": [
+      "D3",
+      "D4",
+      "D5"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Joe McElderry": 5.0792,
+      "Bradley Joseph": 3.23
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Joe McElderry",
+    "supporting_doc_ids": [
+      "D3",
+      "D4",
+      "D5"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "reason": "Candidate has stronger explicit support with 3 primary documents vs. 2 for competing cluster."
+  },
+  "final_answer": "Joe McElderry",
+  "decision_trace": [
+    "Extracted 7 evidence cards.",
+    "Built 7 duplicate groups.",
+    "Built 10 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> Joe McElderry.",
+    "Verifier decision: supported -> Joe McElderry."
+  ]
+}

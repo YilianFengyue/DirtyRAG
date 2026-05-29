@@ -1,0 +1,296 @@
+{
+  "qid": "ramdocs_000114",
+  "question": "What sport is Doug Harvey associated with?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "ice hockey",
+      "normalized_answer": "ice hockey",
+      "claim": "Doug Harvey was a professional ice hockey player.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Doug Harvey (ice hockey) Douglas Norman Harvey (December 19, 1924 – December 26, 1989) was a Canadian professional hockey player",
+      "rationale": "The document explicitly identifies Doug Harvey as a professional hockey player, specifically in ice hockey.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "baseball",
+      "normalized_answer": "baseball",
+      "claim": "Doug Harvey is primarily associated with baseball as a Hall of Fame umpire.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "the Baseball Hall of Fame",
+      "rationale": "The document directly refers to Harvey in the context of the Baseball Hall of Fame and umpiring, establishing baseball as his primary sport.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:nfl",
+        "basketball:basketball",
+        "baseball:baseball"
+      ]
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "baseball",
+      "normalized_answer": "baseball",
+      "claim": "Doug Harvey was a Major League Baseball umpire in the 1970s and 1980s.",
+      "temporal_status": "current",
+      "time_cue": "1970s or 1980s",
+      "confidence": 0.95,
+      "raw_quote": "Tune in to a high-profile Major League Baseball game in the 1970s or 1980s , and No . 8 – Doug Harvey – was likely to be behind the plate .",
+      "rationale": "The document explicitly associates Doug Harvey with Major League Baseball, identifying his role as an umpire.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "baseball:baseball"
+      ]
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "baseball",
+      "normalized_answer": "baseball",
+      "claim": "Doug Harvey was a plate umpire in baseball and enshrined in the baseball Hall of Fame.",
+      "temporal_status": "current",
+      "time_cue": "2018",
+      "confidence": 1.0,
+      "raw_quote": "plate umpire Doug Harvey",
+      "rationale": "The document states he was a plate umpire and in the baseball Hall of Fame, indicating his primary sport is baseball.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "baseball:baseball",
+        "baseball:mlb"
+      ]
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "baseball",
+      "normalized_answer": "baseball",
+      "claim": "Doug Harvey was a revered baseball umpire.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "Doug Harvey set the bar for future umpires.",
+      "rationale": "The document identifies Doug Harvey as an umpire, which is a role in baseball.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "ice hockey"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "baseball"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "baseball"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "baseball"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "baseball"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'ice hockey', while D2 supports 'baseball'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'ice hockey', while D3 supports 'baseball'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'ice hockey', while D4 supports 'baseball'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'ice hockey', while D5 supports 'baseball'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "baseball",
+      "normalized_answer": "baseball",
+      "doc_ids": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G2",
+        "G3",
+        "G4",
+        "G5"
+      ],
+      "unique_support_count": 4,
+      "high_relevance_count": 4,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 4,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 4,
+      "score": 7.1575
+    },
+    {
+      "answer": "ice hockey",
+      "normalized_answer": "ice hockey",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 4,
+      "score": 1.62
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "baseball",
+    "supporting_doc_ids": [
+      "D2",
+      "D3",
+      "D4",
+      "D5"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "baseball": 7.1575,
+      "ice hockey": 1.62
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "baseball",
+    "supporting_doc_ids": [
+      "D2",
+      "D3",
+      "D4",
+      "D5"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "Four high-confidence evidence cards explicitly support baseball, outweighing a single hockey card."
+  },
+  "final_answer": "baseball",
+  "decision_trace": [
+    "Extracted 5 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 10 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> baseball.",
+    "Verifier decision: supported -> baseball."
+  ]
+}

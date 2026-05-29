@@ -1,0 +1,186 @@
+{
+  "qid": "ramdocs_000069",
+  "question": "When did the Freaky Friday musical begin its performances?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "October 4, 2016",
+      "normalized_answer": "october 4 2016",
+      "claim": "The Freaky Friday musical began its performances on October 4, 2016 at the Signature Theatre in Arlington, Virginia.",
+      "temporal_status": "current",
+      "time_cue": "October 4, 2016",
+      "confidence": 1.0,
+      "raw_quote": "musical began performances at the Signature Theatre, Arlington, Virginia on October 4, 2016.",
+      "rationale": "The document explicitly states the first performance date as October 4, 2016.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "January 31, 2017",
+      "normalized_answer": "january 31 2017",
+      "claim": "The Freaky Friday musical began performances on January 31, 2017 at the La Jolla Playhouse.",
+      "temporal_status": "current",
+      "time_cue": "January 31, 2017",
+      "confidence": 0.95,
+      "raw_quote": "The musical began performances at the La Jolla Playhouse, San Diego, on January 31, 2017",
+      "rationale": "The document provides two start dates; the earliest is considered the beginning of the musical's performances.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document discusses performances in the Freaky Friday musical but does not provide a start date.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.1,
+      "raw_quote": "Portraying Ellie, Lauren Hackett held up the other end of the show–a perfect balance to Smaha.",
+      "rationale": "The excerpt mentions the musical but lacks any temporal information about when performances began.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "Brynn Ayoob is excited to be the choreographer for Freaky Friday.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "She assisted the teen show last summer and is excited to be the choreographer for Freaky Friday !",
+      "rationale": "The document mentions Freaky Friday but provides no information about when performances began.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "October 4, 2016"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "January 31, 2017"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'October 4, 2016', while D2 supports 'January 31, 2017'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "October 4, 2016",
+      "normalized_answer": "october 4 2016",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 1,
+      "score": 1.98
+    },
+    {
+      "answer": "January 31, 2017",
+      "normalized_answer": "january 31 2017",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 1,
+      "score": 1.9675
+    }
+  ],
+  "candidate_decision": {
+    "mode": "conflict",
+    "answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support.",
+    "scores": {
+      "October 4, 2016": 1.98,
+      "January 31, 2017": 1.9675
+    }
+  },
+  "verifier_decision": {
+    "verdict": "conflict",
+    "final_answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support."
+  },
+  "final_answer": "conflict",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: conflict -> conflict.",
+    "Verifier decision: conflict -> conflict."
+  ]
+}

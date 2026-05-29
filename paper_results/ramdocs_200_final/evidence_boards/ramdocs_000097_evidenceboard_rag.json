@@ -1,0 +1,270 @@
+{
+  "qid": "ramdocs_000097",
+  "question": "What sport is Tim Martin associated with?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "American football",
+      "normalized_answer": "american football",
+      "claim": "Tim Martin is associated with American football.",
+      "temporal_status": "outdated",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Tim Martin (American football) ... is a former American football lineman",
+      "rationale": "The document identifies him as a former American football lineman, indicating American football as his primary sport.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:american football",
+        "American football:football"
+      ]
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "cricket",
+      "normalized_answer": "cricket",
+      "claim": "Tim Martin is associated with cricket.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Tim Martin, a renowned figure in cricket, is known for his strategic insights and commentary on the sport.",
+      "rationale": "Document explicitly states Tim Martin is a renowned figure in cricket.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:american football",
+        "American football:football",
+        "American football:touchdown"
+      ]
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention Tim Martin; it only mentions Jim Martin and associates him with ice hockey.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.1,
+      "raw_quote": "Jim Martin (Ice Hockey)",
+      "rationale": "The document is about Jim Martin, not Tim Martin.",
+      "entity_explicitness": "unknown",
+      "answer_role": "unsupported",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "football",
+      "normalized_answer": "football",
+      "claim": "Tim Martin is associated with football.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "Temple Owls football players",
+      "rationale": "Categories include football teams (Temple Owls football, Seahawks, Commanders), indicating the primary sport is football.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:football"
+      ]
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "American football",
+      "normalized_answer": "american football",
+      "claim": "The document does not mention Tim Martin or any sport associated with him.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document only mentions Grand Valley State Lakers football and coaches such as Chuck Martin, but no Tim Martin.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:football"
+      ]
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "American football"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "cricket"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "football"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "American football"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'American football', while D2 supports 'cricket'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'American football', while D4 supports 'football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'cricket', while D4 supports 'football'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "American football",
+      "normalized_answer": "american football",
+      "doc_ids": [
+        "D1",
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G5"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.5,
+      "conflict_count": 2,
+      "score": 3.285
+    },
+    {
+      "answer": "cricket",
+      "normalized_answer": "cricket",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 2,
+      "score": 1.86
+    },
+    {
+      "answer": "football",
+      "normalized_answer": "football",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 2,
+      "score": 1.835
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "American football",
+    "supporting_doc_ids": [
+      "D1",
+      "D5"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "American football": 3.285,
+      "cricket": 1.86,
+      "football": 1.835
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "American football",
+    "supporting_doc_ids": [
+      "D1",
+      "D5"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D4"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "American football",
+  "decision_trace": [
+    "Extracted 5 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 4 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> American football.",
+    "Verifier decision: supported -> American football."
+  ]
+}

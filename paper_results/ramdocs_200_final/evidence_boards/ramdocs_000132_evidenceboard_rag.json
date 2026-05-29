@@ -1,0 +1,353 @@
+{
+  "qid": "ramdocs_000132",
+  "question": "What is the medium of \"Green Pastures\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "play",
+      "normalized_answer": "play",
+      "claim": "The Green Pastures is a play.",
+      "temporal_status": "current",
+      "time_cue": "1930",
+      "confidence": 1.0,
+      "raw_quote": "The Green Pastures is a play written in 1930 by Marc Connelly",
+      "rationale": "The document explicitly states that The Green Pastures is a play.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document contains no information about \"Green Pastures\" or its medium.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document lists religious article titles and does not mention \"Green Pastures\".",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "novel",
+      "normalized_answer": "novel",
+      "claim": "The Green Pastures is a novel.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "The Green Pastures is not a novel utterly different from everything that Connelly had done before",
+      "rationale": "The document explicitly refers to 'The Green Pastures' as a novel.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "novel",
+      "normalized_answer": "novel",
+      "claim": "'Green Pastures' is a novel.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "The 'Green Pastures' is a novel that explores deep spiritual themes and narratives.",
+      "rationale": "The document explicitly states the medium.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "film",
+      "normalized_answer": "film",
+      "claim": "The medium of 'Green Pastures' is a film.",
+      "temporal_status": "current",
+      "time_cue": "1936",
+      "confidence": 1.0,
+      "raw_quote": "The Green Pastures is a 1936 American film",
+      "rationale": "The document explicitly states it is a film.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document contains no mention of 'Green Pastures'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Document is a snippet about a book and EBSCO, with no reference to 'Green Pastures'.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "high",
+      "answer_candidate": "film",
+      "normalized_answer": "film",
+      "claim": "The Green Pastures is a film.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "The Green Pastures ( film )",
+      "rationale": "Document refers to it as a film with links to film databases and a Commons media category for the film.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "play"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "novel"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "novel"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "film"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "film"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'play', while D3 supports 'novel'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'play', while D4 supports 'novel'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'play', while D5 supports 'film'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D1 supports 'play', while D7 supports 'film'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports 'novel', while D5 supports 'film'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D3 supports 'novel', while D7 supports 'film'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D4 supports 'novel', while D5 supports 'film'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D4 supports 'novel', while D7 supports 'film'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D7",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "novel",
+      "normalized_answer": "novel",
+      "doc_ids": [
+        "D3",
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G3",
+        "G4"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 1,
+      "missing_entity_count": 1,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 6,
+      "score": 3.5675
+    },
+    {
+      "answer": "film",
+      "normalized_answer": "film",
+      "doc_ids": [
+        "D5",
+        "D7"
+      ],
+      "duplicate_group_ids": [
+        "G5",
+        "G7"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 2,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 6,
+      "score": 2.53
+    },
+    {
+      "answer": "play",
+      "normalized_answer": "play",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 4,
+      "score": 1.27
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "novel",
+    "supporting_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D5",
+      "D7"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "novel": 3.5675,
+      "film": 2.53,
+      "play": 1.27
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "novel",
+    "supporting_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D5",
+      "D7"
+    ],
+    "reason": "Candidate answer 'novel' has explicit support (D4) and the highest cluster score, outweighing conflicting clusters."
+  },
+  "final_answer": "novel",
+  "decision_trace": [
+    "Extracted 7 evidence cards.",
+    "Built 7 duplicate groups.",
+    "Built 10 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> novel.",
+    "Verifier decision: supported -> novel."
+  ]
+}

@@ -1,0 +1,361 @@
+{
+  "qid": "ramdocs_000140",
+  "question": "What is the population of Port Vincent?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "741",
+      "normalized_answer": "741",
+      "claim": "The population of Port Vincent was 741 at the 2010 census.",
+      "temporal_status": "outdated",
+      "time_cue": "2010 census",
+      "confidence": 0.95,
+      "raw_quote": "The population was 741 at the 2010 census.",
+      "rationale": "The document explicitly states the 2010 census population as 741, making it the most recent figure provided.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "58050 people",
+      "normalized_answer": "58050 people",
+      "claim": "The document does not contain population information for Port Vincent.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Port Vincent administrative numbers Port",
+      "rationale": "The document lists contact details but no population data.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "741",
+      "normalized_answer": "741",
+      "claim": "The population of Port Vincent at the 2010 census was 741.",
+      "temporal_status": "outdated",
+      "time_cue": "2010 census",
+      "confidence": 0.95,
+      "raw_quote": "Its population at the 2010 census was 741",
+      "rationale": "Direct population figure from 2010 census.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "1,234 people",
+      "normalized_answer": "1234 people",
+      "claim": "The population of Port Vincent is 1,234 as of the 2020 census.",
+      "temporal_status": "current",
+      "time_cue": "2020",
+      "confidence": 1.0,
+      "raw_quote": "Population ( 2020 ) • Total 1,234",
+      "rationale": "The document explicitly lists the 2020 population total as 1,234.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "472",
+      "normalized_answer": "472",
+      "claim": "Port Vincent had a population of 472.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Port Vincent had a population of 472.",
+      "rationale": "The document directly states the population.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain any information about the population of Port Vincent.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Document content is about online slot game providers and does not mention Port Vincent or its population.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "low",
+      "answer_candidate": "2000 people",
+      "normalized_answer": "2000 people",
+      "claim": "The document does not contain information about the population of Port Vincent.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "No relevant quote found.",
+      "rationale": "The document fragment contains only demographic headers and no mention of Port Vincent or population figures.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "741"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "58050 people"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "741"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "1,234 people"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "472"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "2000 people"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports '741', while D4 supports '1,234 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports '741', while D5 supports '472'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports '741', while D4 supports '1,234 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports '741', while D5 supports '472'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D4 supports '1,234 people', while D5 supports '472'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "741",
+      "normalized_answer": "741",
+      "doc_ids": [
+        "D1",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G3"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 2,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 4,
+      "score": 4.7575
+    },
+    {
+      "answer": "1,234 people",
+      "normalized_answer": "1234 people",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 2.44
+    },
+    {
+      "answer": "472",
+      "normalized_answer": "472",
+      "doc_ids": [
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G5"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 2.44
+    },
+    {
+      "answer": "58050 people",
+      "normalized_answer": "58050 people",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 2.3
+    },
+    {
+      "answer": "2000 people",
+      "normalized_answer": "2000 people",
+      "doc_ids": [
+        "D7"
+      ],
+      "duplicate_group_ids": [
+        "G7"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.25
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "741",
+    "supporting_doc_ids": [
+      "D1",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D5"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "741": 4.7575,
+      "1,234 people": 2.44,
+      "472": 2.44,
+      "58050 people": 2.3,
+      "2000 people": 1.25
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "741",
+    "supporting_doc_ids": [
+      "D1",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D5"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "741",
+  "decision_trace": [
+    "Extracted 7 evidence cards.",
+    "Built 7 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 5 answer clusters.",
+    "Candidate decision: answer -> 741.",
+    "Verifier decision: supported -> 741."
+  ]
+}

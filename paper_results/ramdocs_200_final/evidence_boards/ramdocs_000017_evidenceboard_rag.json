@@ -1,0 +1,130 @@
+{
+  "qid": "ramdocs_000017",
+  "question": "What is the estimated population of Handa?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "117,088 people",
+      "normalized_answer": "117088 people",
+      "claim": "The estimated population of Handa as of May 2015 is 117,088.",
+      "temporal_status": "outdated",
+      "time_cue": "May 2015",
+      "confidence": 1.0,
+      "raw_quote": "As of May 2015, the city had an estimated population of 117,088",
+      "rationale": "The document directly states the estimated population with a clear time cue.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "2,446 people",
+      "normalized_answer": "2446 people",
+      "claim": "Document D2 does not contain population data for Handa.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "density of 2,446 persons per km 2 . Its total area was 18.03 km 2 . Municipalities [ edit ] The district consists of one town : Tōgō",
+      "rationale": "The document only describes Aichi District and Tōgō town, with no mention of Handa's population.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "117,088 people"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "2,446 people"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [
+    {
+      "answer": "117,088 people",
+      "normalized_answer": "117088 people",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 0,
+      "score": 2.75
+    },
+    {
+      "answer": "2,446 people",
+      "normalized_answer": "2446 people",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.25
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "117,088 people",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "The top answer has stronger explicit entity support than competing clusters.",
+    "scores": {
+      "117,088 people": 2.75,
+      "2,446 people": 1.25
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "117,088 people",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2"
+    ],
+    "reason": "D1 provides explicit, high-confidence support for 117,088 people; D2 is irrelevant and lacks population data."
+  },
+  "final_answer": "117,088 people",
+  "decision_trace": [
+    "Extracted 2 evidence cards.",
+    "Built 2 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> 117,088 people.",
+    "Verifier decision: supported -> 117,088 people."
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "qid": "ramdocs_000032",
+  "question": "Where is Interstate 235 located?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Des Moines metropolitan area in Iowa",
+      "normalized_answer": "des moines metropolitan area in iowa",
+      "claim": "Interstate 235 is located in the Des Moines metropolitan area of Iowa.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "runs just north of downtown Des Moines through the heart of the Des Moines metropolitan area",
+      "rationale": "The document explicitly describes the route of I-235 in the Des Moines area.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document discusses Interstate 35 but does not mention Interstate 235.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Document does not contain information about Interstate 235.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention Interstate 235; it mentions Interstate 35 intersecting with Lincoln Highway in Story County, Iowa.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Story County is the home of Iowa DOT and the location where the historic Lincoln Highway and I-35 intersect.",
+      "rationale": "The document discusses I-35, not I-235, so the location of I-235 cannot be determined.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document mentions I-235 only in the context of a sign change, not its location.",
+      "temporal_status": "unknown",
+      "time_cue": "by 2005",
+      "confidence": 0.1,
+      "raw_quote": "A slight change was also made for the I-235 end sign by 2005.",
+      "rationale": "The document provides no information about where Interstate 235 is located.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention Interstate 235.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Interstate 235 is not mentioned in the document.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Des Moines metropolitan area in Iowa"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [
+    {
+      "answer": "Des Moines metropolitan area in Iowa",
+      "normalized_answer": "des moines metropolitan area in iowa",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 0,
+      "score": 2.1
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Des Moines metropolitan area in Iowa",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "Des Moines metropolitan area in Iowa": 2.1
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Des Moines metropolitan area in Iowa",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D3",
+      "D4",
+      "D5"
+    ],
+    "reason": "Strong explicit support from D1 with high confidence and no conflict."
+  },
+  "final_answer": "Des Moines metropolitan area in Iowa",
+  "decision_trace": [
+    "Extracted 5 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> Des Moines metropolitan area in Iowa.",
+    "Verifier decision: supported -> Des Moines metropolitan area in Iowa."
+  ]
+}

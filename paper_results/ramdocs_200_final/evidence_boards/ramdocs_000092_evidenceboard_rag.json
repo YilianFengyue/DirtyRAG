@@ -1,0 +1,160 @@
+{
+  "qid": "ramdocs_000092",
+  "question": "What political party was Daniel Hogan affiliated with?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Republican",
+      "normalized_answer": "republican",
+      "claim": "Daniel Hogan was a Republican.",
+      "temporal_status": "outdated",
+      "time_cue": "1882",
+      "confidence": 0.95,
+      "raw_quote": "elected as a Republican to the Illinois Senate",
+      "rationale": "The document explicitly states his party affiliation when elected in 1882.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain information about Daniel Hogan's political party affiliation.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "I have made the decision to run for the United States Senate",
+      "rationale": "The document text focuses on a speaker's Senate run and does not mention Daniel Hogan.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention Daniel Hogan or his political affiliation.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "District 7 Eric Burlison ( R ) District 8 Jason Smith ( R ) Republican Party ( 8 ) Democratic Party ( 2 )",
+      "rationale": "The document lists congressional representatives and party counts but does not include Daniel Hogan.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention Daniel Hogan.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Daniel Hogan is not listed in the document.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Republican"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [
+    {
+      "answer": "Republican",
+      "normalized_answer": "republican",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 0,
+      "score": 2.0375
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Republican",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "Republican": 2.0375
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Republican",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "reason": "Candidate answer is directly supported by D1, which has high relevance and confidence, with no conflicting evidence."
+  },
+  "final_answer": "Republican",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> Republican.",
+    "Verifier decision: supported -> Republican."
+  ]
+}

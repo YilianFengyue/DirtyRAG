@@ -1,0 +1,84 @@
+{
+  "qid": "ramdocs_000035",
+  "question": "What is the profession of Ingrid Visser?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "guide",
+      "normalized_answer": "guide",
+      "claim": "Visser works as a guide on eco-tourism adventures.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "Visser works as a guide on a variety of eco-tourism adventures",
+      "rationale": "The document explicitly states her occupation as a guide.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "guide"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [
+    {
+      "answer": "guide",
+      "normalized_answer": "guide",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 0,
+      "score": 2.0875
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "guide",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "guide": 2.0875
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "guide",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Candidate answer is directly supported by the only evidence cluster."
+  },
+  "final_answer": "guide",
+  "decision_trace": [
+    "Extracted 1 evidence cards.",
+    "Built 1 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> guide.",
+    "Verifier decision: supported -> guide."
+  ]
+}

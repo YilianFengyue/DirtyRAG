@@ -62,6 +62,14 @@ def plot_case_evidence_graph(
 
     if G.number_of_nodes() > 0:
         pos = nx.spring_layout(G, seed=7, k=1.6 / max(1, G.number_of_nodes() ** 0.5))
+        # normalize layout into [0,1]^2 then leave headroom for labels/legend
+        xs = [p[0] for p in pos.values()]
+        ys = [p[1] for p in pos.values()]
+        x0, x1 = min(xs), max(xs)
+        y0, y1 = min(ys), max(ys)
+        xr = (x1 - x0) or 1.0
+        yr = (y1 - y0) or 1.0
+        pos = {n: ((p[0] - x0) / xr, (p[1] - y0) / yr) for n, p in pos.items()}
     else:
         pos = {}
 
@@ -97,10 +105,13 @@ def plot_case_evidence_graph(
             bbox=dict(boxstyle="round,pad=0.18", facecolor="white", edgecolor="#E5E7EB", linewidth=0.6),
         )
 
+    # leave margins so node side-labels never clip
+    ax_graph.set_xlim(-0.18, 1.18)
+    ax_graph.set_ylim(-0.30, 1.18)
     ax_graph.set_title(f"Evidence Graph  ·  {qid}", loc="left", fontweight="bold")
     ax_graph.set_axis_off()
 
-    # graph legend
+    # graph legend — anchored below the axes so it never overlaps nodes
     legend_handles = [
         mpatches.Patch(facecolor=SOURCE_TYPE_COLOR["correct"], edgecolor="#1F2937", label="correct"),
         mpatches.Patch(facecolor=SOURCE_TYPE_COLOR["misinfo"], edgecolor="#1F2937", label="misinfo"),
@@ -109,7 +120,15 @@ def plot_case_evidence_graph(
         plt.Line2D([0], [0], color=EDGE_STYLE["support"]["color"], lw=1.2, ls="--", label="support"),
         plt.Line2D([0], [0], color=EDGE_STYLE["duplicate"]["color"], lw=1.4, ls=":", label="duplicate"),
     ]
-    ax_graph.legend(handles=legend_handles, loc="lower left", ncol=3, fontsize=8.5)
+    ax_graph.legend(
+        handles=legend_handles,
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.01),
+        ncol=3,
+        fontsize=8.5,
+        columnspacing=1.4,
+        handletextpad=0.5,
+    )
 
     # answers table
     ax_table.set_title("Method answers", loc="left", fontweight="bold")

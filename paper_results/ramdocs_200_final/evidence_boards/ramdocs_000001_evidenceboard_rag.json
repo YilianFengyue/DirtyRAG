@@ -1,0 +1,200 @@
+{
+  "qid": "ramdocs_000001",
+  "question": "What is the population of Broken Bow?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "3,559 people",
+      "normalized_answer": "3559 people",
+      "claim": "The population of Broken Bow is 3,559 as of the 2010 census.",
+      "temporal_status": "outdated",
+      "time_cue": "2010",
+      "confidence": 0.95,
+      "raw_quote": "As of the census of 2010, there were 3,559 people",
+      "rationale": "The document directly states the population from the 2010 census.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "3,506 people",
+      "normalized_answer": "3506 people",
+      "claim": "The population of Broken Bow in 2020 was 3,506.",
+      "temporal_status": "current",
+      "time_cue": "2020",
+      "confidence": 0.95,
+      "raw_quote": "2020 3,506",
+      "rationale": "The document provides a table of historical census populations, with the most recent being 2020.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "10,000 people",
+      "normalized_answer": "10000 people",
+      "claim": "The population of Broken Bow was 10,000 as of the 2020 census.",
+      "temporal_status": "current",
+      "time_cue": "2020",
+      "confidence": 1.0,
+      "raw_quote": "2020 10,000",
+      "rationale": "Document provides a demographics table with the most recent census population for 2020 as 10,000.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "3,559 people"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "3,506 people"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "10,000 people"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports '3,559 people', while D2 supports '3,506 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports '3,559 people', while D3 supports '10,000 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports '3,506 people', while D3 supports '10,000 people'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "3,559 people",
+      "normalized_answer": "3559 people",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 2,
+      "score": 2.4975
+    },
+    {
+      "answer": "10,000 people",
+      "normalized_answer": "10000 people",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 2,
+      "score": 1.51
+    },
+    {
+      "answer": "3,506 people",
+      "normalized_answer": "3506 people",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 2,
+      "score": 1.4975
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "3,559 people",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "reason": "The top answer has stronger explicit entity support than competing clusters.",
+    "scores": {
+      "3,559 people": 2.4975,
+      "10,000 people": 1.51,
+      "3,506 people": 1.4975
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "3,559 people",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "reason": "Candidate answer is directly supported by D1 with explicit entity and primary evidence, giving it stronger support than conflicting clusters."
+  },
+  "final_answer": "3,559 people",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> 3,559 people.",
+    "Verifier decision: supported -> 3,559 people."
+  ]
+}

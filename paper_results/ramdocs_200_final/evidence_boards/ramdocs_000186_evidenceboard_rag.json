@@ -1,0 +1,231 @@
+{
+  "qid": "ramdocs_000186",
+  "question": "Who is the director of the film \"Turkey Shoot\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Brian Trenchard-Smith",
+      "normalized_answer": "brian trenchardsmith",
+      "claim": "The film \"Turkey Shoot\" was directed by Brian Trenchard-Smith.",
+      "temporal_status": "current",
+      "time_cue": "1982",
+      "confidence": 1.0,
+      "raw_quote": "directed by Brian Trenchard-Smith",
+      "rationale": "The document explicitly names Brian Trenchard-Smith as the director.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Jon Hewitt",
+      "normalized_answer": "jon hewitt",
+      "claim": "The film was directed by Jon Hewitt.",
+      "temporal_status": "current",
+      "time_cue": "2014",
+      "confidence": 1.0,
+      "raw_quote": "directed by Jon Hewitt",
+      "rationale": "The document explicitly identifies Jon Hewitt as the director.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Jon Hewitt",
+      "normalized_answer": "jon hewitt",
+      "claim": "The film Turkey Shoot was directed by Jon Hewitt.",
+      "temporal_status": "current",
+      "time_cue": "2014",
+      "confidence": 1.0,
+      "raw_quote": "Directed by Jon Hewitt",
+      "rationale": "The document explicitly states the director.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "Jon Hewitt",
+      "normalized_answer": "jon hewitt",
+      "claim": "Jon Hewitt is the director of the remake of 'Turkey Shoot'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "as director Jon Hewitt called it",
+      "rationale": "The document explicitly mentions Jon Hewitt as the director in the context of a remake of Turkey Shoot.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Brian Trenchard-Smith"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Jon Hewitt"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Jon Hewitt"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Jon Hewitt"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'Brian Trenchard-Smith', while D2 supports 'Jon Hewitt'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'Brian Trenchard-Smith', while D3 supports 'Jon Hewitt'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'Brian Trenchard-Smith', while D4 supports 'Jon Hewitt'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Jon Hewitt",
+      "normalized_answer": "jon hewitt",
+      "doc_ids": [
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G2",
+        "G3",
+        "G4"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 5.44
+    },
+    {
+      "answer": "Brian Trenchard-Smith",
+      "normalized_answer": "brian trenchardsmith",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 1.74
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Jon Hewitt",
+    "supporting_doc_ids": [
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Jon Hewitt": 5.44,
+      "Brian Trenchard-Smith": 1.74
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Jon Hewitt",
+    "supporting_doc_ids": [
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "Candidate answer Jon Hewitt has stronger support from three primary documents compared to one conflicting document for Brian Trenchard-Smith."
+  },
+  "final_answer": "Jon Hewitt",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> Jon Hewitt.",
+    "Verifier decision: supported -> Jon Hewitt."
+  ]
+}

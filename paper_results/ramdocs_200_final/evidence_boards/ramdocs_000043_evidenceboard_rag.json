@@ -1,0 +1,110 @@
+{
+  "qid": "ramdocs_000043",
+  "question": "What is the genre of \"Hard Time\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "comic book",
+      "normalized_answer": "comic book",
+      "claim": "Hard Time is a comic book series.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Hard Time is a comic book series",
+      "rationale": "The document explicitly states the genre as a comic book series.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "medium",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document describes a TV series involving a prison inmate with a psychic superpower, but does not specify its genre.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.3,
+      "raw_quote": "While in prison, Ethan continues to manifest a superpower called the `` KHE-CHARE '' that appears as psychic manifestation of his alter ego while he sleeps",
+      "rationale": "The excerpt focuses on plot details, not genre classification.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "comic book"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [
+    {
+      "answer": "comic book",
+      "normalized_answer": "comic book",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 0,
+      "score": 2.8
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "comic book",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "comic book": 2.8
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "comic book",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2"
+    ],
+    "reason": "D1 explicitly states Hard Time is a comic book series with high confidence; no conflicting evidence exists."
+  },
+  "final_answer": "comic book",
+  "decision_trace": [
+    "Extracted 2 evidence cards.",
+    "Built 2 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> comic book.",
+    "Verifier decision: supported -> comic book."
+  ]
+}

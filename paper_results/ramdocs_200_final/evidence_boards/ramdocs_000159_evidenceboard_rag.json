@@ -1,0 +1,528 @@
+{
+  "qid": "ramdocs_000159",
+  "question": "Who is the husband of Chilonis?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Cleonymus",
+      "normalized_answer": "cleonymus",
+      "claim": "Chilonis was the wife of Cleonymus.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.99,
+      "raw_quote": "wife of Cleonymus",
+      "rationale": "The document explicitly states Chilonis was the wife of Cleonymus.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Cleonymus",
+      "normalized_answer": "cleonymus",
+      "claim": "Chilonis' husband is Cleonymus.",
+      "temporal_status": "outdated",
+      "time_cue": "272 BC",
+      "confidence": 0.9,
+      "raw_quote": "when Cleonymus attacked his homeland with the help of Pyrrhus of Epirus . [ 2 ] Chilonis preferred death to a return to her husband ;",
+      "rationale": "The document juxtaposes Cleonymus' attack with Chilonis' refusal to return to her husband, strongly implying that Cleonymus is that husband.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Cleonymus",
+      "normalized_answer": "cleonymus",
+      "claim": "Chilonis was the wife of Cleonymus, but she loved Acrotatus II.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "Chilonis loved Acrotatus II , the grand-nephew of Cleonymus . Deeply offended , Cleonymus",
+      "rationale": "Cleonymus is offended by Chilonis's love for another, implying he is her husband.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "Acrotatus",
+      "normalized_answer": "acrotatus",
+      "claim": "Chilonis was the wife of Acrotatus.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "wife of Acrotatus",
+      "rationale": "The document explicitly states that Chilonis was the wife of Acrotatus.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "Pyrrhus",
+      "normalized_answer": "pyrrhus",
+      "claim": "Pyrrhus is the husband of Chilonis.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "Pyrrhus is the husband of Chilonis",
+      "rationale": "The modified context explicitly states that Pyrrhus is the husband, replacing Cleonymus.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "high",
+      "answer_candidate": "Cleombrotus II",
+      "normalized_answer": "cleombrotus ii",
+      "claim": "Chilonis's husband was Cleombrotus II.",
+      "temporal_status": "current",
+      "time_cue": "272 BC",
+      "confidence": 1.0,
+      "raw_quote": "her husband Cleombrotus II",
+      "rationale": "The document explicitly states Cleombrotus II as her husband.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "high",
+      "answer_candidate": "Cleombrotus II",
+      "normalized_answer": "cleombrotus ii",
+      "claim": "Cleombrotus II is the husband of Chilonis.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "He married into the royal family via the daughter of Leonidas II , Chilonis .",
+      "rationale": "The document explicitly states Cleombrotus II married Chilonis, making him her husband.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D8",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain information about Chilonis or her husband.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document is a list of historical figures and does not mention Chilonis.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D9",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain any information about Chilonis or her husband.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document discusses Cleomenes, Hippias, and Megara, but Chilonis is not mentioned.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D10",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain information about Chilonis or her husband.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Document is about Leotychidas II and does not mention Chilonis.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Cleonymus"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Cleonymus"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Cleonymus"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Acrotatus"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "Pyrrhus"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "Cleombrotus II"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "Cleombrotus II"
+    },
+    {
+      "group_id": "G8",
+      "doc_ids": [
+        "D8"
+      ],
+      "representative_doc_id": "D8",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G9",
+      "doc_ids": [
+        "D9"
+      ],
+      "representative_doc_id": "D9",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G10",
+      "doc_ids": [
+        "D10"
+      ],
+      "representative_doc_id": "D10",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'Cleonymus', while D4 supports 'Acrotatus'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'Cleonymus', while D5 supports 'Pyrrhus'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D1 supports 'Cleonymus', while D6 supports 'Cleombrotus II'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D1 supports 'Cleonymus', while D7 supports 'Cleombrotus II'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'Cleonymus', while D4 supports 'Acrotatus'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports 'Cleonymus', while D5 supports 'Pyrrhus'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D2 supports 'Cleonymus', while D6 supports 'Cleombrotus II'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D2 supports 'Cleonymus', while D7 supports 'Cleombrotus II'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'Cleonymus', while D4 supports 'Acrotatus'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports 'Cleonymus', while D5 supports 'Pyrrhus'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D3 supports 'Cleonymus', while D6 supports 'Cleombrotus II'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D3 supports 'Cleonymus', while D7 supports 'Cleombrotus II'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D4 supports 'Acrotatus', while D5 supports 'Pyrrhus'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D4 supports 'Acrotatus', while D6 supports 'Cleombrotus II'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D4 supports 'Acrotatus', while D7 supports 'Cleombrotus II'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D5 supports 'Pyrrhus', while D6 supports 'Cleombrotus II'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D5 supports 'Pyrrhus', while D7 supports 'Cleombrotus II'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D6",
+      "dst": "D7",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Cleonymus",
+      "normalized_answer": "cleonymus",
+      "doc_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 3,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.93,
+      "conflict_count": 12,
+      "score": 6.3925
+    },
+    {
+      "answer": "Cleombrotus II",
+      "normalized_answer": "cleombrotus ii",
+      "doc_ids": [
+        "D6",
+        "D7"
+      ],
+      "duplicate_group_ids": [
+        "G6",
+        "G7"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 2,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 10,
+      "score": 4.1375
+    },
+    {
+      "answer": "Acrotatus",
+      "normalized_answer": "acrotatus",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 6,
+      "score": 2.055
+    },
+    {
+      "answer": "Pyrrhus",
+      "normalized_answer": "pyrrhus",
+      "doc_ids": [
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G5"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 6,
+      "score": 2.055
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Cleonymus",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D5",
+      "D6",
+      "D7"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Cleonymus": 6.3925,
+      "Cleombrotus II": 4.1375,
+      "Acrotatus": 2.055,
+      "Pyrrhus": 2.055
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Cleonymus",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D5",
+      "D6",
+      "D7"
+    ],
+    "reason": "Cleonymus cluster has the most explicit, high-confidence, primary support from three cards, outweighing weaker alternative clusters with fewer supporting sources."
+  },
+  "final_answer": "Cleonymus",
+  "decision_trace": [
+    "Extracted 10 evidence cards.",
+    "Built 10 duplicate groups.",
+    "Built 21 evidence graph edges.",
+    "Built 4 answer clusters.",
+    "Candidate decision: answer -> Cleonymus.",
+    "Verifier decision: supported -> Cleonymus."
+  ]
+}

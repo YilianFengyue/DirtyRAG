@@ -1,0 +1,410 @@
+{
+  "qid": "ramdocs_000134",
+  "question": "Who is the artist of \"The Love Album\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "John Hartford",
+      "normalized_answer": "john hartford",
+      "claim": "The Love Album is John Hartford's third LP, released in 1968.",
+      "temporal_status": "current",
+      "time_cue": "1968",
+      "confidence": 1.0,
+      "raw_quote": "The Love Album is John Hartford's third LP",
+      "rationale": "The document explicitly states the artist of the album.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "John Hartford",
+      "normalized_answer": "john hartford",
+      "claim": "The Love Album is by John Hartford.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "\" The Love Album > Review \" ... v t e John Hartford Solo albums",
+      "rationale": "The document includes a review of 'The Love Album' and the page context indicates it belongs to John Hartford's solo albums.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Taylor Swift",
+      "normalized_answer": "taylor swift",
+      "claim": "The Love Album is by Taylor Swift.",
+      "temporal_status": "current",
+      "time_cue": "2003",
+      "confidence": 1.0,
+      "raw_quote": "The Love Album (2003) - Taylor Swift's tribute to classic country music",
+      "rationale": "The document explicitly attributes 'The Love Album' to Taylor Swift.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "Taylor Swift",
+      "normalized_answer": "taylor swift",
+      "claim": "The Love Album is an album by Taylor Swift.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "The_Love_Album_ ( Taylor_Swift_album )",
+      "rationale": "The document title and categories explicitly name Taylor Swift as the artist.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "Westlife",
+      "normalized_answer": "westlife",
+      "claim": "The Love Album is by Westlife.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "The Love Album is the seventh studio album ... by Irish boy band Westlife.",
+      "rationale": "The document directly identifies the artist as Westlife.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "high",
+      "answer_candidate": "Westlife",
+      "normalized_answer": "westlife",
+      "claim": "Westlife is the artist of 'The Love Album'.",
+      "temporal_status": "current",
+      "time_cue": "2006",
+      "confidence": 0.9,
+      "raw_quote": "Westlife | Artist | Official Charts",
+      "rationale": "The document references Westlife as an artist in chart information, which likely pertains to 'The Love Album' mentioned earlier.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document contains chart positions for an album but does not identify the artist of 'The Love Album'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "The document lists chart positions (e.g., Irish Albums, Japanese Albums) but does not mention 'The Love Album' or its artist.",
+      "rationale": "The document lacks any mention of the album title or artist requested.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D8",
+      "relevance": "medium",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document discusses the chart performance of 'The Love Album' but does not name the artist.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.2,
+      "raw_quote": "The album debuted at its peak position at No. 1 on the UK Charts",
+      "rationale": "The document focuses on sales and chart history, omitting the artist.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "John Hartford"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "John Hartford"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Taylor Swift"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Taylor Swift"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "Westlife"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "Westlife"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G8",
+      "doc_ids": [
+        "D8"
+      ],
+      "representative_doc_id": "D8",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'John Hartford', while D3 supports 'Taylor Swift'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'John Hartford', while D4 supports 'Taylor Swift'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'John Hartford', while D5 supports 'Westlife'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D1 supports 'John Hartford', while D6 supports 'Westlife'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'John Hartford', while D3 supports 'Taylor Swift'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'John Hartford', while D4 supports 'Taylor Swift'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports 'John Hartford', while D5 supports 'Westlife'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D2 supports 'John Hartford', while D6 supports 'Westlife'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports 'Taylor Swift', while D5 supports 'Westlife'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D3 supports 'Taylor Swift', while D6 supports 'Westlife'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D4 supports 'Taylor Swift', while D5 supports 'Westlife'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D4 supports 'Taylor Swift', while D6 supports 'Westlife'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D6",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Taylor Swift",
+      "normalized_answer": "taylor swift",
+      "doc_ids": [
+        "D3",
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G3",
+        "G4"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 8,
+      "score": 2.99
+    },
+    {
+      "answer": "John Hartford",
+      "normalized_answer": "john hartford",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 8,
+      "score": 2.9775
+    },
+    {
+      "answer": "Westlife",
+      "normalized_answer": "westlife",
+      "doc_ids": [
+        "D5",
+        "D6"
+      ],
+      "duplicate_group_ids": [
+        "G5",
+        "G6"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 8,
+      "score": 2.9775
+    }
+  ],
+  "candidate_decision": {
+    "mode": "conflict",
+    "answer": "conflict",
+    "supporting_doc_ids": [
+      "D3",
+      "D4",
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support.",
+    "scores": {
+      "Taylor Swift": 2.99,
+      "John Hartford": 2.9775,
+      "Westlife": 2.9775
+    }
+  },
+  "verifier_decision": {
+    "verdict": "conflict",
+    "final_answer": "conflict",
+    "supporting_doc_ids": [
+      "D3",
+      "D4",
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support."
+  },
+  "final_answer": "conflict",
+  "decision_trace": [
+    "Extracted 8 evidence cards.",
+    "Built 8 duplicate groups.",
+    "Built 15 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: conflict -> conflict.",
+    "Verifier decision: conflict -> conflict."
+  ]
+}

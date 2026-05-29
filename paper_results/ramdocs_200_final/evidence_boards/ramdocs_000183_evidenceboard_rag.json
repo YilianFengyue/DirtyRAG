@@ -1,0 +1,297 @@
+{
+  "qid": "ramdocs_000183",
+  "question": "When was the David Jones House built?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "1912",
+      "normalized_answer": "1912",
+      "claim": "The David H. Jones House was built in 1912.",
+      "temporal_status": "current",
+      "time_cue": "1912",
+      "confidence": 1.0,
+      "raw_quote": "The house was built in 1912",
+      "rationale": "The document explicitly states the construction year.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "1912",
+      "normalized_answer": "1912",
+      "claim": "The David H. Jones House was built in 1912.",
+      "temporal_status": "current",
+      "time_cue": "1912",
+      "confidence": 1.0,
+      "raw_quote": "inception 1912",
+      "rationale": "The document directly states inception year 1912 for the house.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "1895",
+      "normalized_answer": "1895",
+      "claim": "The David Jones House was built in 1895.",
+      "temporal_status": "current",
+      "time_cue": "1895",
+      "confidence": 0.99,
+      "raw_quote": "The house was built in 1895",
+      "rationale": "The document directly states the year of construction.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "1874",
+      "normalized_answer": "1874",
+      "claim": "The David Jones House was built in 1874.",
+      "temporal_status": "current",
+      "time_cue": "1874",
+      "confidence": 1.0,
+      "raw_quote": "was built in 1874",
+      "rationale": "The document explicitly states the construction year.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain information about the David Jones House.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Madison City Directories . Brainerd . 1873",
+      "rationale": "The document is a list of bibliographic citations and does not mention the David Jones House or its construction date.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain any information about the David Jones House or its construction date.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document lists months and years with post counts; it does not mention the David Jones House.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "1912"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "1912"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "1895"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "1874"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports '1912', while D3 supports '1895'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports '1912', while D4 supports '1874'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports '1912', while D3 supports '1895'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports '1912', while D4 supports '1874'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports '1895', while D4 supports '1874'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "1912",
+      "normalized_answer": "1912",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 4,
+      "score": 3.47
+    },
+    {
+      "answer": "1874",
+      "normalized_answer": "1874",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 1.74
+    },
+    {
+      "answer": "1895",
+      "normalized_answer": "1895",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.99,
+      "conflict_count": 3,
+      "score": 1.7375
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "1912",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "1912": 3.47,
+      "1874": 1.74,
+      "1895": 1.7375
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "1912",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "reason": "The candidate answer 1912 has stronger explicit support (two primary sources with high confidence) compared to competing clusters, so it is supported."
+  },
+  "final_answer": "1912",
+  "decision_trace": [
+    "Extracted 6 evidence cards.",
+    "Built 6 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> 1912.",
+    "Verifier decision: supported -> 1912."
+  ]
+}

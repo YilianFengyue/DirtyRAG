@@ -1,0 +1,255 @@
+{
+  "qid": "ramdocs_000106",
+  "question": "Who was Mahmud I's father?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Mustafa II",
+      "normalized_answer": "mustafa ii",
+      "claim": "Mahmud I was the son of Mustafa II.",
+      "temporal_status": "current",
+      "time_cue": "1696",
+      "confidence": 1.0,
+      "raw_quote": "the son of Mustafa II (1664–1703)",
+      "rationale": "The document explicitly states that Mahmud I was the son of Mustafa II.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "card_error: Expecting value: line 1 column 1 (char 0); heuristic fallback used",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Malik Shah I",
+      "normalized_answer": "malik shah i",
+      "claim": "Mahmud I's father was Malik Shah I.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "Turkan Khatun, the last wife of Malik Shah, tried to win the throne for her 4 years old son Mahmud",
+      "rationale": "The document states Mahmud is the son of Turkan Khatun and Malik Shah, implying Malik Shah I is his father.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "Malik Shah I",
+      "normalized_answer": "malik shah i",
+      "claim": "Mahmud I's father was Malik Shah I.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "the empire built by his father and Alp Arslan fragmented",
+      "rationale": "The document indicates that the empire was built by Mahmud I's father, and the preceding context establishes Malik Shah I as the previous sultan.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "Malik Shah I",
+      "normalized_answer": "malik shah i",
+      "claim": "Mahmud I's father was Malik Shah I.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Father Malik Shah I",
+      "rationale": "The document explicitly lists 'Father Malik Shah I' in the biographical summary.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Mustafa II"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Malik Shah I"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Malik Shah I"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "Malik Shah I"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'Mustafa II', while D3 supports 'Malik Shah I'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'Mustafa II', while D4 supports 'Malik Shah I'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'Mustafa II', while D5 supports 'Malik Shah I'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Malik Shah I",
+      "normalized_answer": "malik shah i",
+      "doc_ids": [
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G3",
+        "G4",
+        "G5"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9667,
+      "conflict_count": 3,
+      "score": 5.4317
+    },
+    {
+      "answer": "Mustafa II",
+      "normalized_answer": "mustafa ii",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 1.74
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Malik Shah I",
+    "supporting_doc_ids": [
+      "D3",
+      "D4",
+      "D5"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Malik Shah I": 5.4317,
+      "Mustafa II": 1.74
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Malik Shah I",
+    "supporting_doc_ids": [
+      "D3",
+      "D4",
+      "D5"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "The candidate answer has strong explicit support from three primary documents (D3,D4,D5) with high confidence, outweighing the single conflicting document (D1)."
+  },
+  "final_answer": "Malik Shah I",
+  "decision_trace": [
+    "Extracted 5 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> Malik Shah I.",
+    "Verifier decision: supported -> Malik Shah I."
+  ]
+}

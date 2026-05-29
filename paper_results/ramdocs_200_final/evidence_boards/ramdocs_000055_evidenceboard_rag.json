@@ -1,0 +1,285 @@
+{
+  "qid": "ramdocs_000055",
+  "question": "What sport is Vestri associated with?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "football",
+      "normalized_answer": "football",
+      "claim": "Vestri is the football department of the Vestri sport club.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "Vestri (football club) Knattspyrnudeild Vestra, also known as Vestri, is the football department of the Vestri sport club",
+      "rationale": "The document directly identifies Vestri as a football club and football department, so football is the primary sport association.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:football"
+      ]
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "basketball",
+      "normalized_answer": "basketball",
+      "claim": "Vestri is a men's basketball club in Iceland.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Vestri (men's basketball)",
+      "rationale": "The document title and categories explicitly identify the sport as basketball.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "basketball:basketball"
+      ]
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "football",
+      "normalized_answer": "football",
+      "claim": "Vestri is a football club, as indicated by the mention of goals scored and cards.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "of goals scored, number of cards and much more. IF Vestri top scorers list",
+      "rationale": "The document refers to goals, cards, and top scorers, all typical of football, while the basketball mention is a separate link unrelated to Vestri.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "golf:tournament",
+        "basketball:basketball"
+      ]
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "golf",
+      "normalized_answer": "golf",
+      "claim": "The document does not mention Vestri.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Document is a list of countries and leagues; Vestri is not mentioned.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "golf:championship"
+      ]
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "football",
+      "normalized_answer": "football",
+      "claim": "Vestri is primarily associated with football, as indicated by its promotion to the top division.",
+      "temporal_status": "current",
+      "time_cue": "2019",
+      "confidence": 0.9,
+      "raw_quote": "Vestri fær sæti í efstu deild",
+      "rationale": "The quote reports Vestri entering the top division, which in context refers to men's football; the document also references a football history book.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "football"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "basketball"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "football"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "golf"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "football"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'football', while D2 supports 'basketball'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'basketball', while D3 supports 'football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports 'basketball', while D5 supports 'football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "football",
+      "normalized_answer": "football",
+      "doc_ids": [
+        "D1",
+        "D3",
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G3",
+        "G5"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9167,
+      "conflict_count": 3,
+      "score": 5.4192
+    },
+    {
+      "answer": "basketball",
+      "normalized_answer": "basketball",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 1.74
+    },
+    {
+      "answer": "golf",
+      "normalized_answer": "golf",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.6
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "football",
+    "supporting_doc_ids": [
+      "D1",
+      "D3",
+      "D5"
+    ],
+    "rejected_doc_ids": [
+      "D2"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "football": 5.4192,
+      "basketball": 1.74,
+      "golf": 1.6
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "football",
+    "supporting_doc_ids": [
+      "D1",
+      "D3",
+      "D5"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D4"
+    ],
+    "reason": "The football cluster has stronger independent primary support (3 cards) versus basketball's single card, making the candidate answer well-supported despite conflicts."
+  },
+  "final_answer": "football",
+  "decision_trace": [
+    "Extracted 5 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> football.",
+    "Verifier decision: supported -> football."
+  ]
+}

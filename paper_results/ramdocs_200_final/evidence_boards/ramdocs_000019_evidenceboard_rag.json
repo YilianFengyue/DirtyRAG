@@ -1,0 +1,262 @@
+{
+  "qid": "ramdocs_000019",
+  "question": "What sport is Ronald Powell associated with?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "football",
+      "normalized_answer": "football",
+      "claim": "Ronald Powell was a member of the Florida Gators football teams.",
+      "temporal_status": "current",
+      "time_cue": "from 2010 to 2013",
+      "confidence": 1.0,
+      "raw_quote": "where he was a member of coach Urban Meyer and coach Will Muschamp's Florida Gators football teams from 2010 to 2013.",
+      "rationale": "The document explicitly states his association with the football team.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:football"
+      ]
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "American football",
+      "normalized_answer": "american football",
+      "claim": "Ronald Powell played American football for the Florida Gators.",
+      "temporal_status": "current",
+      "time_cue": "2010 to 2013",
+      "confidence": 0.95,
+      "raw_quote": "playing in 53 games with 79 total tackles, 18.5 tackles for loss and 11 sacks.",
+      "rationale": "The document contains football-specific statistics and mentions the Florida Gators Football account, indicating his association with American football.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:football"
+      ]
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "chess",
+      "normalized_answer": "chess",
+      "claim": "Ronald Powell is a renowned chess player.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Ronald Powell, a renowned chess player",
+      "rationale": "The document explicitly identifies Ronald Powell as a chess player, answering the question about his associated sport.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:football",
+        "American football:nfl",
+        "golf:golf",
+        "golf:tournament",
+        "basketball:nba",
+        "baseball:mlb",
+        "soccer:soccer",
+        "tennis:tennis"
+      ]
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "football",
+      "normalized_answer": "football",
+      "claim": "Ronald Powell played college football for the Florida Gators.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "regular starter for the Gators",
+      "rationale": "The document details his career as a starter, games played, and football-specific measurables, confirming his association with football.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "football"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "American football"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "chess"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "football"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'football', while D2 supports 'American football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'football', while D3 supports 'chess'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'American football', while D3 supports 'chess'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'American football', while D4 supports 'football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'chess', while D4 supports 'football'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "football",
+      "normalized_answer": "football",
+      "doc_ids": [
+        "D1",
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G4"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.975,
+      "conflict_count": 4,
+      "score": 3.4637
+    },
+    {
+      "answer": "chess",
+      "normalized_answer": "chess",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 1.74
+    },
+    {
+      "answer": "American football",
+      "normalized_answer": "american football",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 3,
+      "score": 1.7275
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "football",
+    "supporting_doc_ids": [
+      "D1",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "football": 3.4637,
+      "chess": 1.74,
+      "American football": 1.7275
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "football",
+    "supporting_doc_ids": [
+      "D1",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "reason": "The football cluster has the strongest support with two high-confidence primary sources (D1, D4) that directly state 'football', outweighing the conflicting but weaker or more specific clusters."
+  },
+  "final_answer": "football",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> football.",
+    "Verifier decision: supported -> football."
+  ]
+}

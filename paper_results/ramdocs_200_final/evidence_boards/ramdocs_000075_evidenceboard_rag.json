@@ -1,0 +1,164 @@
+{
+  "qid": "ramdocs_000075",
+  "question": "Who is the artist of the album \"Crazy World\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Boys Like Girls",
+      "normalized_answer": "boys like girls",
+      "claim": "The album 'Crazy World' is by Boys Like Girls.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Crazy World is the third studio album by American pop rock band Boys Like Girls.",
+      "rationale": "Directly stated in the document.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "One Direction",
+      "normalized_answer": "one direction",
+      "claim": "One Direction is set to release the 'Crazy World' EP.",
+      "temporal_status": "current",
+      "time_cue": "July 9, 2012",
+      "confidence": 1.0,
+      "raw_quote": "One Direction Set To Release 'Crazy World' EP July 17",
+      "rationale": "The document directly names One Direction as the artist releasing the 'Crazy World' EP.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention the album 'Crazy World' or its artist.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document discusses an album by The Beatles that was scrapped, with no reference to 'Crazy World'.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Boys Like Girls"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "One Direction"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'Boys Like Girls', while D2 supports 'One Direction'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Boys Like Girls",
+      "normalized_answer": "boys like girls",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 1,
+      "score": 1.98
+    },
+    {
+      "answer": "One Direction",
+      "normalized_answer": "one direction",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 1,
+      "score": 1.63
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Boys Like Girls",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2"
+    ],
+    "reason": "The top answer cluster has the highest evidence score.",
+    "scores": {
+      "Boys Like Girls": 1.98,
+      "One Direction": 1.63
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Boys Like Girls",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2"
+    ],
+    "reason": "The candidate answer has the highest-scoring cluster with direct, high-confidence support, outweighing the conflicting but weaker cluster."
+  },
+  "final_answer": "Boys Like Girls",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> Boys Like Girls.",
+    "Verifier decision: supported -> Boys Like Girls."
+  ]
+}

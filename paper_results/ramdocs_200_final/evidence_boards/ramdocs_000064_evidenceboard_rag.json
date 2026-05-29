@@ -1,0 +1,206 @@
+{
+  "qid": "ramdocs_000064",
+  "question": "What is the population of Kensett?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "1,791 people",
+      "normalized_answer": "1791 people",
+      "claim": "The population of Kensett was 1,791 as of the 2000 census.",
+      "temporal_status": "outdated",
+      "time_cue": "census of 2000",
+      "confidence": 0.9,
+      "raw_quote": "there were 1,791 people",
+      "rationale": "The document directly states the population from the 2000 census.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "1,791 people",
+      "normalized_answer": "1791 people",
+      "claim": "The population of Kensett was 1,791 as of the 2000 census.",
+      "temporal_status": "outdated",
+      "time_cue": "2000",
+      "confidence": 0.95,
+      "raw_quote": "there were 1,791 people",
+      "rationale": "The document directly states the population figure from the 2000 census.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "2,500 people",
+      "normalized_answer": "2500 people",
+      "claim": "The population of Kensett is 2,500.",
+      "temporal_status": "current",
+      "time_cue": "currently",
+      "confidence": 1.0,
+      "raw_quote": "Of the 2,500 people who live in Kensett",
+      "rationale": "The document explicitly states the number of people living in Kensett.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "No population information is present in the document.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "The document is a city website menu with no population data.",
+      "rationale": "Document is a homepage with navigational elements but no population figure.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "1,791 people"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "1,791 people"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "2,500 people"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports '1,791 people', while D3 supports '2,500 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports '1,791 people', while D3 supports '2,500 people'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "1,791 people",
+      "normalized_answer": "1791 people",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 2,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.925,
+      "conflict_count": 2,
+      "score": 2.8912
+    },
+    {
+      "answer": "2,500 people",
+      "normalized_answer": "2500 people",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 2,
+      "score": 2.56
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "1,791 people",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "1,791 people": 2.8912,
+      "2,500 people": 2.56
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "1,791 people",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "Multiple high-confidence primary sources support 1,791 people, outperforming the single conflicting source for 2,500 people."
+  },
+  "final_answer": "1,791 people",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> 1,791 people.",
+    "Verifier decision: supported -> 1,791 people."
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "qid": "ramdocs_000121",
+  "question": "Who is the main character in the video game \"Who Framed Roger Rabbit\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Roger Rabbit",
+      "normalized_answer": "roger rabbit",
+      "claim": "The player controls Roger Rabbit, making him the main character of the video game.",
+      "temporal_status": "current",
+      "time_cue": "1988",
+      "confidence": 0.99,
+      "raw_quote": "The player controls Roger Rabbit through four levels",
+      "rationale": "The document explicitly states the player controls Roger Rabbit, identifying him as the main character.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Eddie Valiant",
+      "normalized_answer": "eddie valiant",
+      "claim": "The main character in the video game is Eddie Valiant.",
+      "temporal_status": "current",
+      "time_cue": "1989",
+      "confidence": 0.9,
+      "raw_quote": "The player controls private detective Eddie Valiant",
+      "rationale": "The document explicitly states that the player controls Eddie Valiant, making him the main character.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Roger Rabbit"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Eddie Valiant"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'Roger Rabbit', while D2 supports 'Eddie Valiant'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Roger Rabbit",
+      "normalized_answer": "roger rabbit",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.99,
+      "conflict_count": 1,
+      "score": 1.9775
+    },
+    {
+      "answer": "Eddie Valiant",
+      "normalized_answer": "eddie valiant",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 1,
+      "score": 1.955
+    }
+  ],
+  "candidate_decision": {
+    "mode": "conflict",
+    "answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support.",
+    "scores": {
+      "Roger Rabbit": 1.9775,
+      "Eddie Valiant": 1.955
+    }
+  },
+  "verifier_decision": {
+    "verdict": "conflict",
+    "final_answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support."
+  },
+  "final_answer": "conflict",
+  "decision_trace": [
+    "Extracted 2 evidence cards.",
+    "Built 2 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: conflict -> conflict.",
+    "Verifier decision: conflict -> conflict."
+  ]
+}

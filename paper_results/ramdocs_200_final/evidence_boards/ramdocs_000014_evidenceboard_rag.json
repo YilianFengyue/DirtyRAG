@@ -1,0 +1,206 @@
+{
+  "qid": "ramdocs_000014",
+  "question": "Who is the artist of the album \"A Kind of Hush\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Carpenters",
+      "normalized_answer": "carpenters",
+      "claim": "The album 'A Kind of Hush' was performed by the American popular music duo Carpenters.",
+      "temporal_status": "current",
+      "time_cue": "1976",
+      "confidence": 1.0,
+      "raw_quote": "A Kind of Hush is the seventh studio album by American popular music duo Carpenters.",
+      "rationale": "The document directly states that the album is by Carpenters.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Carpenters",
+      "normalized_answer": "carpenters",
+      "claim": "The album 'A Kind of Hush' is by the American music duo Carpenters.",
+      "temporal_status": "current",
+      "time_cue": "1976",
+      "confidence": 1.0,
+      "raw_quote": "A Kind of Hush is the seventh studio album by the American music duo Carpenters.",
+      "rationale": "Directly states the artist.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "The Beatles",
+      "normalized_answer": "the beatles",
+      "claim": "The album 'A Kind of Hush' is by The Beatles.",
+      "temporal_status": "current",
+      "time_cue": "1976",
+      "confidence": 1.0,
+      "raw_quote": "`` A Kind of Hush `` is an album by The Beatles.",
+      "rationale": "The document explicitly states the artist.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document is a Wikipedia page for the album 'A Kind of Hush' but does not mention an artist in the provided content.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The provided document content is only the navigation and table of contents, with no information about the artist.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Carpenters"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Carpenters"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "The Beatles"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'Carpenters', while D3 supports 'The Beatles'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'Carpenters', while D3 supports 'The Beatles'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Carpenters",
+      "normalized_answer": "carpenters",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 2,
+      "score": 3.71
+    },
+    {
+      "answer": "The Beatles",
+      "normalized_answer": "the beatles",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 2,
+      "score": 1.86
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Carpenters",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Carpenters": 3.71,
+      "The Beatles": 1.86
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Carpenters",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "Carpenters",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> Carpenters.",
+    "Verifier decision: supported -> Carpenters."
+  ]
+}

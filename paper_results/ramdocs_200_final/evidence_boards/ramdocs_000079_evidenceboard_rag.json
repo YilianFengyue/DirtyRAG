@@ -1,0 +1,84 @@
+{
+  "qid": "ramdocs_000079",
+  "question": "When did Tom Fisher play in the Major League?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "1904",
+      "normalized_answer": "1904",
+      "claim": "Tom Fisher played one season in Major League Baseball in 1904.",
+      "temporal_status": "outdated",
+      "time_cue": "1904",
+      "confidence": 1.0,
+      "raw_quote": "played one season in Major League Baseball for the Boston Beaneaters in 1904",
+      "rationale": "Document explicitly states he played one MLB season in 1904.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "1904"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [
+    {
+      "answer": "1904",
+      "normalized_answer": "1904",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 0,
+      "score": 2.05
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "1904",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "1904": 2.05
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "1904",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "The evidence board contains a single, explicit, high-confidence primary source stating Tom Fisher played in MLB in 1904, with no conflicting evidence."
+  },
+  "final_answer": "1904",
+  "decision_trace": [
+    "Extracted 1 evidence cards.",
+    "Built 1 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> 1904.",
+    "Verifier decision: supported -> 1904."
+  ]
+}

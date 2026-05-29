@@ -1,0 +1,260 @@
+{
+  "qid": "ramdocs_000004",
+  "question": "What sport is Ryan Davis associated with?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Australian rules football",
+      "normalized_answer": "australian rules football",
+      "claim": "Ryan Davis is associated with Australian rules football (AFL).",
+      "temporal_status": "unknown",
+      "time_cue": "2008 season",
+      "confidence": 0.95,
+      "raw_quote": "Davis made his AFL debut",
+      "rationale": "The document explicitly mentions his AFL debut, indicating Australian rules football is his sport.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Australian rules football",
+      "normalized_answer": "australian rules football",
+      "claim": "Ryan Davis is primarily associated with Australian rules football, having been delisted from an AFL team and later serving as a runner for the Sydney Swans.",
+      "temporal_status": "outdated",
+      "time_cue": "2008, 2012",
+      "confidence": 0.9,
+      "raw_quote": "He was delisted at the end of the year and was not selected in the 2008 AFL Draft.",
+      "rationale": "The document shows Davis's history in Australian rules football (AFL) as a player and runner, making it his primary sport association despite later coaching roles in rugby league.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:nfl"
+      ]
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "basketball",
+      "normalized_answer": "basketball",
+      "claim": "The document is about Bradley James Davis, a basketball player, and does not mention Ryan Davis.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Bradley James Davis (born 18 July 1972) is a former basketball player",
+      "rationale": "The document describes a person named Bradley James Davis, not Ryan Davis, so no association for Ryan Davis can be inferred.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:football",
+        "basketball:basketball",
+        "basketball:nba"
+      ]
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "Football",
+      "normalized_answer": "football",
+      "claim": "Ryan Davis is a football player.",
+      "temporal_status": "current",
+      "time_cue": "2021 season",
+      "confidence": 1.0,
+      "raw_quote": "Davis was a nominee for CFL 'Most Outstanding Rookie' of the 2021 season.",
+      "rationale": "The document mentions his involvement with CFL and XFL, both professional football leagues.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:touchdown"
+      ]
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document provides statistical data but does not explicitly mention a sport associated with Ryan Davis.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.1,
+      "raw_quote": "24 26 2 28 19 5 0 0 0 1 0 2018 Rd 23 ...",
+      "rationale": "The document contains only numerical game statistics without any sport name or player name, making it impossible to determine the sport from the text alone.",
+      "entity_explicitness": "unknown",
+      "answer_role": "unsupported",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Australian rules football"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Australian rules football"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "basketball"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Football"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'Australian rules football', while D4 supports 'Football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'Australian rules football', while D4 supports 'Football'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Australian rules football",
+      "normalized_answer": "australian rules football",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.925,
+      "conflict_count": 2,
+      "score": 3.6413
+    },
+    {
+      "answer": "Football",
+      "normalized_answer": "football",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 2,
+      "score": 1.86
+    },
+    {
+      "answer": "basketball",
+      "normalized_answer": "basketball",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.6
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Australian rules football",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Australian rules football": 3.6413,
+      "Football": 1.86,
+      "basketball": 1.6
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Australian rules football",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4",
+      "D5"
+    ],
+    "reason": "The answer has strong explicit support from D1 and D2 (high confidence, primary role) with higher cluster score, outweighing the conflicting but weaker and less specific 'Football' cluster."
+  },
+  "final_answer": "Australian rules football",
+  "decision_trace": [
+    "Extracted 5 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> Australian rules football.",
+    "Verifier decision: supported -> Australian rules football."
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "qid": "ramdocs_000058",
+  "question": "What is the primary instrument played by Allah Rakha?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "tabla",
+      "normalized_answer": "tabla",
+      "claim": "Alla Rakha was an Indian tabla player.",
+      "temporal_status": "current",
+      "time_cue": "29 April 1919 – 3 February 2000",
+      "confidence": 1.0,
+      "raw_quote": "was an Indian tabla player",
+      "rationale": "The document explicitly identifies him as a tabla player, which is his primary instrument.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document contains no information about Allah Rakha or the instrument they play.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document only describes sitar strings and tuning; Allah Rakha is not mentioned.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "tabla"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [
+    {
+      "answer": "tabla",
+      "normalized_answer": "tabla",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 0,
+      "score": 2.1
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "tabla",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "tabla": 2.1
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "tabla",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2"
+    ],
+    "reason": "The candidate answer is directly supported by D1, which explicitly states Alla Rakha was a tabla player."
+  },
+  "final_answer": "tabla",
+  "decision_trace": [
+    "Extracted 2 evidence cards.",
+    "Built 2 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> tabla.",
+    "Verifier decision: supported -> tabla."
+  ]
+}

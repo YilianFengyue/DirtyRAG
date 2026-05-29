@@ -1,0 +1,231 @@
+{
+  "qid": "ramdocs_000190",
+  "question": "What is the language of the film Choorian?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Punjabi",
+      "normalized_answer": "punjabi",
+      "claim": "The film Choorian is a Punjabi-language film.",
+      "temporal_status": "current",
+      "time_cue": "1998",
+      "confidence": 1.0,
+      "raw_quote": "1998 Pakistani Punjabi-language",
+      "rationale": "The document explicitly states the language of the film.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Urdu",
+      "normalized_answer": "urdu",
+      "claim": "The film Choorian is an Urdu-language film.",
+      "temporal_status": "current",
+      "time_cue": "1998",
+      "confidence": 0.95,
+      "raw_quote": "Urdu-language",
+      "rationale": "Document explicitly states the film is an Urdu-language film.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Punjabi",
+      "normalized_answer": "punjabi",
+      "claim": "Choorian is a Punjabi language film.",
+      "temporal_status": "current",
+      "time_cue": "1963",
+      "confidence": 1.0,
+      "raw_quote": "Choorian is a 1963 black and white Pakistani Punjabi language super-hit musical film.",
+      "rationale": "The document states directly that the film's language is Punjabi.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "Punjabi",
+      "normalized_answer": "punjabi",
+      "claim": "Choorian is a Pakistani Punjabi language film.",
+      "temporal_status": "current",
+      "time_cue": "1963",
+      "confidence": 1.0,
+      "raw_quote": "Choorian is a 1963 black and white Pakistani Punjabi language super-hit musical film.",
+      "rationale": "The document explicitly states the language of the film.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Punjabi"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Urdu"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Punjabi"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Punjabi"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'Punjabi', while D2 supports 'Urdu'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'Urdu', while D3 supports 'Punjabi'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'Urdu', while D4 supports 'Punjabi'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Punjabi",
+      "normalized_answer": "punjabi",
+      "doc_ids": [
+        "D1",
+        "D3",
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G3",
+        "G4"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 5.44
+    },
+    {
+      "answer": "Urdu",
+      "normalized_answer": "urdu",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 3,
+      "score": 1.7275
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Punjabi",
+    "supporting_doc_ids": [
+      "D1",
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D2"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Punjabi": 5.44,
+      "Urdu": 1.7275
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Punjabi",
+    "supporting_doc_ids": [
+      "D1",
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D2"
+    ],
+    "reason": "verifier_error_fallback: Expecting property name enclosed in double quotes: line 2 column 26 (char 27)"
+  },
+  "final_answer": "Punjabi",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> Punjabi.",
+    "Verifier decision: supported -> Punjabi."
+  ]
+}

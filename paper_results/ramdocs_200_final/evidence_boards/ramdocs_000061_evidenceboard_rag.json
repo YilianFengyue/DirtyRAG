@@ -1,0 +1,277 @@
+{
+  "qid": "ramdocs_000061",
+  "question": "What is the primary medium associated with the New York School?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "poetry",
+      "normalized_answer": "poetry",
+      "claim": "The New York School is primarily associated with poetry.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "Poets often associated with the New York School include John Ashbery, Frank O'Hara, Kenneth Koch, James Schuyler, Barbara Guest, Ted Berrigan, Bernadette Mayer, Alice Notley, Kenward Elmslie, Frank Lima, Ron Padgett, Lewis Warsh,",
+      "rationale": "The document explicitly lists poets as being associated with the New York School, indicating poetry as the primary medium.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "poetry",
+      "normalized_answer": "poetry",
+      "claim": "The New York School was primarily centered around a core group of poets.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "the first was centered around a core group of five poets : John Ashbery , Barbara Guest , James Schuyler , Kenneth Koch , and Frank O ’ Hara .",
+      "rationale": "The document explicitly states the group was centered around poets, making poetry the primary medium.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Abstract Expressionist Painting",
+      "normalized_answer": "abstract expressionist painting",
+      "claim": "The primary medium associated with the New York School is Abstract Expressionist Painting, as the document lists this heading for a group of artists after modification.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "Abstract Expressionist Painting",
+      "rationale": "The document's heading 'Abstract Expressionist Painting' replaces the original 'Poetry' per the note, indicating the intended association for the New York School.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "abstract expressionist painting",
+      "normalized_answer": "abstract expressionist painting",
+      "claim": "The primary medium associated with the New York School abstract expressionist painters was abstract expressionist painting.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "Concerning the New York School abstract expressionist painters, critics argued that their primary medium was abstract expressionist painting, which emphasized spontaneous, automatic, or subconscious creation.",
+      "rationale": "The document explicitly states the primary medium for the New York School painters.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain information about the New York School.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The provided excerpt discusses abstract expressionism but makes no mention of the New York School or its primary medium.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention the New York School or its primary medium.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "can learn more by reading How Do Art Movements Begin ? . Why Are Art Movements Important ?",
+      "rationale": "The document text contains no reference to the New York School, so the answer cannot be extracted.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "poetry"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "poetry"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Abstract Expressionist Painting"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "abstract expressionist painting"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'poetry', while D3 supports 'Abstract Expressionist Painting'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'poetry', while D4 supports 'abstract expressionist painting'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'poetry', while D3 supports 'Abstract Expressionist Painting'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'poetry', while D4 supports 'abstract expressionist painting'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "poetry",
+      "normalized_answer": "poetry",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.925,
+      "conflict_count": 4,
+      "score": 3.4512
+    },
+    {
+      "answer": "Abstract Expressionist Painting",
+      "normalized_answer": "abstract expressionist painting",
+      "doc_ids": [
+        "D3",
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G3",
+        "G4"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 4,
+      "score": 3.445
+    }
+  ],
+  "candidate_decision": {
+    "mode": "conflict",
+    "answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support.",
+    "scores": {
+      "poetry": 3.4512,
+      "Abstract Expressionist Painting": 3.445
+    }
+  },
+  "verifier_decision": {
+    "verdict": "conflict",
+    "final_answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support."
+  },
+  "final_answer": "conflict",
+  "decision_trace": [
+    "Extracted 6 evidence cards.",
+    "Built 6 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: conflict -> conflict.",
+    "Verifier decision: conflict -> conflict."
+  ]
+}

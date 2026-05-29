@@ -1,0 +1,182 @@
+{
+  "qid": "ramdocs_000094",
+  "question": "What is the median age in Fort Kent?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "42.7 years",
+      "normalized_answer": "427 years",
+      "claim": "The median age in Fort Kent is 42.7 years.",
+      "temporal_status": "outdated",
+      "time_cue": "2000",
+      "confidence": 1.0,
+      "raw_quote": "The median age in the town was 42.7 years.",
+      "rationale": "The document directly states the median age for the town, which matches Fort Kent.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "42.7 years",
+      "normalized_answer": "427 years",
+      "claim": "The median age in Fort Kent is 42.7 years.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "The median age in the town was 42.7 years.",
+      "rationale": "The document directly states the median age.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "46.2 years",
+      "normalized_answer": "462 years",
+      "claim": "The median age in Fort Kent is 46.2 years according to the 2020 Census.",
+      "temporal_status": "current",
+      "time_cue": "2020 Census",
+      "confidence": 1.0,
+      "raw_quote": "46.2 years",
+      "rationale": "The document explicitly states 'Median Age : ... 46.2 years' for the geographic area, which is Fort Kent based on the context.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "42.7 years"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "42.7 years"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "46.2 years"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports '42.7 years', while D3 supports '46.2 years'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports '42.7 years', while D3 supports '46.2 years'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "42.7 years",
+      "normalized_answer": "427 years",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.975,
+      "conflict_count": 2,
+      "score": 3.6537
+    },
+    {
+      "answer": "46.2 years",
+      "normalized_answer": "462 years",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 2,
+      "score": 1.86
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "42.7 years",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "42.7 years": 3.6537,
+      "46.2 years": 1.86
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "42.7 years",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "Stronger support from two primary sources outweighs a single conflicting source."
+  },
+  "final_answer": "42.7 years",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> 42.7 years.",
+    "Verifier decision: supported -> 42.7 years."
+  ]
+}

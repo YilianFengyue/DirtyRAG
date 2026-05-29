@@ -1,0 +1,278 @@
+{
+  "qid": "ramdocs_000022",
+  "question": "When did Louis Alexandre die?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document mentions the death of the comte de Toulouse, not Louis Alexandre.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "The comte de Toulouse died at the Château de Rambouillet on 1 December 1737.",
+      "rationale": "No death date for Louis Alexandre appears in the document.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "1 December 1737",
+      "normalized_answer": "1 december 1737",
+      "claim": "Louis-Alexandre de Bourbon, comte de Toulouse, died on 1 December 1737.",
+      "temporal_status": "current",
+      "time_cue": "1 December 1737",
+      "confidence": 0.95,
+      "raw_quote": "Louis-Alexandre de Bourbon , comte de Toulouse 6 June 1678 1 December 1737",
+      "rationale": "The document explicitly lists the death date.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "1 December 1737",
+      "normalized_answer": "1 december 1737",
+      "claim": "Louis Alexandre died on 1 December 1737.",
+      "temporal_status": "current",
+      "time_cue": "1 December 1737",
+      "confidence": 1.0,
+      "raw_quote": "date of death 1 December 1737",
+      "rationale": "The document explicitly states the date of death.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "15 June 1745",
+      "normalized_answer": "15 june 1745",
+      "claim": "Louis Alexandre died on 15 June 1745.",
+      "temporal_status": "current",
+      "time_cue": "15 June 1745",
+      "confidence": 1.0,
+      "raw_quote": "The last known count, Louis Alexandre, died on 15 June 1745",
+      "rationale": "The document explicitly states the death date.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "card_error: Expecting value: line 1 column 1 (char 0); heuristic fallback used",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "medium",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "Louis Alexandre's remains were transferred in 1783, suggesting he died before that year.",
+      "temporal_status": "current",
+      "time_cue": "1783",
+      "confidence": 0.2,
+      "raw_quote": "in 1783 , his remains , as well as the remains of other family members , were transferred",
+      "rationale": "The document mentions a transfer of remains in 1783 but does not provide a specific death date.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "medium",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document mentions Louis Alexandre's place of death as Rambouillet but does not provide a death date.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "place of death Rambouillet",
+      "rationale": "The document states the place of death but no death date, so answering the question is not possible.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "1 December 1737"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "1 December 1737"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "15 June 1745"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports '1 December 1737', while D4 supports '15 June 1745'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports '1 December 1737', while D4 supports '15 June 1745'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "1 December 1737",
+      "normalized_answer": "1 december 1737",
+      "doc_ids": [
+        "D2",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G2",
+        "G3"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.975,
+      "conflict_count": 2,
+      "score": 3.7037
+    },
+    {
+      "answer": "15 June 1745",
+      "normalized_answer": "15 june 1745",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 2,
+      "score": 1.86
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "1 December 1737",
+    "supporting_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "1 December 1737": 3.7037,
+      "15 June 1745": 1.86
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "1 December 1737",
+    "supporting_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4"
+    ],
+    "reason": "verifier_error_fallback: Unterminated string starting at: line 6 column 13 (char 145)"
+  },
+  "final_answer": "1 December 1737",
+  "decision_trace": [
+    "Extracted 7 evidence cards.",
+    "Built 7 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> 1 December 1737.",
+    "Verifier decision: supported -> 1 December 1737."
+  ]
+}

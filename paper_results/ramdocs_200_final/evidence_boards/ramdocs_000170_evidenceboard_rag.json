@@ -1,0 +1,347 @@
+{
+  "qid": "ramdocs_000170",
+  "question": "Who was the owner of the Short House?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "George Washington Short",
+      "normalized_answer": "george washington short",
+      "claim": "The first owner of the George Short House was George Washington Short.",
+      "temporal_status": "current",
+      "time_cue": "1840s",
+      "confidence": 1.0,
+      "raw_quote": "The house's first owner, George Washington Short",
+      "rationale": "The document explicitly states the first owner.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "George Washington Short",
+      "normalized_answer": "george washington short",
+      "claim": "The first owner of the Short House was George Washington Short.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "The house 's first owner , George Washington Short , was a wealthy businessman who was involved with the local tobacco industry .",
+      "rationale": "The document explicitly names George Washington Short as the first owner.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Thomas Jefferson Long",
+      "normalized_answer": "thomas jefferson long",
+      "claim": "The first owner of the Short House was Thomas Jefferson Long.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "The house's first owner, Thomas Jefferson Long, was a wealthy businessman...",
+      "rationale": "Direct statement of ownership.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "John Adams Long",
+      "normalized_answer": "john adams long",
+      "claim": "The first owner of the George Short House was John Adams Long.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "The house's first owner, John Adams Long, was a wealthy businessman who was involved with the local tobacco industry.",
+      "rationale": "Document explicitly states the first owner's name.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "William A. and Sally Baker Short",
+      "normalized_answer": "william a and sally baker short",
+      "claim": "The William A. Short House was built in 1904 for William A. and Sally Baker Short, making them the owners.",
+      "temporal_status": "outdated",
+      "time_cue": "1904",
+      "confidence": 0.95,
+      "raw_quote": "built in 1904 for William A. and Sally Baker Short.",
+      "rationale": "The document directly states it was built for them, so they were the owners at that time.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention the Short House or its owner.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "House of Windsor",
+      "rationale": "The document is about the House of Windsor lineage; it contains no reference to the Short House or its ownership.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "George Washington Short"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "George Washington Short"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Thomas Jefferson Long"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "John Adams Long"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "William A. and Sally Baker Short"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'George Washington Short', while D3 supports 'Thomas Jefferson Long'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'George Washington Short', while D4 supports 'John Adams Long'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'George Washington Short', while D5 supports 'William A. and Sally Baker Short'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'George Washington Short', while D3 supports 'Thomas Jefferson Long'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'George Washington Short', while D4 supports 'John Adams Long'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports 'George Washington Short', while D5 supports 'William A. and Sally Baker Short'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'Thomas Jefferson Long', while D4 supports 'John Adams Long'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports 'Thomas Jefferson Long', while D5 supports 'William A. and Sally Baker Short'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D4 supports 'John Adams Long', while D5 supports 'William A. and Sally Baker Short'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "George Washington Short",
+      "normalized_answer": "george washington short",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 6,
+      "score": 3.2175
+    },
+    {
+      "answer": "Thomas Jefferson Long",
+      "normalized_answer": "thomas jefferson long",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 4,
+      "score": 1.62
+    },
+    {
+      "answer": "John Adams Long",
+      "normalized_answer": "john adams long",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 4,
+      "score": 1.62
+    },
+    {
+      "answer": "William A. and Sally Baker Short",
+      "normalized_answer": "william a and sally baker short",
+      "doc_ids": [
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G5"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 4,
+      "score": 1.5575
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "George Washington Short",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4",
+      "D5"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "George Washington Short": 3.2175,
+      "Thomas Jefferson Long": 1.62,
+      "John Adams Long": 1.62,
+      "William A. and Sally Baker Short": 1.5575
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "George Washington Short",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4",
+      "D5"
+    ],
+    "reason": "The candidate answer has stronger explicit support (2 high-confidence primary evidence cards) compared to competing clusters, each with only one support."
+  },
+  "final_answer": "George Washington Short",
+  "decision_trace": [
+    "Extracted 6 evidence cards.",
+    "Built 6 duplicate groups.",
+    "Built 10 evidence graph edges.",
+    "Built 4 answer clusters.",
+    "Candidate decision: answer -> George Washington Short.",
+    "Verifier decision: supported -> George Washington Short."
+  ]
+}

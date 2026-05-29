@@ -1,0 +1,273 @@
+{
+  "qid": "ramdocs_000130",
+  "question": "Where is Lincoln County High School located?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Stanford, Kentucky",
+      "normalized_answer": "stanford kentucky",
+      "claim": "Lincoln County High School is located in Stanford, Kentucky.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "located in Stanford, Kentucky, USA",
+      "rationale": "The document explicitly states the school's location.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Springfield, Illinois",
+      "normalized_answer": "springfield illinois",
+      "claim": "Lincoln County High School is located in Springfield, Illinois.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Lincoln County High School is a public secondary school located in Springfield, Illinois, USA.",
+      "rationale": "The document explicitly states the location.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Hamlin, West Virginia",
+      "normalized_answer": "hamlin west virginia",
+      "claim": "Lincoln County High School is located in Hamlin, West Virginia.",
+      "temporal_status": "current",
+      "time_cue": "built between 2004 and 2006",
+      "confidence": 1.0,
+      "raw_quote": "Lincoln County High School is a Class AA high school in Hamlin, West Virginia.",
+      "rationale": "The document explicitly states the location of the school.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "No location information is provided for Lincoln County High School.",
+      "temporal_status": "unknown",
+      "time_cue": "Mar 22 2022",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document does not mention any location details for LCHS.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "medium",
+      "answer_candidate": "Hamlin, West Virginia",
+      "normalized_answer": "hamlin west virginia",
+      "claim": "Lincoln County Schools is located in Hamlin, WV.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.6,
+      "raw_quote": "Lincoln County Schools HAMLIN, WV",
+      "rationale": "The document mentions the school district's location, which may be the same as the high school, but it does not explicitly state the high school's address.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Stanford, Kentucky"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Springfield, Illinois"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Hamlin, West Virginia"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "Hamlin, West Virginia"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'Stanford, Kentucky', while D2 supports 'Springfield, Illinois'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'Stanford, Kentucky', while D3 supports 'Hamlin, West Virginia'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'Stanford, Kentucky', while D5 supports 'Hamlin, West Virginia'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'Springfield, Illinois', while D3 supports 'Hamlin, West Virginia'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports 'Springfield, Illinois', while D5 supports 'Hamlin, West Virginia'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Hamlin, West Virginia",
+      "normalized_answer": "hamlin west virginia",
+      "doc_ids": [
+        "D3",
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G3",
+        "G5"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.8,
+      "conflict_count": 4,
+      "score": 3.17
+    },
+    {
+      "answer": "Stanford, Kentucky",
+      "normalized_answer": "stanford kentucky",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 1.74
+    },
+    {
+      "answer": "Springfield, Illinois",
+      "normalized_answer": "springfield illinois",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 1.74
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Hamlin, West Virginia",
+    "supporting_doc_ids": [
+      "D3",
+      "D5"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Hamlin, West Virginia": 3.17,
+      "Stanford, Kentucky": 1.74,
+      "Springfield, Illinois": 1.74
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Hamlin, West Virginia",
+    "supporting_doc_ids": [
+      "D3",
+      "D5"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "Hamlin, West Virginia",
+  "decision_trace": [
+    "Extracted 5 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> Hamlin, West Virginia.",
+    "Verifier decision: supported -> Hamlin, West Virginia."
+  ]
+}

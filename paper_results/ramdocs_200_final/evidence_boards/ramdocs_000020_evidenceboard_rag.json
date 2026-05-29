@@ -1,0 +1,154 @@
+{
+  "qid": "ramdocs_000020",
+  "question": "Who won the 5th Soccer Bowl?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "",
+      "temporal_status": "unknown",
+      "time_cue": "1973",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "card_error: Unterminated string starting at: line 9 column 16 (char 301); heuristic fallback used",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention the 5th Soccer Bowl or its winner.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Document only discusses Philadelphia Atoms vs Dallas Tornado in 1973 NASL Championship Final and previous Fury loss; no reference to 5th Soccer Bowl.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain information about the winner of the 5th Soccer Bowl.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document is a list of soccer team names and includes no mention of the Soccer Bowl or its results.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document contains player statistics but no mention of the 5th Soccer Bowl winner.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "No mention of Soccer Bowl.",
+      "rationale": "The document only lists player statistics and does not address the question.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document contains no information about the 5th Soccer Bowl winner.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Retrieved from `` https : //en.wikipedia.org/w/index.php ? title=1979_North_American_Soccer_League_season & oldid=1229900451 ``",
+      "rationale": "The document is a citation stub with categories but no actual season details or match results.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [],
+  "candidate_decision": {
+    "mode": "unknown",
+    "answer": "unknown",
+    "supporting_doc_ids": [],
+    "rejected_doc_ids": [],
+    "reason": "No non-unknown answer cluster was found.",
+    "scores": {}
+  },
+  "verifier_decision": {
+    "verdict": "unknown",
+    "final_answer": "unknown",
+    "supporting_doc_ids": [],
+    "rejected_doc_ids": [],
+    "reason": "No non-unknown answer cluster was found."
+  },
+  "final_answer": "unknown",
+  "decision_trace": [
+    "Extracted 5 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 0 answer clusters.",
+    "Candidate decision: unknown -> unknown.",
+    "Verifier decision: unknown -> unknown."
+  ]
+}

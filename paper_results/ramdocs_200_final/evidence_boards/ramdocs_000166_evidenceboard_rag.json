@@ -1,0 +1,249 @@
+{
+  "qid": "ramdocs_000166",
+  "question": "Who led the Chola invasion of Kalinga?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Vikrama Chola",
+      "normalized_answer": "vikrama chola",
+      "claim": "The Chola invasion of Kalinga was led by Vikrama Chola.",
+      "temporal_status": "current",
+      "time_cue": "1097",
+      "confidence": 1.0,
+      "raw_quote": "A huge army under Vikrama Chola was sent to repulse the invaders.",
+      "rationale": "The document explicitly states that an army under Vikrama Chola was sent to repulse the Kalinga invaders.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Kulothunga Chola I",
+      "normalized_answer": "kulothunga chola i",
+      "claim": "Kulothunga Chola I led the first Chola invasion of Kalinga in 1097.",
+      "temporal_status": "current",
+      "time_cue": "1097",
+      "confidence": 1.0,
+      "raw_quote": "The first Chola invasion of Kalinga by Kulothunga Chola I in 1097",
+      "rationale": "The document explicitly states the invasion was by Kulothunga Chola I.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Karunakara Tondaiman",
+      "normalized_answer": "karunakara tondaiman",
+      "claim": "Karunakara Tondaiman led the Chola forces during the invasion of Kalinga in 1110 CE.",
+      "temporal_status": "current",
+      "time_cue": "1110 CE",
+      "confidence": 1.0,
+      "raw_quote": "The forces led by the Pallava chief, Karunakara Tondaiman, achieved an easy victory",
+      "rationale": "The document directly states that the forces were led by Karunakara Tondaiman.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "Karunakara Tondaiman",
+      "normalized_answer": "karunakara tondaiman",
+      "claim": "The Chola invasion of Kalinga was led by the Pallava chief Karunakara Tondaiman.",
+      "temporal_status": "current",
+      "time_cue": "1110 CE",
+      "confidence": 0.9,
+      "raw_quote": "The forces led by the Pallava chief , Karunakara Tondaiman , achieved an easy victory",
+      "rationale": "The document explicitly states the forces were led by Karunakara Tondaiman.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Vikrama Chola"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Kulothunga Chola I"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Karunakara Tondaiman"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Karunakara Tondaiman"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'Vikrama Chola', while D2 supports 'Kulothunga Chola I'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'Vikrama Chola', while D3 supports 'Karunakara Tondaiman'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'Vikrama Chola', while D4 supports 'Karunakara Tondaiman'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'Kulothunga Chola I', while D3 supports 'Karunakara Tondaiman'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'Kulothunga Chola I', while D4 supports 'Karunakara Tondaiman'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Karunakara Tondaiman",
+      "normalized_answer": "karunakara tondaiman",
+      "doc_ids": [
+        "D3",
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G3",
+        "G4"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 2,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 4,
+      "score": 4.8575
+    },
+    {
+      "answer": "Vikrama Chola",
+      "normalized_answer": "vikrama chola",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 2.44
+    },
+    {
+      "answer": "Kulothunga Chola I",
+      "normalized_answer": "kulothunga chola i",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 2.44
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Karunakara Tondaiman",
+    "supporting_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Karunakara Tondaiman": 4.8575,
+      "Vikrama Chola": 2.44,
+      "Kulothunga Chola I": 2.44
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Karunakara Tondaiman",
+    "supporting_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "reason": "Stronger explicit support from two high-confidence documents compared to conflicting clusters."
+  },
+  "final_answer": "Karunakara Tondaiman",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> Karunakara Tondaiman.",
+    "Verifier decision: supported -> Karunakara Tondaiman."
+  ]
+}

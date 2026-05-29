@@ -1,0 +1,182 @@
+{
+  "qid": "ramdocs_000152",
+  "question": "When was Christy O'Connor born?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "19 August 1948",
+      "normalized_answer": "19 august 1948",
+      "claim": "Christy O'Connor Jnr was born on 19 August 1948.",
+      "temporal_status": "current",
+      "time_cue": "19 August 1948",
+      "confidence": 1.0,
+      "raw_quote": "born Christopher O'Connor; 19 August 1948",
+      "rationale": "The document explicitly states the birth date of Christy O'Connor Jnr.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "19 August 1948",
+      "normalized_answer": "19 august 1948",
+      "claim": "Christy O'Connor Jr. was born on 19 August 1948.",
+      "temporal_status": "current",
+      "time_cue": "19 August 1948",
+      "confidence": 1.0,
+      "raw_quote": "born 19 August 1948",
+      "rationale": "The document explicitly states the birth date.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "21 December 1924",
+      "normalized_answer": "21 december 1924",
+      "claim": "Christy O'Connor was born on 21 December 1924.",
+      "temporal_status": "current",
+      "time_cue": "21 December 1924",
+      "confidence": 1.0,
+      "raw_quote": "21 December 1924",
+      "rationale": "The document explicitly states the birth date in parentheses after the name.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "19 August 1948"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "19 August 1948"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "21 December 1924"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports '19 August 1948', while D3 supports '21 December 1924'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports '19 August 1948', while D3 supports '21 December 1924'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "19 August 1948",
+      "normalized_answer": "19 august 1948",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 2,
+      "score": 4.41
+    },
+    {
+      "answer": "21 December 1924",
+      "normalized_answer": "21 december 1924",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 2,
+      "score": 2.56
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "19 August 1948",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "19 August 1948": 4.41,
+      "21 December 1924": 2.56
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "19 August 1948",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "19 August 1948",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> 19 August 1948.",
+    "Verifier decision: supported -> 19 August 1948."
+  ]
+}

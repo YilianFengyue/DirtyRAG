@@ -1,0 +1,110 @@
+{
+  "qid": "ramdocs_000047",
+  "question": "Who was the husband of Khentkaus?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Shepseskaf and Userkaf",
+      "normalized_answer": "shepseskaf and userkaf",
+      "claim": "Khentkaus I may have been the wife of both kings Shepseskaf and Userkaf.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.6,
+      "raw_quote": "wife of both kings Shepseskaf and Userkaf",
+      "rationale": "The document directly states she was wife of both kings, though with uncertainty indicated by 'may have been'.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention Khentkaus or her husband.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "The city was probably the home of the priests and servants of the pyramid complex.",
+      "rationale": "Document D2 discusses a pyramid city from the Fourth Dynasty but contains no reference to Khentkaus.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Shepseskaf and Userkaf"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [
+    {
+      "answer": "Shepseskaf and Userkaf",
+      "normalized_answer": "shepseskaf and userkaf",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.6,
+      "conflict_count": 0,
+      "score": 2.7
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Shepseskaf and Userkaf",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "Shepseskaf and Userkaf": 2.7
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Shepseskaf and Userkaf",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2"
+    ],
+    "reason": "D1 explicitly states Khentkaus I may have been the wife of both Shepseskaf and Userkaf."
+  },
+  "final_answer": "Shepseskaf and Userkaf",
+  "decision_trace": [
+    "Extracted 2 evidence cards.",
+    "Built 2 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> Shepseskaf and Userkaf.",
+    "Verifier decision: supported -> Shepseskaf and Userkaf."
+  ]
+}

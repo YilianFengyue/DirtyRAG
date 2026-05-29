@@ -1,0 +1,311 @@
+{
+  "qid": "ramdocs_000168",
+  "question": "What is the medium of \"Monkey Grip\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "film",
+      "normalized_answer": "film",
+      "claim": "Monkey Grip is a film.",
+      "temporal_status": "current",
+      "time_cue": "1982",
+      "confidence": 1.0,
+      "raw_quote": "Monkey Grip is a 1982 Australian drama film directed by Ken Cameron.",
+      "rationale": "The document explicitly identifies Monkey Grip as a film.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "film",
+      "normalized_answer": "film",
+      "claim": "Monkey Grip is a film.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "NY Times: Monkey Grip; Festival de Cannes: Monkey Grip",
+      "rationale": "References to a film review and a film festival indicate Monkey Grip is a film.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "novel",
+      "normalized_answer": "novel",
+      "claim": "\"Monkey Grip\" is a novel.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "\"Monkey Grip\" is a novel",
+      "rationale": "The document explicitly states that 'Monkey Grip' is a novel.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "novel",
+      "normalized_answer": "novel",
+      "claim": "Monkey Grip is a 1977 novel by Australian writer Helen Garner.",
+      "temporal_status": "current",
+      "time_cue": "1977",
+      "confidence": 1.0,
+      "raw_quote": "Monkey Grip is a 1977 novel",
+      "rationale": "The document explicitly identifies the work as a novel, which is its medium.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not specify the medium of 'Monkey Grip'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "\"On the ruthless honesty of 'Monkey Grip'\"",
+      "rationale": "The document only contains a citation title mentioning 'Monkey Grip' but no information about its medium.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "high",
+      "answer_candidate": "film",
+      "normalized_answer": "film",
+      "claim": "Monkey Grip is a film.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "The film received mixed reviews.",
+      "rationale": "The document explicitly refers to Monkey Grip as a film.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "film"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "film"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "novel"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "novel"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "film"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'film', while D3 supports 'novel'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'film', while D4 supports 'novel'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D6",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'film', while D3 supports 'novel'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'film', while D4 supports 'novel'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D6",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D3",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D3 supports 'novel', while D6 supports 'film'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D4 supports 'novel', while D6 supports 'film'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "film",
+      "normalized_answer": "film",
+      "doc_ids": [
+        "D1",
+        "D2",
+        "D6"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2",
+        "G6"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 1,
+      "missing_entity_count": 2,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 6,
+      "score": 5.0675
+    },
+    {
+      "answer": "novel",
+      "normalized_answer": "novel",
+      "doc_ids": [
+        "D3",
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G3",
+        "G4"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 2,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 6,
+      "score": 4.63
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "film",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D6"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "film": 5.0675,
+      "novel": 4.63
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "film",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D6"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "film",
+  "decision_trace": [
+    "Extracted 6 evidence cards.",
+    "Built 6 duplicate groups.",
+    "Built 10 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> film.",
+    "Verifier decision: supported -> film."
+  ]
+}

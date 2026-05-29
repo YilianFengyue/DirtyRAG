@@ -1,0 +1,84 @@
+{
+  "qid": "ramdocs_000100",
+  "question": "Who is the artist of the \"Never Ever\" EP?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Park Ji-yeon",
+      "normalized_answer": "park jiyeon",
+      "claim": "The artist of the 'Never Ever' EP is Park Ji-yeon.",
+      "temporal_status": "current",
+      "time_cue": "May 20, 2014",
+      "confidence": 1.0,
+      "raw_quote": "Never Ever is the debut EP by Park Ji-yeon.",
+      "rationale": "The document directly states the artist of the EP.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Park Ji-yeon"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [
+    {
+      "answer": "Park Ji-yeon",
+      "normalized_answer": "park jiyeon",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 0,
+      "score": 2.1
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Park Ji-yeon",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "Park Ji-yeon": 2.1
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Park Ji-yeon",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "The evidence board shows a single high-confidence cluster supporting the candidate answer with no conflicts."
+  },
+  "final_answer": "Park Ji-yeon",
+  "decision_trace": [
+    "Extracted 1 evidence cards.",
+    "Built 1 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> Park Ji-yeon.",
+    "Verifier decision: supported -> Park Ji-yeon."
+  ]
+}

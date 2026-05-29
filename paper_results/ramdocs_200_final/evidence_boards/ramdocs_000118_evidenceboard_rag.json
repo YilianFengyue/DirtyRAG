@@ -1,0 +1,249 @@
+{
+  "qid": "ramdocs_000118",
+  "question": "What is the population of Vermillion Township?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "1,243 people",
+      "normalized_answer": "1243 people",
+      "claim": "The population of Vermillion Township was 1,243 at the 2000 census.",
+      "temporal_status": "outdated",
+      "time_cue": "2000 census",
+      "confidence": 0.95,
+      "raw_quote": "The population was 1,243 at the 2000 census.",
+      "rationale": "The document explicitly states the population at the 2000 census.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "1,290 people",
+      "normalized_answer": "1290 people",
+      "claim": "The population of Vermillion Township is 1,290 as of the 2020 census.",
+      "temporal_status": "current",
+      "time_cue": "2020",
+      "confidence": 0.95,
+      "raw_quote": "2020 1,290",
+      "rationale": "The 2020 census figure provides the most recent population count.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "1,243 people",
+      "normalized_answer": "1243 people",
+      "claim": "The population of Vermillion Township is 1,243.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Population : 1,243 ( all rural )",
+      "rationale": "Direct statement of population.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "924",
+      "normalized_answer": "924",
+      "claim": "As of the 2010 census, the population of Vermillion Township was 924.",
+      "temporal_status": "outdated",
+      "time_cue": "2010 census",
+      "confidence": 0.95,
+      "raw_quote": "its population was 924",
+      "rationale": "The document directly states the population from the 2010 census.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "1,243 people"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "1,290 people"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "1,243 people"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "924"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports '1,243 people', while D2 supports '1,290 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports '1,243 people', while D4 supports '924'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports '1,290 people', while D3 supports '1,243 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports '1,290 people', while D4 supports '924'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports '1,243 people', while D4 supports '924'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "1,243 people",
+      "normalized_answer": "1243 people",
+      "doc_ids": [
+        "D1",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G3"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 2,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.975,
+      "conflict_count": 4,
+      "score": 4.8137
+    },
+    {
+      "answer": "924",
+      "normalized_answer": "924",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 3,
+      "score": 2.3775
+    },
+    {
+      "answer": "1,290 people",
+      "normalized_answer": "1290 people",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 3,
+      "score": 1.7275
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "1,243 people",
+    "supporting_doc_ids": [
+      "D1",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "1,243 people": 4.8137,
+      "924": 2.3775,
+      "1,290 people": 1.7275
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "1,243 people",
+    "supporting_doc_ids": [
+      "D1",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D4"
+    ],
+    "reason": "The candidate answer has stronger explicit support (D1 and D3, both primary and explicit) than competing clusters despite temporal variations."
+  },
+  "final_answer": "1,243 people",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> 1,243 people.",
+    "Verifier decision: supported -> 1,243 people."
+  ]
+}

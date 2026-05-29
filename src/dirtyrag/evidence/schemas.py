@@ -17,6 +17,9 @@ class EvidenceCard(BaseModel):
     raw_quote: str = ""
     rationale: str = ""
     entity_explicitness: str = "unknown"
+    answer_role: str = "primary"
+    contamination_risk: float = 0.0
+    domain_cues: list[str] = Field(default_factory=list)
 
 
 class DuplicateGroup(BaseModel):
@@ -43,6 +46,8 @@ class AnswerCluster(BaseModel):
     high_relevance_count: int
     explicit_support_count: int = 0
     missing_entity_count: int = 0
+    primary_support_count: int = 0
+    mean_contamination_risk: float = 0.0
     mean_confidence: float
     conflict_count: int
     score: float

@@ -1,0 +1,416 @@
+{
+  "qid": "ramdocs_000116",
+  "question": "What is the genre of the film \"The Squeeze\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "gangster thriller",
+      "normalized_answer": "gangster thriller",
+      "claim": "The film 'The Squeeze' is a British gangster thriller.",
+      "temporal_status": "current",
+      "time_cue": "1977",
+      "confidence": 0.99,
+      "raw_quote": "The Squeeze is a 1977 British gangster thriller",
+      "rationale": "The document explicitly states the genre.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "gangster thriller",
+      "normalized_answer": "gangster thriller",
+      "claim": "The film The Squeeze is a British gangster thriller.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "The Squeeze is a 1977 British gangster thriller",
+      "rationale": "The genre is explicitly stated in the document.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "gangster thriller",
+      "normalized_answer": "gangster thriller",
+      "claim": "The Squeeze is a British gangster thriller.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "The Squeeze is a 1977 British gangster thriller",
+      "rationale": "The document explicitly states the genre.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "comedy",
+      "normalized_answer": "comedy",
+      "claim": "The Squeeze is a 1987 American comedy film directed by Roger Young.",
+      "temporal_status": "current",
+      "time_cue": "1987",
+      "confidence": 1.0,
+      "raw_quote": "The Squeeze is a 1987 American comedy film",
+      "rationale": "The document explicitly labels the film as a comedy.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "action comedy",
+      "normalized_answer": "action comedy",
+      "claim": "The Squeeze is an action comedy film.",
+      "temporal_status": "current",
+      "time_cue": "1987",
+      "confidence": 1.0,
+      "raw_quote": "The Squeeze is a 1987 American action comedy film",
+      "rationale": "The document explicitly labels the film's genre.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "high",
+      "answer_candidate": "action comedy",
+      "normalized_answer": "action comedy",
+      "claim": "The Squeeze is a 1987 American action comedy film.",
+      "temporal_status": "current",
+      "time_cue": "1987",
+      "confidence": 1.0,
+      "raw_quote": "The Squeeze is a 1987 American action comedy film directed by Roger Young and starring Michael Keaton and Rae Dawn Chong.",
+      "rationale": "The document explicitly states the film's genre as action comedy.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "",
+      "temporal_status": "unknown",
+      "time_cue": "1987",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "card_error: Unterminated string starting at: line 10 column 3 (char 328); heuristic fallback used",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D8",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not specify the genre of the film 'The Squeeze'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document is a Wikipedia footer with no genre information.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "gangster thriller"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "gangster thriller"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "gangster thriller"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "comedy"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "action comedy"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "action comedy"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G8",
+      "doc_ids": [
+        "D8"
+      ],
+      "representative_doc_id": "D8",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'gangster thriller', while D4 supports 'comedy'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'gangster thriller', while D5 supports 'action comedy'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D1 supports 'gangster thriller', while D6 supports 'action comedy'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'gangster thriller', while D4 supports 'comedy'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports 'gangster thriller', while D5 supports 'action comedy'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D2 supports 'gangster thriller', while D6 supports 'action comedy'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'gangster thriller', while D4 supports 'comedy'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports 'gangster thriller', while D5 supports 'action comedy'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D3 supports 'gangster thriller', while D6 supports 'action comedy'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D4 supports 'comedy', while D5 supports 'action comedy'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D4 supports 'comedy', while D6 supports 'action comedy'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D6",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "gangster thriller",
+      "normalized_answer": "gangster thriller",
+      "doc_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9967,
+      "conflict_count": 9,
+      "score": 4.7192
+    },
+    {
+      "answer": "action comedy",
+      "normalized_answer": "action comedy",
+      "doc_ids": [
+        "D5",
+        "D6"
+      ],
+      "duplicate_group_ids": [
+        "G5",
+        "G6"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 8,
+      "score": 2.99
+    },
+    {
+      "answer": "comedy",
+      "normalized_answer": "comedy",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 5,
+      "score": 1.5
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "gangster thriller",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D5",
+      "D6"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "gangster thriller": 4.7192,
+      "action comedy": 2.99,
+      "comedy": 1.5
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "gangster thriller",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D5",
+      "D6"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "gangster thriller",
+  "decision_trace": [
+    "Extracted 8 evidence cards.",
+    "Built 8 duplicate groups.",
+    "Built 15 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> gangster thriller.",
+    "Verifier decision: supported -> gangster thriller."
+  ]
+}

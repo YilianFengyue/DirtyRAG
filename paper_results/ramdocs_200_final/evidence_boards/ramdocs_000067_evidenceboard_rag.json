@@ -1,0 +1,278 @@
+{
+  "qid": "ramdocs_000067",
+  "question": "What political party is Senator Tate a member of?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Republican",
+      "normalized_answer": "republican",
+      "claim": "Senator Tate is a member of the Republican Party.",
+      "temporal_status": "current",
+      "time_cue": "from 2014",
+      "confidence": 0.9,
+      "raw_quote": "Tate was a Republican member of the Colorado House of Representatives",
+      "rationale": "The document explicitly states his party affiliation.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Republican",
+      "normalized_answer": "republican",
+      "claim": "Senator Jack Tate is a Republican.",
+      "temporal_status": "current",
+      "time_cue": "March 29, 2018",
+      "confidence": 1.0,
+      "raw_quote": "GOP Sen. Jack Tate",
+      "rationale": "The document explicitly identifies Senator Tate as a GOP senator.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "",
+      "temporal_status": "unknown",
+      "time_cue": "2014",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "card_error: Expecting value: line 1 column 1 (char 0); heuristic fallback used",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "Democratic",
+      "normalized_answer": "democratic",
+      "claim": "Senator Jack Tate is a member of the Democratic Party.",
+      "temporal_status": "outdated",
+      "time_cue": "2018-03-29",
+      "confidence": 0.9,
+      "raw_quote": "Democratic Sen. Jack Tate",
+      "rationale": "The document contains a headline explicitly referring to 'Democratic Sen. Jack Tate'.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention Senator Tate or his party affiliation.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "District 31 Matt Ball ( D ) District 32 Robert Rodriguez ( D ) District 33 James Coleman ( D ) District 34 Julie Gonzales ( D ) District 35 Rod Pelton ( GP )",
+      "rationale": "The document lists only the named legislators and their parties, none named Tate.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention Senator Tate or any political party affiliation.",
+      "temporal_status": "unknown",
+      "time_cue": "17 December 2023",
+      "confidence": 0.0,
+      "raw_quote": "17 December 2023 . Retrieved 9 June 2024 . Critics say Tate 's commentary and content is harmful in and of itself .",
+      "rationale": "The document is about Andrew Tate, not Senator Tate, and contains no political party information.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention Senator Tate or any political party affiliation.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Document is about Andrew Tate and Elon Musk, with no reference to Senator Tate or political parties.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Republican"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Republican"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Democratic"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'Republican', while D4 supports 'Democratic'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'Republican', while D4 supports 'Democratic'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Republican",
+      "normalized_answer": "republican",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 2,
+      "score": 3.6975
+    },
+    {
+      "answer": "Democratic",
+      "normalized_answer": "democratic",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 2,
+      "score": 1.785
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Republican",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Republican": 3.6975,
+      "Democratic": 1.785
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Republican",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D4"
+    ],
+    "reason": "Stronger explicit support from D1 and D2 outweighs the conflicting D4."
+  },
+  "final_answer": "Republican",
+  "decision_trace": [
+    "Extracted 7 evidence cards.",
+    "Built 7 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> Republican.",
+    "Verifier decision: supported -> Republican."
+  ]
+}

@@ -1,0 +1,6 @@
+method,num_examples,strict_success,gold_coverage,wrong_leakage,conflict_sensitivity,avg_latency,avg_total_tokens
+crag_style_rag,200,0.22,0.22,0.015,0.14,9.450903,2025.18
+direct_llm,200,0.05,0.055,0.01,0.0,2.660972,140.95
+evidenceboard_rag,200,0.495,0.505,0.06,0.35,33.063782,3595.555
+relevance_filter_rag,200,0.36,0.4,0.055,0.195,19.09809,2527.95
+vanilla_rag,200,0.335,0.38,0.06,0.18,7.263547,1090.755

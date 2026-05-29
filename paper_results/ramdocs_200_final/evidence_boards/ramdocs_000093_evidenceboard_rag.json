@@ -1,0 +1,171 @@
+{
+  "qid": "ramdocs_000093",
+  "question": "What is the common name for Yellow Lantern?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "yellow lantern banksia",
+      "normalized_answer": "yellow lantern banksia",
+      "claim": "Banksia lemanniana is commonly known as the yellow lantern banksia.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "commonly known as the yellow lantern banksia",
+      "rationale": "The document explicitly states the common name.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Yellow lantern banksia",
+      "normalized_answer": "yellow lantern banksia",
+      "claim": "The common name for Yellow Lantern is Yellow lantern banksia.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "Yellow lantern banksia",
+      "rationale": "The document directly lists 'Yellow lantern banksia' as a common name.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "Banksia lemanniana is commonly known as the red lantern banksia or Lemann's banksia.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Banksia lemanniana, commonly known as the red lantern banksia or Lemann's banksia",
+      "rationale": "The document does not contain information about Yellow Lantern.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain a common name for Yellow Lantern; it mentions Red Lantern Banksia and Lemann's banksia as common names for Banksia lemanniana.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Lemann's banksia Red Lantern Banksia",
+      "rationale": "The document lists common names for a plant, none matching Yellow Lantern.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "yellow lantern banksia"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Yellow lantern banksia"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "yellow lantern banksia",
+      "normalized_answer": "yellow lantern banksia",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 2,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.925,
+      "conflict_count": 0,
+      "score": 5.3312
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "yellow lantern banksia",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "yellow lantern banksia": 5.3312
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "yellow lantern banksia",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "reason": "Candidate answer is directly supported by two high-confidence, explicit primary evidence cards (D1, D2). Low-relevance cards (D3, D4) provide no conflict."
+  },
+  "final_answer": "yellow lantern banksia",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> yellow lantern banksia.",
+    "Verifier decision: supported -> yellow lantern banksia."
+  ]
+}

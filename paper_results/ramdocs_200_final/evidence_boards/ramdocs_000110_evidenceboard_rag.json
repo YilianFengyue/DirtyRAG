@@ -1,0 +1,188 @@
+{
+  "qid": "ramdocs_000110",
+  "question": "Who is the artist of \"The Coast Is Clear\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "In-Flight Safety",
+      "normalized_answer": "inflight safety",
+      "claim": "The Coast Is Clear is an album by In-Flight Safety.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "The Coast Is Clear is the debut album by Canadian indie rock band In-Flight Safety",
+      "rationale": "The document explicitly identifies the artist as In-Flight Safety.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Tracy Lawrence",
+      "normalized_answer": "tracy lawrence",
+      "claim": "The Coast Is Clear is an album by country music artist Tracy Lawrence.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "released by country music artist Tracy Lawrence",
+      "rationale": "The document explicitly states the album is by Tracy Lawrence.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain information about who the artist of 'The Coast Is Clear' is.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "The Coast Is Clear",
+      "rationale": "The provided document snippet only includes Wikipedia navigation elements and the page title, lacking any content about the artist.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain information about the artist of 'The Coast Is Clear'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.1,
+      "raw_quote": "The Coast Is Clear - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account Log in Personal tools Donate Create account Log in Pages for logged out editors learn more Contributions Talk The Coast Is Clear Add languages Add links Article Talk English Read Edit View h",
+      "rationale": "The provided document snippet is only the header and navigation of a Wikipedia page, lacking any substantive information about the song or its artist.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "In-Flight Safety"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Tracy Lawrence"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'In-Flight Safety', while D2 supports 'Tracy Lawrence'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Tracy Lawrence",
+      "normalized_answer": "tracy lawrence",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 1,
+      "score": 2.68
+    },
+    {
+      "answer": "In-Flight Safety",
+      "normalized_answer": "inflight safety",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 1,
+      "score": 1.98
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Tracy Lawrence",
+    "supporting_doc_ids": [
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "The top answer has stronger explicit entity support than competing clusters.",
+    "scores": {
+      "Tracy Lawrence": 2.68,
+      "In-Flight Safety": 1.98
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Tracy Lawrence",
+    "supporting_doc_ids": [
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "D2 provides explicit support for Tracy Lawrence, while D1 only implicitly supports In-Flight Safety, making the candidate answer stronger."
+  },
+  "final_answer": "Tracy Lawrence",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> Tracy Lawrence.",
+    "Verifier decision: supported -> Tracy Lawrence."
+  ]
+}

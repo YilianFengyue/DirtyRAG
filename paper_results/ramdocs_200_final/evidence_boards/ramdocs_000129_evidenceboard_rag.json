@@ -1,0 +1,273 @@
+{
+  "qid": "ramdocs_000129",
+  "question": "What political party does Marcoux belong to?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Liberal-Progressives",
+      "normalized_answer": "liberalprogressives",
+      "claim": "Marcoux became a member of the Liberal-Progressives following the merger of the Liberal and Progressive parties.",
+      "temporal_status": "outdated",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "He was a Liberal by background, and became a member of the Liberal-Progressives following the merger of the two constituent parties.",
+      "rationale": "The document explicitly states his party affiliation as Liberal-Progressives after the merger.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Liberal-Progressives",
+      "normalized_answer": "liberalprogressives",
+      "claim": "Marcoux was a Liberal by background and became a member of the Liberal-Progressives.",
+      "temporal_status": "outdated",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "He was a Liberal by background, and became a member of the Liberal-Progressives",
+      "rationale": "Direct statement of party affiliation.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Conservative",
+      "normalized_answer": "conservative",
+      "claim": "Marcoux was a Conservative by background and remained loyal to the party even after the merger of the Liberals and Progressives.",
+      "temporal_status": "outdated",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "He was a Conservative by background, and remained loyal to the party even after the merger of the Liberals and Progressives.",
+      "rationale": "The document explicitly states his party affiliation as Conservative.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "Quebec Liberal Party",
+      "normalized_answer": "quebec liberal party",
+      "claim": "Yvon Marcoux is a member of the Quebec Liberal Party.",
+      "temporal_status": "outdated",
+      "time_cue": "1998 to 2014",
+      "confidence": 0.95,
+      "raw_quote": "as a member of the Quebec Liberal Party",
+      "rationale": "The document explicitly states his party affiliation during his tenure as MNA.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "card_error: Unterminated string starting at: line 9 column 16 (char 261); heuristic fallback used",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Liberal-Progressives"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Liberal-Progressives"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Conservative"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Quebec Liberal Party"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'Liberal-Progressives', while D3 supports 'Conservative'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'Liberal-Progressives', while D4 supports 'Quebec Liberal Party'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'Liberal-Progressives', while D3 supports 'Conservative'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'Liberal-Progressives', while D4 supports 'Quebec Liberal Party'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'Conservative', while D4 supports 'Quebec Liberal Party'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Liberal-Progressives",
+      "normalized_answer": "liberalprogressives",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.925,
+      "conflict_count": 4,
+      "score": 3.3512
+    },
+    {
+      "answer": "Conservative",
+      "normalized_answer": "conservative",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 3,
+      "score": 1.6775
+    },
+    {
+      "answer": "Quebec Liberal Party",
+      "normalized_answer": "quebec liberal party",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 3,
+      "score": 1.6775
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Liberal-Progressives",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Liberal-Progressives": 3.3512,
+      "Conservative": 1.6775,
+      "Quebec Liberal Party": 1.6775
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Liberal-Progressives",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "reason": "Liberal-Progressives has stronger independent support (2 primary supports) than conflicting clusters with only 1 support each."
+  },
+  "final_answer": "Liberal-Progressives",
+  "decision_trace": [
+    "Extracted 5 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> Liberal-Progressives.",
+    "Verifier decision: supported -> Liberal-Progressives."
+  ]
+}

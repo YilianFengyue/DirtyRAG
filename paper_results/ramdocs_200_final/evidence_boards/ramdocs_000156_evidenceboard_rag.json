@@ -1,0 +1,401 @@
+{
+  "qid": "ramdocs_000156",
+  "question": "Who is the artist of the album \"Music of the Spheres\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Ian Brown",
+      "normalized_answer": "ian brown",
+      "claim": "Ian Brown released the album Music of the Spheres as his third solo album.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Music of the Spheres is the third solo album released by Ian Brown",
+      "rationale": "The document explicitly identifies Ian Brown as the artist of the album.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "",
+      "temporal_status": "unknown",
+      "time_cue": "2024",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "card_error: Expecting value: line 1 column 1 (char 0); heuristic fallback used",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Taylor Swift",
+      "normalized_answer": "taylor swift",
+      "claim": "Taylor Swift is the artist of the album \"Music of the Spheres\".",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Music of the Spheres is the third solo album released by Taylor Swift",
+      "rationale": "The document explicitly states that the album was released by Taylor Swift.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "",
+      "temporal_status": "unknown",
+      "time_cue": "2024",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "card_error: Unterminated string starting at: line 7 column 3 (char 235); heuristic fallback used",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "Mike Oldfield",
+      "normalized_answer": "mike oldfield",
+      "claim": "Music of the Spheres is an album by Mike Oldfield.",
+      "temporal_status": "current",
+      "time_cue": "17 March 2008",
+      "confidence": 1.0,
+      "raw_quote": "Music of the Spheres is an album by English musician Mike Oldfield",
+      "rationale": "The document explicitly names Mike Oldfield as the artist.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "high",
+      "answer_candidate": "Mike Oldfield",
+      "normalized_answer": "mike oldfield",
+      "claim": "The album 'Music of the Spheres' is by Mike Oldfield.",
+      "temporal_status": "current",
+      "time_cue": "March 2008",
+      "confidence": 1.0,
+      "raw_quote": "Craft : Mike Oldfield",
+      "rationale": "The document references Mike Oldfield in relation to Music of the Spheres.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "high",
+      "answer_candidate": "Mike Oldfield",
+      "normalized_answer": "mike oldfield",
+      "claim": "The album 'Music of the Spheres' is by Mike Oldfield.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Categories : Mike Oldfield albums",
+      "rationale": "The document's categories and URL explicitly associate the album with Mike Oldfield.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D8",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not state the artist of the album 'Music of the Spheres'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "See also [ edit ] List of Coldplay live performances",
+      "rationale": "The document mentions Coldplay only in a 'See also' link about live performances, not the album in question.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D9",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document is a disambiguation page for 'Music of the Spheres' and does not specify the album's artist.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Music of the Spheres ( disambiguation )",
+      "rationale": "The provided snippet only shows a disambiguation page without any mention of an album artist.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Ian Brown"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2",
+        "D4"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Taylor Swift"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "Mike Oldfield"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "Mike Oldfield"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "Mike Oldfield"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D8"
+      ],
+      "representative_doc_id": "D8",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G8",
+      "doc_ids": [
+        "D9"
+      ],
+      "representative_doc_id": "D9",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'Ian Brown', while D3 supports 'Taylor Swift'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'Ian Brown', while D5 supports 'Mike Oldfield'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D1 supports 'Ian Brown', while D6 supports 'Mike Oldfield'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D1 supports 'Ian Brown', while D7 supports 'Mike Oldfield'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "duplicate",
+      "reason": "The two documents support the same answer with highly similar text.",
+      "confidence": 0.95
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports 'Taylor Swift', while D5 supports 'Mike Oldfield'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D3 supports 'Taylor Swift', while D6 supports 'Mike Oldfield'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D3 supports 'Taylor Swift', while D7 supports 'Mike Oldfield'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D6",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D5",
+      "dst": "D7",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D6",
+      "dst": "D7",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Mike Oldfield",
+      "normalized_answer": "mike oldfield",
+      "doc_ids": [
+        "D5",
+        "D6",
+        "D7"
+      ],
+      "duplicate_group_ids": [
+        "G4",
+        "G5",
+        "G6"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 6,
+      "score": 5.08
+    },
+    {
+      "answer": "Ian Brown",
+      "normalized_answer": "ian brown",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 4,
+      "score": 1.62
+    },
+    {
+      "answer": "Taylor Swift",
+      "normalized_answer": "taylor swift",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 4,
+      "score": 1.62
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Mike Oldfield",
+    "supporting_doc_ids": [
+      "D5",
+      "D6",
+      "D7"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D3"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Mike Oldfield": 5.08,
+      "Ian Brown": 1.62,
+      "Taylor Swift": 1.62
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Mike Oldfield",
+    "supporting_doc_ids": [
+      "D5",
+      "D6",
+      "D7"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D3"
+    ],
+    "reason": "verifier_error_fallback: Unterminated string starting at: line 6 column 13 (char 155)"
+  },
+  "final_answer": "Mike Oldfield",
+  "decision_trace": [
+    "Extracted 9 evidence cards.",
+    "Built 8 duplicate groups.",
+    "Built 11 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> Mike Oldfield.",
+    "Verifier decision: supported -> Mike Oldfield."
+  ]
+}

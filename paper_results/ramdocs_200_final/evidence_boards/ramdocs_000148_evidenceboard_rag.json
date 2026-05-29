@@ -1,0 +1,319 @@
+{
+  "qid": "ramdocs_000148",
+  "question": "What is the population of Wadi?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "120,000 people",
+      "normalized_answer": "120000 people",
+      "claim": "Wadi had a population of 120,000 according to the India census.",
+      "temporal_status": "outdated",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Wadi had a population of 120,000.",
+      "rationale": "The document directly states the population figure for Wadi.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "40,147 people",
+      "normalized_answer": "40147 people",
+      "claim": "Wadi had a population of 40,147.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Wadi had a population of 40,147.",
+      "rationale": "The document directly states the population figure for Wadi.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "40,147 people",
+      "normalized_answer": "40147 people",
+      "claim": "Wadi had a population of 40,147.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Wadi had a population of 40,147",
+      "rationale": "Direct population figure provided in the document.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "40,147 people",
+      "normalized_answer": "40147 people",
+      "claim": "The population of Wadi is 40,147 as of the 2011 census.",
+      "temporal_status": "outdated",
+      "time_cue": "2011",
+      "confidence": 1.0,
+      "raw_quote": "Population ( 2011 ) • Total 40,147",
+      "rationale": "The document directly states the population figure for 2011.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "1,460,211,131 people",
+      "normalized_answer": "1460211131 people",
+      "claim": "The document does not mention Wadi or its population.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "The current population of India is 1,460,211,131 as of Friday , March 21 , 2025",
+      "rationale": "The document provides India's population but no information about Wadi.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "low",
+      "answer_candidate": "2024 people",
+      "normalized_answer": "2024 people",
+      "claim": "The document does not provide the population of Wadi.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "bridge the gap between urban and rural India by sharing comprehensive information about the villages...",
+      "rationale": "Document contains no mention of Wadi or any population figure.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "120,000 people"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "40,147 people"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "40,147 people"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "40,147 people"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "1,460,211,131 people"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "2024 people"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports '120,000 people', while D2 supports '40,147 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports '120,000 people', while D3 supports '40,147 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports '120,000 people', while D4 supports '40,147 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "40,147 people",
+      "normalized_answer": "40147 people",
+      "doc_ids": [
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G2",
+        "G3",
+        "G4"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 3,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 7.49
+    },
+    {
+      "answer": "120,000 people",
+      "normalized_answer": "120000 people",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 2.39
+    },
+    {
+      "answer": "1,460,211,131 people",
+      "normalized_answer": "1460211131 people",
+      "doc_ids": [
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G5"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 0,
+      "score": 1.5
+    },
+    {
+      "answer": "2024 people",
+      "normalized_answer": "2024 people",
+      "doc_ids": [
+        "D6"
+      ],
+      "duplicate_group_ids": [
+        "G6"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.25
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "40,147 people",
+    "supporting_doc_ids": [
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "40,147 people": 7.49,
+      "120,000 people": 2.39,
+      "1,460,211,131 people": 1.5,
+      "2024 people": 1.25
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "40,147 people",
+    "supporting_doc_ids": [
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "40,147 people",
+  "decision_trace": [
+    "Extracted 6 evidence cards.",
+    "Built 6 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 4 answer clusters.",
+    "Candidate decision: answer -> 40,147 people.",
+    "Verifier decision: supported -> 40,147 people."
+  ]
+}

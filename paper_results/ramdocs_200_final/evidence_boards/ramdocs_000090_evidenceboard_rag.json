@@ -1,0 +1,146 @@
+{
+  "qid": "ramdocs_000090",
+  "question": "When was Harry Parkes born?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "September 1888",
+      "normalized_answer": "september 1888",
+      "claim": "Harry Parkes was born in September 1888.",
+      "temporal_status": "current",
+      "time_cue": "September 1888",
+      "confidence": 0.98,
+      "raw_quote": "Harry Parkes (footballer, born 1888) Harold Arnold \"Harry\" Parkes (September 1888 – March 1947)",
+      "rationale": "The document explicitly states his birth month and year in the introductory description.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "September 1888",
+      "normalized_answer": "september 1888",
+      "claim": "Harry Parkes was born in September 1888.",
+      "temporal_status": "current",
+      "time_cue": "September 1888",
+      "confidence": 1.0,
+      "raw_quote": "date of birth September 1888 Gregorian",
+      "rationale": "Direct statement of birth date in the document.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document contains no information about Harry Parkes's birth date.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "August 1939 . He appeared for the club 345 times scoring 4 goals",
+      "rationale": "The passage only mentions career details starting from 1939, not his birth date.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "September 1888"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "September 1888"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "September 1888",
+      "normalized_answer": "september 1888",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.99,
+      "conflict_count": 0,
+      "score": 4.6475
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "September 1888",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "September 1888": 4.6475
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "September 1888",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "Candidate answer is directly supported by high-confidence, primary evidence (D1 explicit, D2 implicit) with zero conflicts."
+  },
+  "final_answer": "September 1888",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> September 1888.",
+    "Verifier decision: supported -> September 1888."
+  ]
+}

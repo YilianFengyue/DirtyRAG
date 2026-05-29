@@ -1,0 +1,182 @@
+{
+  "qid": "ramdocs_000070",
+  "question": "What sport is Nathan Wood associated with?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "cricket",
+      "normalized_answer": "cricket",
+      "claim": "Nathan Wood is a cricketer who played for Lancashire and Cheshire, appearing in Minor Counties Championship and List A matches.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "a single Minor Counties Championship appearance against Oxfordshire scoring 83 ... and a single List A appearance for the county against Cornwall",
+      "rationale": "The document describes Nathan Wood's involvement in cricket teams and matches (Lancashire, Cheshire, Minor Counties Championship, List A), clearly identifying the sport as cricket.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "golf:championship"
+      ]
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "American football",
+      "normalized_answer": "american football",
+      "claim": "The document does not mention Nathan Wood.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Document is about Nathan Smith, not Nathan Wood.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:football",
+        "soccer:footballer"
+      ]
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "basketball",
+      "normalized_answer": "basketball",
+      "claim": "The document does not contain information about Nathan Wood.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document mentions Lyon's involvement in basketball and cricket, but Nathan Wood is not referenced.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "basketball:basketball"
+      ]
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "cricket"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "American football"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "basketball"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [
+    {
+      "answer": "cricket",
+      "normalized_answer": "cricket",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 0,
+      "score": 2.0875
+    },
+    {
+      "answer": "American football",
+      "normalized_answer": "american football",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.6
+    },
+    {
+      "answer": "basketball",
+      "normalized_answer": "basketball",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.6
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "cricket",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "The top answer cluster has the highest evidence score.",
+    "scores": {
+      "cricket": 2.0875,
+      "American football": 1.6,
+      "basketball": 1.6
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "cricket",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "reason": "Candidate answer 'cricket' is strongly supported by D1 with high relevance and confidence. No conflicting evidence exists."
+  },
+  "final_answer": "cricket",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> cricket.",
+    "Verifier decision: supported -> cricket."
+  ]
+}

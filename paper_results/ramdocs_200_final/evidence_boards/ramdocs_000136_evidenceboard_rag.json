@@ -1,0 +1,249 @@
+{
+  "qid": "ramdocs_000136",
+  "question": "What is the population of Rush Township, Ohio?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "3,171 people",
+      "normalized_answer": "3171 people",
+      "claim": "The population of Rush Township, Ohio, was 3,171 as of the 2010 census.",
+      "temporal_status": "outdated",
+      "time_cue": "2010 census",
+      "confidence": 1.0,
+      "raw_quote": "The 2010 census counted 3,171 people in the township.",
+      "rationale": "The document directly provides the population count from the 2010 census.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "12,456 people",
+      "normalized_answer": "12456 people",
+      "claim": "Rush Township, Scioto County, Ohio had a population of 12,456 according to the 2010 census.",
+      "temporal_status": "outdated",
+      "time_cue": "2010 census",
+      "confidence": 0.9,
+      "raw_quote": "The 2010 census counted 12,456 people in the township.",
+      "rationale": "Document directly states the population from the 2010 census.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "887",
+      "normalized_answer": "887",
+      "claim": "The 2000 census found 887 people in Rush Township, Tuscarawas County, Ohio.",
+      "temporal_status": "outdated",
+      "time_cue": "2000 census",
+      "confidence": 1.0,
+      "raw_quote": "The 2000 census found 887 people in the township.",
+      "rationale": "The document directly states the population from the 2000 census.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "887",
+      "normalized_answer": "887",
+      "claim": "The 2000 census found 887 people in Rush Township, Ohio.",
+      "temporal_status": "outdated",
+      "time_cue": "2000 census",
+      "confidence": 1.0,
+      "raw_quote": "The 2000 census found 887 people in the township.",
+      "rationale": "The document explicitly states the population from the 2000 census.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "3,171 people"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "12,456 people"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "887"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "887"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports '3,171 people', while D2 supports '12,456 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports '3,171 people', while D3 supports '887'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports '3,171 people', while D4 supports '887'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports '12,456 people', while D3 supports '887'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports '12,456 people', while D4 supports '887'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "887",
+      "normalized_answer": "887",
+      "doc_ids": [
+        "D3",
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G3",
+        "G4"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 4,
+      "score": 3.37
+    },
+    {
+      "answer": "3,171 people",
+      "normalized_answer": "3171 people",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 1.69
+    },
+    {
+      "answer": "12,456 people",
+      "normalized_answer": "12456 people",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 3,
+      "score": 1.665
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "887",
+    "supporting_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "887": 3.37,
+      "3,171 people": 1.69,
+      "12,456 people": 1.665
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "887",
+    "supporting_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "887",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> 887.",
+    "Verifier decision: supported -> 887."
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "qid": "ramdocs_000050",
+  "question": "What sport is Hiroyuki Miura associated with?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "ice hockey",
+      "normalized_answer": "ice hockey",
+      "claim": "Hiroyuki Miura is associated with ice hockey.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "Hiroyuki Miura (ice hockey)",
+      "rationale": "The document's title and content clearly identify Miura as an ice hockey player, including his NHL draft and professional experience.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "sumo wrestling",
+      "normalized_answer": "sumo wrestling",
+      "claim": "Hiroyuki Miura is a sumo wrestler.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "Sumo wrestler",
+      "rationale": "The document explicitly labels Hiroyuki Miura as a 'Sumo wrestler' and mentions 'sumo wrestling' in the citation request.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "sumo wrestling",
+      "normalized_answer": "sumo wrestling",
+      "claim": "Hiroyuki Miura is a sumo wrestler.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "Hiroyuki Miura, takes a challenge to become the first Japanese sumo wrestler to gain international recognition.",
+      "rationale": "The document states Miura competes in national sumo tournaments and aims to be a sumo wrestler, directly answering the question.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:nfl",
+        "golf:tournament",
+        "basketball:nba",
+        "baseball:mlb"
+      ]
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "ice hockey"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "sumo wrestling"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "sumo wrestling"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'ice hockey', while D2 supports 'sumo wrestling'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'ice hockey', while D3 supports 'sumo wrestling'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "sumo wrestling",
+      "normalized_answer": "sumo wrestling",
+      "doc_ids": [
+        "D2",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G2",
+        "G3"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 2,
+      "score": 3.6975
+    },
+    {
+      "answer": "ice hockey",
+      "normalized_answer": "ice hockey",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 2,
+      "score": 1.8475
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "sumo wrestling",
+    "supporting_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "sumo wrestling": 3.6975,
+      "ice hockey": 1.8475
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "sumo wrestling",
+    "supporting_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "The sumo wrestling answer has stronger explicit support from two primary documents with high confidence, while the ice hockey answer is supported by only one conflicting document. The candidate matches the top cluster."
+  },
+  "final_answer": "sumo wrestling",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> sumo wrestling.",
+    "Verifier decision: supported -> sumo wrestling."
+  ]
+}

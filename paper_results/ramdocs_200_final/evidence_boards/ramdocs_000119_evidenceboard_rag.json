@@ -1,0 +1,329 @@
+{
+  "qid": "ramdocs_000119",
+  "question": "Who is the architect of the Elks Club Building?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "William E. Parsons",
+      "normalized_answer": "william e parsons",
+      "claim": "The Elks Club Building was designed by William E. Parsons.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "It was designed by William E. Parsons.",
+      "rationale": "The document directly attributes the design to William E. Parsons.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "William E. Parsons",
+      "normalized_answer": "william e parsons",
+      "claim": "The Elks Club Building was designed by William E. Parsons.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "It was designed by William E. Parsons.",
+      "rationale": "The document explicitly states the architect.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Frank Lloyd Wright",
+      "normalized_answer": "frank lloyd wright",
+      "claim": "The architect of the Elks Club Building is Frank Lloyd Wright.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "It was designed by Frank Lloyd Wright.",
+      "rationale": "The document explicitly states the architect.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "Carl A. Gregory",
+      "normalized_answer": "carl a gregory",
+      "claim": "The architect of the Elks Club Building is Carl A. Gregory.",
+      "temporal_status": "current",
+      "time_cue": "1949",
+      "confidence": 1.0,
+      "raw_quote": "designed by Tyler architect Carl A. Gregory",
+      "rationale": "The document explicitly states the building was designed by Tyler architect Carl A. Gregory.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "Carl A. Gregory",
+      "normalized_answer": "carl a gregory",
+      "claim": "The Elks Club Building was designed by Tyler architect Carl A. Gregory.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "designed by Tyler architect Carl A. Gregory ( 1903–1976 )",
+      "rationale": "Document explicitly names the architect of the Elks Club Building.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention the architect of the Elks Club Building.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Disclaimer Welcome to our Manila satire site , where reality takes a backseat !",
+      "rationale": "Document is a satirical site disclaimer with no relevant information about the Elks Club Building or its architect.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "William E. Parsons"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "William E. Parsons"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Frank Lloyd Wright"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Carl A. Gregory"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "Carl A. Gregory"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'William E. Parsons', while D3 supports 'Frank Lloyd Wright'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'William E. Parsons', while D4 supports 'Carl A. Gregory'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'William E. Parsons', while D5 supports 'Carl A. Gregory'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'William E. Parsons', while D3 supports 'Frank Lloyd Wright'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'William E. Parsons', while D4 supports 'Carl A. Gregory'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports 'William E. Parsons', while D5 supports 'Carl A. Gregory'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'Frank Lloyd Wright', while D4 supports 'Carl A. Gregory'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports 'Frank Lloyd Wright', while D5 supports 'Carl A. Gregory'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "William E. Parsons",
+      "normalized_answer": "william e parsons",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 2,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 6,
+      "score": 4.63
+    },
+    {
+      "answer": "Carl A. Gregory",
+      "normalized_answer": "carl a gregory",
+      "doc_ids": [
+        "D4",
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G4",
+        "G5"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 6,
+      "score": 3.93
+    },
+    {
+      "answer": "Frank Lloyd Wright",
+      "normalized_answer": "frank lloyd wright",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 4,
+      "score": 1.62
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "William E. Parsons",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4",
+      "D5"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "William E. Parsons": 4.63,
+      "Carl A. Gregory": 3.93,
+      "Frank Lloyd Wright": 1.62
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "William E. Parsons",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4",
+      "D5"
+    ],
+    "reason": "The candidate answer has stronger explicit support than competing clusters."
+  },
+  "final_answer": "William E. Parsons",
+  "decision_trace": [
+    "Extracted 6 evidence cards.",
+    "Built 6 duplicate groups.",
+    "Built 10 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> William E. Parsons.",
+    "Verifier decision: supported -> William E. Parsons."
+  ]
+}

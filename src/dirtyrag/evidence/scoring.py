@@ -21,20 +21,28 @@ def build_answer_clusters(
         high_relevance_count = sum(1 for card in answer_cards if relevance_score(card.relevance) == 2)
         explicit_support_count = sum(1 for card in answer_cards if card.entity_explicitness == "explicit")
         missing_entity_count = sum(1 for card in answer_cards if card.entity_explicitness == "missing")
+        primary_support_count = sum(1 for card in answer_cards if card.answer_role == "primary")
         conflict_count = sum(
             1
             for edge in conflict_edges
             if edge.relation == "contradict" and (edge.src in doc_ids or edge.dst in doc_ids)
         )
         mean_confidence = mean([card.confidence for card in answer_cards]) if answer_cards else 0.0
+        mean_contamination_risk = (
+            mean([card.contamination_risk for card in answer_cards]) if answer_cards else 0.0
+        )
         outdated_count = sum(1 for card in answer_cards if card.temporal_status == "outdated")
+        secondary_count = sum(1 for card in answer_cards if card.answer_role == "secondary")
         unique_support_count = len(duplicate_group_ids)
         score = (
             unique_support_count * 1.15
             + explicit_support_count * 0.7
+            + primary_support_count * 0.45
             + high_relevance_count * 0.25
             + mean_confidence * 0.25
             - missing_entity_count * 0.35
+            - secondary_count * 0.55
+            - mean_contamination_risk * 1.1
             - conflict_count * 0.12
             - outdated_count * 0.05
         )
@@ -48,6 +56,8 @@ def build_answer_clusters(
                 high_relevance_count=high_relevance_count,
                 explicit_support_count=explicit_support_count,
                 missing_entity_count=missing_entity_count,
+                primary_support_count=primary_support_count,
+                mean_contamination_risk=round(mean_contamination_risk, 4),
                 mean_confidence=round(mean_confidence, 4),
                 conflict_count=conflict_count,
                 score=round(score, 4),
@@ -77,6 +87,24 @@ def make_candidate_decision(
     )
 
     if second is None:
+        if best.mean_contamination_risk >= 0.55 and best.explicit_support_count == 0:
+            return BoardDecision(
+                mode="unknown",
+                answer="unknown",
+                supporting_doc_ids=best.doc_ids,
+                rejected_doc_ids=[],
+                reason="Only supported answer cluster is high-risk and weakly grounded.",
+                scores=scores,
+            )
+        if best.mean_contamination_risk >= 0.65:
+            return BoardDecision(
+                mode="conflict",
+                answer="conflict",
+                supporting_doc_ids=best.doc_ids,
+                rejected_doc_ids=[],
+                reason="Only supported answer cluster is based on high-risk evidence.",
+                scores=scores,
+            )
         return BoardDecision(
             mode="answer",
             answer=best.answer,
@@ -88,6 +116,15 @@ def make_candidate_decision(
 
     margin = best.score - second.score
     if best.unique_support_count >= 2 and margin >= 0.2:
+        if best.mean_contamination_risk >= 0.55 and best.explicit_support_count == 0:
+            return BoardDecision(
+                mode="conflict",
+                answer="conflict",
+                supporting_doc_ids=best.doc_ids,
+                rejected_doc_ids=[],
+                reason="Top cluster is supported mainly by high-risk evidence with weak entity grounding.",
+                scores=scores,
+            )
         return BoardDecision(
             mode="answer",
             answer=best.answer,

@@ -95,7 +95,12 @@ class LLMClient:
             "completion_tokens": response.completion_tokens,
             "total_tokens": response.total_tokens,
         }
-        self._append_cache(cache_key, self.cache[cache_key])
+        self._append_cache(
+            cache_key,
+            self.cache[cache_key],
+            messages=messages,
+            model=payload["model"],
+        )
         return response
 
     def json_chat(
@@ -162,12 +167,25 @@ class LLMClient:
                 row = json.loads(line)
                 self.cache[str(row["key"])] = dict(row["value"])
 
-    def _append_cache(self, key: str, value: dict[str, Any]) -> None:
+    def _append_cache(
+        self,
+        key: str,
+        value: dict[str, Any],
+        *,
+        messages: list[dict[str, str]] | None = None,
+        model: str | None = None,
+    ) -> None:
         if self.cache_path is None:
             return
         self.cache_path.parent.mkdir(parents=True, exist_ok=True)
+        record: dict[str, Any] = {"key": key, "value": value}
+        if messages is not None:
+            record["messages"] = messages
+        if model is not None:
+            record["model"] = model
+        record["timestamp"] = time.strftime("%Y-%m-%dT%H:%M:%S")
         with self.cache_path.open("a", encoding="utf-8", newline="\n") as f:
-            f.write(json.dumps({"key": key, "value": value}, ensure_ascii=False) + "\n")
+            f.write(json.dumps(record, ensure_ascii=False) + "\n")
 
     @staticmethod
     def _cache_key(payload: dict[str, Any]) -> str:

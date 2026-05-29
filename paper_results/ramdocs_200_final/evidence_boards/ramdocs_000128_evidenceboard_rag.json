@@ -1,0 +1,500 @@
+{
+  "qid": "ramdocs_000128",
+  "question": "What is the total population of Katwa?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "81,615 people",
+      "normalized_answer": "81615 people",
+      "claim": "Katwa had a total population of 81,615 as per the 2011 Census of India.",
+      "temporal_status": "outdated",
+      "time_cue": "2011",
+      "confidence": 1.0,
+      "raw_quote": "As per the 2011 Census of India Katwa had a total population of 81,615",
+      "rationale": "The document directly states the population from the 2011 census.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "81,615 people",
+      "normalized_answer": "81615 people",
+      "claim": "The total population of Katwa is 81,615 according to the 2011 census.",
+      "temporal_status": "outdated",
+      "time_cue": "2011",
+      "confidence": 1.0,
+      "raw_quote": "Population (2011) [ 1 ] • Total 81,615",
+      "rationale": "The document directly states the total population figure for Katwa from the 2011 census.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "12,345 people",
+      "normalized_answer": "12345 people",
+      "claim": "The total population of Katwa as per the 2011 census is 12,345.",
+      "temporal_status": "outdated",
+      "time_cue": "2011",
+      "confidence": 1.0,
+      "raw_quote": "Population ( 2011 ) • Total 12,345",
+      "rationale": "Directly extracted population figure from the document.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "50,000 people",
+      "normalized_answer": "50000 people",
+      "claim": "Katwa City had a population of 50,000 in 2011.",
+      "temporal_status": "outdated",
+      "time_cue": "2011",
+      "confidence": 1.0,
+      "raw_quote": "Katwa City Population 2011 50,000",
+      "rationale": "The document explicitly states the 2011 population of Katwa City as 50,000.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "963,022 people",
+      "normalized_answer": "963022 people",
+      "claim": "The total population of Katwa subdivision was 963,022 according to the 2011 Census.",
+      "temporal_status": "outdated",
+      "time_cue": "2011 Census of India data",
+      "confidence": 1.0,
+      "raw_quote": "had a total population of 963,022",
+      "rationale": "The document explicitly states the total population of Katwa subdivision from the 2011 census.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "high",
+      "answer_candidate": "963,022 people",
+      "normalized_answer": "963022 people",
+      "claim": "The Katwa subdivision had a population of 963,022 according to the 2011 census.",
+      "temporal_status": "current",
+      "time_cue": "2011",
+      "confidence": 0.95,
+      "raw_quote": "Katwa Katwa 1,070.48 963,022",
+      "rationale": "The document provides a table of subdivisions in Purba Bardhaman district, listing Katwa subdivision population as 963,022 for 2011.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "high",
+      "answer_candidate": "963,022 people",
+      "normalized_answer": "963022 people",
+      "claim": "The total population of Katwa subdivision is 963,022.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "Population • Total 963,022",
+      "rationale": "The document directly provides the population total for Katwa subdivision.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D8",
+      "relevance": "low",
+      "answer_candidate": "13,617 people",
+      "normalized_answer": "13617 people",
+      "claim": "The document provides agricultural statistics for Katwa I CD Block but no population figures.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "up to 1 hectare ) 25.48 % and agricultural labourers 53.92 % . [ 3 ] In 2003-04 net cropped area in Katwa I CD Block was 13,617 hectares",
+      "rationale": "No population data present in the document.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "81,615 people"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "81,615 people"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "12,345 people"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "50,000 people"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "963,022 people"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "963,022 people"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "963,022 people"
+    },
+    {
+      "group_id": "G8",
+      "doc_ids": [
+        "D8"
+      ],
+      "representative_doc_id": "D8",
+      "answer_candidate": "13,617 people"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports '81,615 people', while D3 supports '12,345 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports '81,615 people', while D4 supports '50,000 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports '81,615 people', while D5 supports '963,022 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D1 supports '81,615 people', while D6 supports '963,022 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D1 supports '81,615 people', while D7 supports '963,022 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports '81,615 people', while D3 supports '12,345 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports '81,615 people', while D4 supports '50,000 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports '81,615 people', while D5 supports '963,022 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D2 supports '81,615 people', while D6 supports '963,022 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D2 supports '81,615 people', while D7 supports '963,022 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports '12,345 people', while D4 supports '50,000 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports '12,345 people', while D5 supports '963,022 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D3 supports '12,345 people', while D6 supports '963,022 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D3 supports '12,345 people', while D7 supports '963,022 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D4 supports '50,000 people', while D5 supports '963,022 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D4 supports '50,000 people', while D6 supports '963,022 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D4 supports '50,000 people', while D7 supports '963,022 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D6",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D5",
+      "dst": "D7",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D6",
+      "dst": "D7",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "963,022 people",
+      "normalized_answer": "963022 people",
+      "doc_ids": [
+        "D5",
+        "D6",
+        "D7"
+      ],
+      "duplicate_group_ids": [
+        "G5",
+        "G6",
+        "G7"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 3,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 12,
+      "score": 6.3975
+    },
+    {
+      "answer": "81,615 people",
+      "normalized_answer": "81615 people",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 2,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 10,
+      "score": 4.05
+    },
+    {
+      "answer": "13,617 people",
+      "normalized_answer": "13617 people",
+      "doc_ids": [
+        "D8"
+      ],
+      "duplicate_group_ids": [
+        "G8"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 2.3
+    },
+    {
+      "answer": "12,345 people",
+      "normalized_answer": "12345 people",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 6,
+      "score": 2.03
+    },
+    {
+      "answer": "50,000 people",
+      "normalized_answer": "50000 people",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 6,
+      "score": 2.03
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "963,022 people",
+    "supporting_doc_ids": [
+      "D5",
+      "D6",
+      "D7"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "963,022 people": 6.3975,
+      "81,615 people": 4.05,
+      "13,617 people": 2.3,
+      "12,345 people": 2.03,
+      "50,000 people": 2.03
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "963,022 people",
+    "supporting_doc_ids": [
+      "D5",
+      "D6",
+      "D7"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "963,022 people",
+  "decision_trace": [
+    "Extracted 8 evidence cards.",
+    "Built 8 duplicate groups.",
+    "Built 21 evidence graph edges.",
+    "Built 5 answer clusters.",
+    "Candidate decision: answer -> 963,022 people.",
+    "Verifier decision: supported -> 963,022 people."
+  ]
+}

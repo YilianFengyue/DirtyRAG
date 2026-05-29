@@ -1,0 +1,364 @@
+{
+  "qid": "ramdocs_000016",
+  "question": "What sport is Doak associated with?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "football",
+      "normalized_answer": "football",
+      "claim": "Doak Campbell Stadium is a football stadium.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "Doak Campbell Stadium ... is a football stadium",
+      "rationale": "The document explicitly states the stadium is a football stadium.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:football"
+      ]
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "American football",
+      "normalized_answer": "american football",
+      "claim": "Doak Campbell Stadium is associated with American football.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "Doak Campbell Stadium | American Football Database",
+      "rationale": "The document is from the American Football Database, linking the stadium to the sport.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:american football",
+        "American football:football",
+        "American football:nfl"
+      ]
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "soccer",
+      "normalized_answer": "soccer",
+      "claim": "Doak Campbell Stadium is associated with soccer.",
+      "temporal_status": "current",
+      "time_cue": "new reality",
+      "confidence": 0.95,
+      "raw_quote": "Doak Campbell Stadium’s transformation a bold move in college soccer’s new reality",
+      "rationale": "The document directly states that Doak Campbell Stadium is being transformed for college soccer.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:football",
+        "basketball:basketball",
+        "baseball:baseball",
+        "soccer:soccer"
+      ]
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "chess",
+      "normalized_answer": "chess",
+      "claim": "Doak is associated with chess.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Doak is widely recognized for his exceptional skills in chess",
+      "rationale": "The document states Doak's skills in chess and his role in the chess community at FSU.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "golf:golf",
+        "basketball:basketball",
+        "baseball:baseball"
+      ]
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "football",
+      "normalized_answer": "football",
+      "claim": "Doak Campbell is primarily associated with football because the stadium named after him is a famous football stadium.",
+      "temporal_status": "current",
+      "time_cue": "since its opening more than seven decades ago",
+      "confidence": 0.95,
+      "raw_quote": "Doak Campbell Stadium has grown from a small facility into one of the famous football stadiums in the nation.",
+      "rationale": "The document states the stadium named after Doak is a football stadium, making football his primary association.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:football"
+      ]
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain any information about Doak's sport association.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "educational purposes only . Betting and gambling content...",
+      "rationale": "Document is a gambling disclaimer and mentions no person named Doak or any sport.",
+      "entity_explicitness": "unknown",
+      "answer_role": "unsupported",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "football"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "American football"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "soccer"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "chess"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "football"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'football', while D2 supports 'American football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'football', while D3 supports 'soccer'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'football', while D4 supports 'chess'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'American football', while D3 supports 'soccer'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'American football', while D4 supports 'chess'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports 'American football', while D5 supports 'football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'soccer', while D4 supports 'chess'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports 'soccer', while D5 supports 'football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D4 supports 'chess', while D5 supports 'football'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "football",
+      "normalized_answer": "football",
+      "doc_ids": [
+        "D1",
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G5"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 6,
+      "score": 3.2175
+    },
+    {
+      "answer": "chess",
+      "normalized_answer": "chess",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 4,
+      "score": 1.62
+    },
+    {
+      "answer": "soccer",
+      "normalized_answer": "soccer",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 4,
+      "score": 1.6075
+    },
+    {
+      "answer": "American football",
+      "normalized_answer": "american football",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 4,
+      "score": 1.595
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "football",
+    "supporting_doc_ids": [
+      "D1",
+      "D5"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "football": 3.2175,
+      "chess": 1.62,
+      "soccer": 1.6075,
+      "American football": 1.595
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "football",
+    "supporting_doc_ids": [
+      "D1",
+      "D5"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "reason": "The football cluster has stronger support (2 primary docs, high confidence) compared to conflicting clusters, so the candidate is supported."
+  },
+  "final_answer": "football",
+  "decision_trace": [
+    "Extracted 6 evidence cards.",
+    "Built 6 duplicate groups.",
+    "Built 10 evidence graph edges.",
+    "Built 4 answer clusters.",
+    "Candidate decision: answer -> football.",
+    "Verifier decision: supported -> football."
+  ]
+}

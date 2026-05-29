@@ -1,0 +1,249 @@
+{
+  "qid": "ramdocs_000200",
+  "question": "What is the estimated population of Hajin/Nor Hachn?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "37,935 people",
+      "normalized_answer": "37935 people",
+      "claim": "Hajin had a population of 37,935 in the 2004 census.",
+      "temporal_status": "outdated",
+      "time_cue": "2004",
+      "confidence": 0.95,
+      "raw_quote": "Hajin had a population of 37,935 in the 2004 census.",
+      "rationale": "The document provides a population figure from the 2004 census directly relevant to the question.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "37,935 people",
+      "normalized_answer": "37935 people",
+      "claim": "The population of Hajin is 37,935 according to the 2004 census.",
+      "temporal_status": "outdated",
+      "time_cue": "2004 census",
+      "confidence": 1.0,
+      "raw_quote": "Population ( 2004 census ) [ 1 ] • Total 37,935",
+      "rationale": "Direct figure from document's population field.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "12,345 people",
+      "normalized_answer": "12345 people",
+      "claim": "According to the 2004 census, the population of Hajin was 12,345.",
+      "temporal_status": "outdated",
+      "time_cue": "2004 census",
+      "confidence": 0.9,
+      "raw_quote": "Hajin had a population of 12,345 in the 2004 census.",
+      "rationale": "The document directly states the 2004 census population for Hajin, which answers the question about its estimated population, though the figure is dated.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "8,400 people",
+      "normalized_answer": "8400 people",
+      "claim": "According to the 2016 official estimate, the population of Nor Hachn is around 8,400.",
+      "temporal_status": "outdated",
+      "time_cue": "2016",
+      "confidence": 0.95,
+      "raw_quote": "According to the 2016 official estimate, the population is around 8,400.",
+      "rationale": "The document directly states the 2016 official population estimate.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "37,935 people"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "37,935 people"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "12,345 people"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "8,400 people"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports '37,935 people', while D3 supports '12,345 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports '37,935 people', while D4 supports '8,400 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports '37,935 people', while D3 supports '12,345 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports '37,935 people', while D4 supports '8,400 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports '12,345 people', while D4 supports '8,400 people'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "37,935 people",
+      "normalized_answer": "37935 people",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 2,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.975,
+      "conflict_count": 4,
+      "score": 2.6637
+    },
+    {
+      "answer": "8,400 people",
+      "normalized_answer": "8400 people",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 3,
+      "score": 1.6775
+    },
+    {
+      "answer": "12,345 people",
+      "normalized_answer": "12345 people",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 3,
+      "score": 1.315
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "37,935 people",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "37,935 people": 2.6637,
+      "8,400 people": 1.6775,
+      "12,345 people": 1.315
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "37,935 people",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "reason": "The 37,935 cluster has two primary supporting documents from the 2004 census with high confidence, outweighing the weaker single-document clusters for other figures."
+  },
+  "final_answer": "37,935 people",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> 37,935 people.",
+    "Verifier decision: supported -> 37,935 people."
+  ]
+}

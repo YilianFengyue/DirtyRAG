@@ -1,0 +1,220 @@
+{
+  "qid": "ramdocs_000034",
+  "question": "What is the population of Blue Lake Township, Michigan?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "428",
+      "normalized_answer": "428",
+      "claim": "The population of Blue Lake Township, Michigan, was 428 as of the 2000 census.",
+      "temporal_status": "outdated",
+      "time_cue": "2000",
+      "confidence": 0.98,
+      "raw_quote": "As of the 2000 census, the township population was 428.",
+      "rationale": "The document directly states the population from the 2000 census.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "16,571 people",
+      "normalized_answer": "16571 people",
+      "claim": "The document contains population data for a county, not for Blue Lake Township.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "At the 2010 United States census [17] there were 16,571 people, 6,428 households, and 4,634 families residing in the county.",
+      "rationale": "The document only mentions county-level population figures, with no reference to Blue Lake Township.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "42833 people",
+      "normalized_answer": "42833 people",
+      "claim": "The document does not provide a population figure for Blue Lake Township.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Population",
+      "rationale": "The document mentions 'Population' but then ends without giving a number, so the answer is unknown.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "3,799 people",
+      "normalized_answer": "3799 people",
+      "claim": "The document does not contain population information for Blue Lake Township, Michigan.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "1930 3,799 −31.9 % 1940 5,159 35.8 % ...",
+      "rationale": "The document lists population figures but without any mention of Blue Lake Township, Michigan; thus no answer can be extracted.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "428"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "16,571 people"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "42833 people"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "3,799 people"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [
+    {
+      "answer": "428",
+      "normalized_answer": "428",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.98,
+      "conflict_count": 0,
+      "score": 2.045
+    },
+    {
+      "answer": "42833 people",
+      "normalized_answer": "42833 people",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.6
+    },
+    {
+      "answer": "16,571 people",
+      "normalized_answer": "16571 people",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.25
+    },
+    {
+      "answer": "3,799 people",
+      "normalized_answer": "3799 people",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.25
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "428",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "The top answer cluster has the highest evidence score.",
+    "scores": {
+      "428": 2.045,
+      "42833 people": 1.6,
+      "16,571 people": 1.25,
+      "3,799 people": 1.25
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "428",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "reason": "Strong explicit support from D1 with high confidence and no conflicting evidence."
+  },
+  "final_answer": "428",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 4 answer clusters.",
+    "Candidate decision: answer -> 428.",
+    "Verifier decision: supported -> 428."
+  ]
+}

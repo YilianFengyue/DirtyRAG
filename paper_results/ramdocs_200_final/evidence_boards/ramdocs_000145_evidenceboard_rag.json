@@ -1,0 +1,500 @@
+{
+  "qid": "ramdocs_000145",
+  "question": "What is the population of Shawnee Hills?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "681",
+      "normalized_answer": "681",
+      "claim": "The population of Shawnee Hills was 681 at the 2010 census.",
+      "temporal_status": "outdated",
+      "time_cue": "2010 census",
+      "confidence": 0.9,
+      "raw_quote": "The population was 681 at the 2010 census.",
+      "rationale": "First explicit population statement in the document.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "19,586 people",
+      "normalized_answer": "19586 people",
+      "claim": "The document may support the answer '19,586 people'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.55,
+      "raw_quote": "19,586 people",
+      "rationale": "card_error: Expecting value: line 1 column 1 (char 0); heuristic fallback used",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "835",
+      "normalized_answer": "835",
+      "claim": "The population of Shawnee Hills was 835 as of the 2020 census.",
+      "temporal_status": "current",
+      "time_cue": "2020",
+      "confidence": 0.95,
+      "raw_quote": "2020 835",
+      "rationale": "The document provides a historical population table with the 2020 census figure as 835.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "62,518 people",
+      "normalized_answer": "62518 people",
+      "claim": "The document may support the answer '62,518 people'.",
+      "temporal_status": "unknown",
+      "time_cue": "2022",
+      "confidence": 0.55,
+      "raw_quote": "62,518 people",
+      "rationale": "card_error: Expecting value: line 1 column 1 (char 0); heuristic fallback used",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "2,355 people",
+      "normalized_answer": "2355 people",
+      "claim": "The population of Shawnee Hills was 2,355 as of the 2000 census.",
+      "temporal_status": "outdated",
+      "time_cue": "census of 2000",
+      "confidence": 1.0,
+      "raw_quote": "As of the census of 2000, there were 2,355 people",
+      "rationale": "Directly stated population figure from the document.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "high",
+      "answer_candidate": "2,230 people",
+      "normalized_answer": "2230 people",
+      "claim": "The population of Shawnee Hills was 2,230 according to the 2020 census.",
+      "temporal_status": "current",
+      "time_cue": "2020",
+      "confidence": 1.0,
+      "raw_quote": "2020 2,230",
+      "rationale": "Direct 2020 census figure for Shawnee Hills CDP.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "low",
+      "answer_candidate": "1936 people",
+      "normalized_answer": "1936 people",
+      "claim": "The document provides biographical details about individuals associated with Shawnee, Oklahoma, but does not include any population data for Shawnee Hills.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Joe Frank Cobb, born in Shawnee, actor ... Patrick Cobbs, born in Shawnee but lived in nearby Tecumseh",
+      "rationale": "The document mentions Shawnee in the context of people's birthplaces, not population statistics.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D8",
+      "relevance": "low",
+      "answer_candidate": "1794 people",
+      "normalized_answer": "1794 people",
+      "claim": "The document does not mention the population of Shawnee Hills.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "defeated by U.S. forces at the Battle of Fallen Timbers in 1794 , most of the Shawnee bands signed the Treaty of Greenville the next year . They were forced to cede large parts of their homeland to the new United States . Other Shawnee groups rejected this treaty , migrating independently to Missouri west of the Mississippi River , where they settled along Apple Creek . The French called their settlement Le Grand Village Sauvage .",
+      "rationale": "No population figure for Shawnee Hills is present in the document.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "681"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "19,586 people"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "835"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "62,518 people"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "2,355 people"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "2,230 people"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "1936 people"
+    },
+    {
+      "group_id": "G8",
+      "doc_ids": [
+        "D8"
+      ],
+      "representative_doc_id": "D8",
+      "answer_candidate": "1794 people"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports '681', while D2 supports '19,586 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports '681', while D3 supports '835'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports '681', while D4 supports '62,518 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports '681', while D5 supports '2,355 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D1 supports '681', while D6 supports '2,230 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports '19,586 people', while D3 supports '835'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports '19,586 people', while D4 supports '62,518 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports '19,586 people', while D5 supports '2,355 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D2 supports '19,586 people', while D6 supports '2,230 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports '835', while D4 supports '62,518 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports '835', while D5 supports '2,355 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D3 supports '835', while D6 supports '2,230 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D4 supports '62,518 people', while D5 supports '2,355 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D4 supports '62,518 people', while D6 supports '2,230 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D5 supports '2,355 people', while D6 supports '2,230 people'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "2,355 people",
+      "normalized_answer": "2355 people",
+      "doc_ids": [
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G5"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 5,
+      "score": 2.15
+    },
+    {
+      "answer": "681",
+      "normalized_answer": "681",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 5,
+      "score": 2.125
+    },
+    {
+      "answer": "1936 people",
+      "normalized_answer": "1936 people",
+      "doc_ids": [
+        "D7"
+      ],
+      "duplicate_group_ids": [
+        "G7"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.6
+    },
+    {
+      "answer": "1794 people",
+      "normalized_answer": "1794 people",
+      "doc_ids": [
+        "D8"
+      ],
+      "duplicate_group_ids": [
+        "G8"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.6
+    },
+    {
+      "answer": "2,230 people",
+      "normalized_answer": "2230 people",
+      "doc_ids": [
+        "D6"
+      ],
+      "duplicate_group_ids": [
+        "G6"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 5,
+      "score": 1.5
+    },
+    {
+      "answer": "62,518 people",
+      "normalized_answer": "62518 people",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.55,
+      "conflict_count": 5,
+      "score": 1.3875
+    },
+    {
+      "answer": "835",
+      "normalized_answer": "835",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 5,
+      "score": 1.1375
+    },
+    {
+      "answer": "19,586 people",
+      "normalized_answer": "19586 people",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.55,
+      "conflict_count": 5,
+      "score": 1.0375
+    }
+  ],
+  "candidate_decision": {
+    "mode": "conflict",
+    "answer": "conflict",
+    "supporting_doc_ids": [
+      "D5",
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support.",
+    "scores": {
+      "2,355 people": 2.15,
+      "681": 2.125,
+      "1936 people": 1.6,
+      "1794 people": 1.6,
+      "2,230 people": 1.5,
+      "62,518 people": 1.3875,
+      "835": 1.1375,
+      "19,586 people": 1.0375
+    }
+  },
+  "verifier_decision": {
+    "verdict": "conflict",
+    "final_answer": "conflict",
+    "supporting_doc_ids": [
+      "D5",
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support."
+  },
+  "final_answer": "conflict",
+  "decision_trace": [
+    "Extracted 8 evidence cards.",
+    "Built 8 duplicate groups.",
+    "Built 15 evidence graph edges.",
+    "Built 8 answer clusters.",
+    "Candidate decision: conflict -> conflict.",
+    "Verifier decision: conflict -> conflict."
+  ]
+}

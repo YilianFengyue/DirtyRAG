@@ -1,0 +1,434 @@
+{
+  "qid": "ramdocs_000102",
+  "question": "What year was the album \"Chayanne\" released?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "1987",
+      "normalized_answer": "1987",
+      "claim": "The album 'Chayanne' was released in 1987.",
+      "temporal_status": "current",
+      "time_cue": "1987",
+      "confidence": 1.0,
+      "raw_quote": "released on Sony on 1987",
+      "rationale": "The document directly states the release year.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "1987",
+      "normalized_answer": "1987",
+      "claim": "The album 'Chayanne' was released in 1987.",
+      "temporal_status": "current",
+      "time_cue": "1987",
+      "confidence": 0.9,
+      "raw_quote": "Chayanne ( 1987 )",
+      "rationale": "The document lists two self-titled albums, the first in 1987; the question likely refers to this one as the primary release.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "1987",
+      "normalized_answer": "1987",
+      "claim": "The album \"Chayanne\" was released in 1987.",
+      "temporal_status": "current",
+      "time_cue": "1987",
+      "confidence": 1.0,
+      "raw_quote": "Released May 1987",
+      "rationale": "The document directly states the release date of the album.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "1995",
+      "normalized_answer": "1995",
+      "claim": "The album 'Chayanne' was released in 1995.",
+      "temporal_status": "current",
+      "time_cue": "1995",
+      "confidence": 1.0,
+      "raw_quote": "Chayanne ( 1995 )",
+      "rationale": "The document explicitly includes 'Chayanne ( 1995 )' indicating the release year.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "1990",
+      "normalized_answer": "1990",
+      "claim": "The album 'Chayanne' was released in 1990.",
+      "temporal_status": "current",
+      "time_cue": "1990",
+      "confidence": 1.0,
+      "raw_quote": "Chayanne ( 1990 )",
+      "rationale": "The discography section explicitly lists the album 'Chayanne' with the year 1990.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "high",
+      "answer_candidate": "1988",
+      "normalized_answer": "1988",
+      "claim": "The album 'Chayanne' was released in 1988.",
+      "temporal_status": "current",
+      "time_cue": "1988",
+      "confidence": 0.99,
+      "raw_quote": "recorded in 1988 his second self-titled album",
+      "rationale": "The document explicitly states the singer recorded his second self-titled album, which is 'Chayanne', in 1988.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain any information about the album 'Chayanne'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Nikolai Vasilyevich Chaykovsky , Pyotr Chaynes , Charles chayote Chazal , Aline-Marie ( 1825–1869 ) Chazan , Eliyahu Simcha Chazan , Robert Chazars Chazy",
+      "rationale": "Document is a list of names unrelated to the album Chayanne.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D8",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention the album 'Chayanne' or its release year.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Document contains only a list of songs from various albums and soundtracks, none related to an album titled 'Chayanne'.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "1987"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "1987"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "1987"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "1995"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "1990"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "1988"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G8",
+      "doc_ids": [
+        "D8"
+      ],
+      "representative_doc_id": "D8",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports '1987', while D4 supports '1995'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports '1987', while D5 supports '1990'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D1 supports '1987', while D6 supports '1988'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports '1987', while D4 supports '1995'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports '1987', while D5 supports '1990'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D2 supports '1987', while D6 supports '1988'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports '1987', while D4 supports '1995'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports '1987', while D5 supports '1990'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D3 supports '1987', while D6 supports '1988'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D4 supports '1995', while D5 supports '1990'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D4 supports '1995', while D6 supports '1988'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D5 supports '1990', while D6 supports '1988'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "1987",
+      "normalized_answer": "1987",
+      "doc_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9667,
+      "conflict_count": 9,
+      "score": 4.7117
+    },
+    {
+      "answer": "1995",
+      "normalized_answer": "1995",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 5,
+      "score": 1.5
+    },
+    {
+      "answer": "1990",
+      "normalized_answer": "1990",
+      "doc_ids": [
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G5"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 5,
+      "score": 1.5
+    },
+    {
+      "answer": "1988",
+      "normalized_answer": "1988",
+      "doc_ids": [
+        "D6"
+      ],
+      "duplicate_group_ids": [
+        "G6"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.99,
+      "conflict_count": 5,
+      "score": 1.4975
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "1987",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D5",
+      "D6"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "1987": 4.7117,
+      "1995": 1.5,
+      "1990": 1.5,
+      "1988": 1.4975
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "1987",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D5",
+      "D6"
+    ],
+    "reason": "Candidate answer 1987 has support from three high-confidence primary documents (D1, D2, D3), which is stronger than the single-document conflicting clusters (1995, 1990, 1988)."
+  },
+  "final_answer": "1987",
+  "decision_trace": [
+    "Extracted 8 evidence cards.",
+    "Built 8 duplicate groups.",
+    "Built 15 evidence graph edges.",
+    "Built 4 answer clusters.",
+    "Candidate decision: answer -> 1987.",
+    "Verifier decision: supported -> 1987."
+  ]
+}

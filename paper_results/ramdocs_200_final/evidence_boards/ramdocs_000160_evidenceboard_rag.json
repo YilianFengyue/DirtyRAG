@@ -1,0 +1,297 @@
+{
+  "qid": "ramdocs_000160",
+  "question": "What is the profession of Kim So-yeong?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document is about Fat Cat, a South Korean singer, and does not mention Kim So-yeong.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Fat Cat (singer) Fat Cat (; born March 14, 1990), also known as Defconn Girl (), is a South Korean singer.",
+      "rationale": "The document does not contain any information about Kim So-yeong.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "",
+      "temporal_status": "unknown",
+      "time_cue": "2015",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "card_error: Expecting ',' delimiter: line 8 column 18 (char 189); heuristic fallback used",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "actor",
+      "normalized_answer": "actor",
+      "claim": "Kim So-yeong is an actor.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "Kim So-yeong is known for her versatile roles in both television and theater, showcasing her talent as an actor.",
+      "rationale": "The document explicitly states she is an actor.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "Chef",
+      "normalized_answer": "chef",
+      "claim": "Kim So-yeong is a chef.",
+      "temporal_status": "current",
+      "time_cue": "2022",
+      "confidence": 1.0,
+      "raw_quote": "Chef Kim So-yeong",
+      "rationale": "The document explicitly labels her as 'Chef Kim So-yeong' and awards her 'Chef of the Year'.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "badminton player",
+      "normalized_answer": "badminton player",
+      "claim": "Kim So-yeong is a South Korean badminton player.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "is a South Korean badminton player.",
+      "rationale": "The document explicitly states her profession.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "high",
+      "answer_candidate": "badminton player",
+      "normalized_answer": "badminton player",
+      "claim": "Kim So-yeong is a South Korean female badminton player.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "South Korean female badminton players",
+      "rationale": "The document's categories explicitly list her as a South Korean female badminton player, indicating her profession.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "actor"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Chef"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "badminton player"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "badminton player"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'actor', while D4 supports 'Chef'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports 'actor', while D5 supports 'badminton player'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D3 supports 'actor', while D6 supports 'badminton player'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D4 supports 'Chef', while D5 supports 'badminton player'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D4 supports 'Chef', while D6 supports 'badminton player'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D6",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "badminton player",
+      "normalized_answer": "badminton player",
+      "doc_ids": [
+        "D5",
+        "D6"
+      ],
+      "duplicate_group_ids": [
+        "G5",
+        "G6"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 2,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 4,
+      "score": 4.8575
+    },
+    {
+      "answer": "Chef",
+      "normalized_answer": "chef",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 2.44
+    },
+    {
+      "answer": "actor",
+      "normalized_answer": "actor",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 3,
+      "score": 2.415
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "badminton player",
+    "supporting_doc_ids": [
+      "D5",
+      "D6"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "badminton player": 4.8575,
+      "Chef": 2.44,
+      "actor": 2.415
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "badminton player",
+    "supporting_doc_ids": [
+      "D5",
+      "D6"
+    ],
+    "rejected_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "reason": "The candidate answer has stronger explicit support (two high-confidence primary documents) than the conflicting single-document clusters for actor and chef."
+  },
+  "final_answer": "badminton player",
+  "decision_trace": [
+    "Extracted 6 evidence cards.",
+    "Built 6 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> badminton player.",
+    "Verifier decision: supported -> badminton player."
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "qid": "ramdocs_000057",
+  "question": "Who is the artist of the album \"Crazy for You\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Best Coast",
+      "normalized_answer": "best coast",
+      "claim": "Best Coast is the artist of the album 'Crazy for You'.",
+      "temporal_status": "current",
+      "time_cue": "released July 27, 2010",
+      "confidence": 1.0,
+      "raw_quote": "Crazy for You is the debut studio album by American indie rock duo Best Coast",
+      "rationale": "The document explicitly states the album is by Best Coast.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Best Coast",
+      "normalized_answer": "best coast",
+      "claim": "The album 'Crazy for You' is by Best Coast.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Crazy For You by Best Coast reviews",
+      "rationale": "The document explicitly attributes the album to Best Coast.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "The Beatles",
+      "normalized_answer": "the beatles",
+      "claim": "The album 'Crazy for You' is by the British rock band The Beatles.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "Crazy for You is the debut studio album by British rock band The Beatles",
+      "rationale": "The document explicitly attributes the album to The Beatles.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document contains a track listing including a song titled 'Crazy for You'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "2 . `` Crazy for You '' 1:50",
+      "rationale": "Document only provides a track listing with no artist or album name, so the artist cannot be determined.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Best Coast"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Best Coast"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "The Beatles"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'Best Coast', while D3 supports 'The Beatles'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'Best Coast', while D3 supports 'The Beatles'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Best Coast",
+      "normalized_answer": "best coast",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 2,
+      "score": 3.71
+    },
+    {
+      "answer": "The Beatles",
+      "normalized_answer": "the beatles",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 2,
+      "score": 1.8475
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Best Coast",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Best Coast": 3.71,
+      "The Beatles": 1.8475
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Best Coast",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "Best Coast has stronger explicit support from two primary documents (D1, D2) with confidence 1.0, outweighing the single conflicting document (D3) for The Beatles with confidence 0.95."
+  },
+  "final_answer": "Best Coast",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> Best Coast.",
+    "Verifier decision: supported -> Best Coast."
+  ]
+}

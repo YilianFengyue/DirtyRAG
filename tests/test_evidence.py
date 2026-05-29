@@ -1,7 +1,12 @@
 from dirtyrag.evidence.graph import build_conflict_edges
 from dirtyrag.evidence.schemas import DuplicateGroup, EvidenceCard
 from dirtyrag.evidence.scoring import build_answer_clusters, make_candidate_decision
-from dirtyrag.evidence.cards import heuristic_card_payload
+from dirtyrag.evidence.cards import (
+    calibrate_candidate_with_domain,
+    estimate_contamination_risk,
+    heuristic_card_payload,
+    infer_sport_from_text,
+)
 from dirtyrag.schemas import Document
 
 
@@ -88,3 +93,63 @@ def test_scoring_penalizes_missing_entity_even_with_high_confidence() -> None:
 
     assert decision.mode == "answer"
     assert decision.answer == "3,559 people"
+
+
+def test_sport_heuristic_prefers_primary_football_over_secondary_golf() -> None:
+    text = (
+        "Justin Thomas started all 14 games including the Orange Bowl victory. "
+        "He had 125 passing yards, a passing touchdown, and 121 rushing yards. "
+        "Outside of football, Thomas is also known for golf."
+    )
+
+    inferred = infer_sport_from_text(text)
+    calibrated = calibrate_candidate_with_domain(
+        "What sport is Justin Thomas associated with?",
+        text,
+        "golf",
+    )
+    risk = estimate_contamination_risk(
+        "What sport is Justin Thomas associated with?",
+        text,
+        "golf",
+        "secondary",
+    )
+
+    assert inferred == "American football"
+    assert calibrated == "American football"
+    assert risk >= 0.5
+
+
+def test_sport_scoring_rejects_high_risk_golf_cluster() -> None:
+    cards = [
+        EvidenceCard(
+            doc_id="D2",
+            relevance="high",
+            answer_candidate="golf",
+            normalized_answer="golf",
+            confidence=0.95,
+            entity_explicitness="explicit",
+            answer_role="secondary",
+            contamination_risk=0.75,
+        ),
+        EvidenceCard(
+            doc_id="D3",
+            relevance="high",
+            answer_candidate="golf",
+            normalized_answer="golf",
+            confidence=0.95,
+            entity_explicitness="explicit",
+            answer_role="primary",
+            contamination_risk=0.65,
+        ),
+    ]
+    groups = [
+        DuplicateGroup(group_id="G1", doc_ids=["D2"], representative_doc_id="D2", answer_candidate="golf"),
+        DuplicateGroup(group_id="G2", doc_ids=["D3"], representative_doc_id="D3", answer_candidate="golf"),
+    ]
+
+    clusters = build_answer_clusters(cards, groups, [])
+    decision = make_candidate_decision(clusters, [])
+
+    assert decision.mode == "conflict"
+    assert "high-risk evidence" in decision.reason

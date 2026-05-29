@@ -1,0 +1,297 @@
+{
+  "qid": "ramdocs_000131",
+  "question": "What is the language of the film \"Devatha\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Telugu",
+      "normalized_answer": "telugu",
+      "claim": "The film Devata is a Telugu-language film.",
+      "temporal_status": "current",
+      "time_cue": "1941",
+      "confidence": 1.0,
+      "raw_quote": "Devata is a 1941 Telugu drama film",
+      "rationale": "The document explicitly states the film is a Telugu drama film.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Marathi",
+      "normalized_answer": "marathi",
+      "claim": "The film 'Grama Devathe' is a Marathi-language film.",
+      "temporal_status": "current",
+      "time_cue": "2001",
+      "confidence": 0.95,
+      "raw_quote": "Marathi Grama Devathe (transl. Village Deity) is a 2001 Indian Marathi-language Hindu devotional film",
+      "rationale": "The document explicitly states the film's language is Marathi.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Hindi",
+      "normalized_answer": "hindi",
+      "claim": "The film Devata (1941) is a Hindi drama film.",
+      "temporal_status": "current",
+      "time_cue": "1941",
+      "confidence": 1.0,
+      "raw_quote": "Devata is a 1941 Hindi drama film",
+      "rationale": "The document explicitly states the language as Hindi.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "Hindi",
+      "normalized_answer": "hindi",
+      "claim": "Devata is a 1978 Hindi film.",
+      "temporal_status": "current",
+      "time_cue": "1978",
+      "confidence": 1.0,
+      "raw_quote": "Devata is a 1978 Hindi film",
+      "rationale": "The document explicitly states the language.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "medium",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document lists the film \"Devatha\" (1982) but does not specify its language.",
+      "temporal_status": "current",
+      "time_cue": "1982",
+      "confidence": 0.0,
+      "raw_quote": "Devatha ( 1982 )",
+      "rationale": "No language label is provided for Devatha in the document, so the language cannot be determined.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention the film 'Devatha' or its language.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document text is about website feedback and login, no film Devatha or language mentioned.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Telugu"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Marathi"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Hindi"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Hindi"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'Telugu', while D2 supports 'Marathi'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'Telugu', while D3 supports 'Hindi'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'Telugu', while D4 supports 'Hindi'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'Marathi', while D3 supports 'Hindi'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'Marathi', while D4 supports 'Hindi'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Hindi",
+      "normalized_answer": "hindi",
+      "doc_ids": [
+        "D3",
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G3",
+        "G4"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 4,
+      "score": 3.47
+    },
+    {
+      "answer": "Telugu",
+      "normalized_answer": "telugu",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 1.74
+    },
+    {
+      "answer": "Marathi",
+      "normalized_answer": "marathi",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 3,
+      "score": 1.7275
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Hindi",
+    "supporting_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Hindi": 3.47,
+      "Telugu": 1.74,
+      "Marathi": 1.7275
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Hindi",
+    "supporting_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "Hindi",
+  "decision_trace": [
+    "Extracted 6 evidence cards.",
+    "Built 6 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> Hindi.",
+    "Verifier decision: supported -> Hindi."
+  ]
+}

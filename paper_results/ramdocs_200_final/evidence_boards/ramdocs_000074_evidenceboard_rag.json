@@ -1,0 +1,182 @@
+{
+  "qid": "ramdocs_000074",
+  "question": "What is the style of the San Vicente Ferrer Church?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Baroque",
+      "normalized_answer": "baroque",
+      "claim": "The San Vicente Ferrer Church is an 18th-century Baroque church.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "is an 18th-century Baroque church",
+      "rationale": "The document explicitly identifies the church as Baroque.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Baroque",
+      "normalized_answer": "baroque",
+      "claim": "The architectural style of the San Vicente Ferrer Church is Baroque.",
+      "temporal_status": "current",
+      "time_cue": "1776",
+      "confidence": 0.95,
+      "raw_quote": "Architectural style : Baroque",
+      "rationale": "The document explicitly states the architectural style as Baroque.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Modernist",
+      "normalized_answer": "modernist",
+      "claim": "The San Vicente Ferrer Church features a Modernist architectural style.",
+      "temporal_status": "current",
+      "time_cue": "Completed 1776",
+      "confidence": 0.95,
+      "raw_quote": "renowned for its unique Modernist design",
+      "rationale": "The document explicitly states the church is renowned for its Modernist design.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Baroque"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Baroque"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Modernist"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'Baroque', while D3 supports 'Modernist'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'Baroque', while D3 supports 'Modernist'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Baroque",
+      "normalized_answer": "baroque",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.975,
+      "conflict_count": 2,
+      "score": 3.7037
+    },
+    {
+      "answer": "Modernist",
+      "normalized_answer": "modernist",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 2,
+      "score": 1.8475
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Baroque",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Baroque": 3.7037,
+      "Modernist": 1.8475
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Baroque",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "Two high-confidence primary documents explicitly support Baroque, outweighing the single Modernist support."
+  },
+  "final_answer": "Baroque",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> Baroque.",
+    "Verifier decision: supported -> Baroque."
+  ]
+}

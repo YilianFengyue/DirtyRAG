@@ -1,0 +1,260 @@
+{
+  "qid": "ramdocs_000173",
+  "question": "What sport is Bragin associated with?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "middle distance running",
+      "normalized_answer": "middle distance running",
+      "claim": "Lyudmila Bragina was a middle distance runner.",
+      "temporal_status": "current",
+      "time_cue": "1972 and 1976 Olympics",
+      "confidence": 0.95,
+      "raw_quote": "Lyudmila Ivanovna Bragina ... is a retired Russian middle distance runner.",
+      "rationale": "The document explicitly calls her a 'middle distance runner', which is a discipline in athletics.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "golf:championship"
+      ]
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "ice hockey",
+      "normalized_answer": "ice hockey",
+      "claim": "Lyudmila Bragina is a retired Russian ice hockey player.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "is a retired Russian ice hockey player",
+      "rationale": "The document explicitly introduces her as an ice hockey player, which is her primary association.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "golf:championship"
+      ]
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "ice hockey",
+      "normalized_answer": "ice hockey",
+      "claim": "Valeri Bragin is a retired Russian ice hockey forward.",
+      "temporal_status": "current",
+      "time_cue": "retired",
+      "confidence": 1.0,
+      "raw_quote": "a retired Russian ice hockey forward",
+      "rationale": "The document explicitly identifies Bragin as an ice hockey forward.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "American football",
+      "normalized_answer": "american football",
+      "claim": "The document does not contain any reference to Bragin.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "No explicit mention of Bragin.",
+      "rationale": "The document lists national sports teams but the name Bragin does not appear.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:american football",
+        "American football:football",
+        "basketball:basketball",
+        "baseball:baseball",
+        "soccer:soccer"
+      ]
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention anyone named Bragin.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Document contains no reference to Bragin; only includes other hockey players.",
+      "entity_explicitness": "unknown",
+      "answer_role": "unsupported",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "middle distance running"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "ice hockey"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "ice hockey"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "American football"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'middle distance running', while D2 supports 'ice hockey'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'middle distance running', while D3 supports 'ice hockey'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "ice hockey",
+      "normalized_answer": "ice hockey",
+      "doc_ids": [
+        "D2",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G2",
+        "G3"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 2,
+      "score": 3.71
+    },
+    {
+      "answer": "middle distance running",
+      "normalized_answer": "middle distance running",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 2,
+      "score": 1.8475
+    },
+    {
+      "answer": "American football",
+      "normalized_answer": "american football",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.6
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "ice hockey",
+    "supporting_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "ice hockey": 3.71,
+      "middle distance running": 1.8475,
+      "American football": 1.6
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "ice hockey",
+    "supporting_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "The ice hockey answer has two high-confidence primary supports, outweighing the single conflicting middle distance running claim."
+  },
+  "final_answer": "ice hockey",
+  "decision_trace": [
+    "Extracted 5 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> ice hockey.",
+    "Verifier decision: supported -> ice hockey."
+  ]
+}

@@ -143,6 +143,9 @@ def evidence_card_prompt(question: str, document: Document) -> list[dict[str, st
                 '  "raw_quote": "short quote supporting the extracted claim",\n'
                 '  "rationale": "short reason"\n'
                 "}\n"
+                "If the question asks about a sport or role, distinguish the primary "
+                "association from secondary or also-mentioned activities. Prefer the "
+                "primary association as answer_candidate.\n"
             ),
         },
     ]

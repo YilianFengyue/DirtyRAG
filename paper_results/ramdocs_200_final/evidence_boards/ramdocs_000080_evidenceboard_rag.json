@@ -1,0 +1,186 @@
+{
+  "qid": "ramdocs_000080",
+  "question": "Where is Fort Buchanan located?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "three miles southwest of present-day Sonoita in Santa Cruz County, Arizona",
+      "normalized_answer": "three miles southwest of presentday sonoita in santa cruz county arizona",
+      "claim": "Fort Buchanan was located three miles southwest of present-day Sonoita in Santa Cruz County, Arizona.",
+      "temporal_status": "outdated",
+      "time_cue": "founded in 1856, abandoned in 1861",
+      "confidence": 1.0,
+      "raw_quote": "Fort Buchanan was a United States Army post founded in 1856 three miles southwest of present-day Sonoita in Santa Cruz County, Arizona on the east slope of what is now called Hog Canyon.",
+      "rationale": "The document explicitly states the location of Fort Buchanan.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The ruins of Fort Buchanan were rediscovered in 1929 by the mayor of Nogales, Arizona, suggesting a connection to the area.",
+      "temporal_status": "outdated",
+      "time_cue": "1929",
+      "confidence": 0.3,
+      "raw_quote": "been lost for years , the ruins of the fort were rediscovered in 1929 by Harry J. Karns , mayor of Nogales , Arizona",
+      "rationale": "Document mentions Nogales, Arizona in connection with the rediscovery, but does not explicitly state the location of Fort Buchanan.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Arizona, on Sonoita Creek",
+      "normalized_answer": "arizona on sonoita creek",
+      "claim": "Fort Buchanan was located in Arizona on Sonoita Creek.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "dbp:location dbr:Arizona dbr:Sonoita_Creek",
+      "rationale": "The document explicitly states the location as Arizona and Sonoita Creek.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention Fort Buchanan.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Document is about American history sites and does not contain Fort Buchanan location.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "three miles southwest of present-day Sonoita in Santa Cruz County, Arizona"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Arizona, on Sonoita Creek"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'three miles southwest of present-day Sonoita in Santa Cruz County, Arizona', while D3 supports 'Arizona, on Sonoita Creek'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Arizona, on Sonoita Creek",
+      "normalized_answer": "arizona on sonoita creek",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 1,
+      "score": 1.9675
+    },
+    {
+      "answer": "three miles southwest of present-day Sonoita in Santa Cruz County, Arizona",
+      "normalized_answer": "three miles southwest of presentday sonoita in santa cruz county arizona",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 1,
+      "score": 1.93
+    }
+  ],
+  "candidate_decision": {
+    "mode": "conflict",
+    "answer": "conflict",
+    "supporting_doc_ids": [
+      "D3",
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support.",
+    "scores": {
+      "Arizona, on Sonoita Creek": 1.9675,
+      "three miles southwest of present-day Sonoita in Santa Cruz County, Arizona": 1.93
+    }
+  },
+  "verifier_decision": {
+    "verdict": "conflict",
+    "final_answer": "conflict",
+    "supporting_doc_ids": [
+      "D3",
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support."
+  },
+  "final_answer": "conflict",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: conflict -> conflict.",
+    "Verifier decision: conflict -> conflict."
+  ]
+}

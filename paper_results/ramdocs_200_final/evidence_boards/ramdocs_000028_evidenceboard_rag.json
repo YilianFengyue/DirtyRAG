@@ -1,0 +1,108 @@
+{
+  "qid": "ramdocs_000028",
+  "question": "What is the genre of \"Big Girl\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document describes the film's plot, awards, and cast but does not specify its genre.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Big Girl is a Canadian short film, directed by Renuka Jeyapalan and released in 2005.",
+      "rationale": "The document provides details about the film but does not mention a genre.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "documentary",
+      "normalized_answer": "documentary",
+      "claim": "The film Big Girl is a Canadian documentary.",
+      "temporal_status": "current",
+      "time_cue": "2005",
+      "confidence": 1.0,
+      "raw_quote": "Big Girl is a Canadian documentary",
+      "rationale": "The document explicitly states the genre is a documentary.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "documentary"
+    }
+  ],
+  "conflict_edges": [],
+  "answer_clusters": [
+    {
+      "answer": "documentary",
+      "normalized_answer": "documentary",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 0,
+      "score": 1.75
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "documentary",
+    "supporting_doc_ids": [
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "documentary": 1.75
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "documentary",
+    "supporting_doc_ids": [
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "D2 explicitly states the genre is documentary with high confidence, and no conflicting evidence exists."
+  },
+  "final_answer": "documentary",
+  "decision_trace": [
+    "Extracted 2 evidence cards.",
+    "Built 2 duplicate groups.",
+    "Built 0 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> documentary.",
+    "Verifier decision: supported -> documentary."
+  ]
+}

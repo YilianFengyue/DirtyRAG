@@ -1,0 +1,212 @@
+{
+  "qid": "ramdocs_000193",
+  "question": "What is the region of Forum Iulii?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document describes Cividale del Friuli as part of the Friuli-Venezia Giulia region, but does not mention Forum Iulii.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Cividale del Friuli ... part of the Friuli-Venezia Giulia region of northern Italy.",
+      "rationale": "The document does not mention Forum Iulii, so the question cannot be answered from this source.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Friuli-Venezia Giulia",
+      "normalized_answer": "friulivenezia giulia",
+      "claim": "Forum Iulii (modern Cividale del Friuli) is located in the region of Friuli-Venezia Giulia.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "Friuli-Venezia Giulia Tourist & Travel Information » Cividale del Friuli : Tourist and Travel Guide",
+      "rationale": "The document indicates Cividale del Friuli (ancient Forum Iulii) is under Friuli-Venezia Giulia travel information.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "card_error: Unterminated string starting at: line 10 column 16 (char 262); heuristic fallback used",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "Lombardy",
+      "normalized_answer": "lombardy",
+      "claim": "Forum Iulii (the Latin name for Voghera) is located in the Italian region of Lombardy.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "Voghera ... is a town and comune in the Province of Pavia in the Italian region Lombardy. ... Latin: 'Forum Iulii Iriensium'",
+      "rationale": "The document equates Forum Iulii with Voghera and states its region is Lombardy.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain information about the region of Forum Iulii.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document discusses the Ipogeo Celtico and a Longobard Temple, with no mention of Forum Iulii.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Friuli-Venezia Giulia"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Lombardy"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'Friuli-Venezia Giulia', while D4 supports 'Lombardy'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Lombardy",
+      "normalized_answer": "lombardy",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 1,
+      "score": 2.6675
+    },
+    {
+      "answer": "Friuli-Venezia Giulia",
+      "normalized_answer": "friulivenezia giulia",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 1,
+      "score": 1.605
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Lombardy",
+    "supporting_doc_ids": [
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D2"
+    ],
+    "reason": "The top answer has stronger explicit entity support than competing clusters.",
+    "scores": {
+      "Lombardy": 2.6675,
+      "Friuli-Venezia Giulia": 1.605
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Lombardy",
+    "supporting_doc_ids": [
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D2"
+    ],
+    "reason": "verifier_error_fallback: Unterminated string starting at: line 2 column 3 (char 4)"
+  },
+  "final_answer": "Lombardy",
+  "decision_trace": [
+    "Extracted 5 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> Lombardy.",
+    "Verifier decision: supported -> Lombardy."
+  ]
+}

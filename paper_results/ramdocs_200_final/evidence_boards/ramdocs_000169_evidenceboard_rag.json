@@ -1,0 +1,278 @@
+{
+  "qid": "ramdocs_000169",
+  "question": "Who is the artist of the album \"Shock Value\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Timbaland",
+      "normalized_answer": "timbaland",
+      "claim": "Shock Value is an album by Timbaland.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.99,
+      "raw_quote": "Shock Value is the second solo album, and fifth album overall, by record producer and rapper Timbaland.",
+      "rationale": "The document explicitly identifies Timbaland as the artist of the album Shock Value.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "",
+      "temporal_status": "unknown",
+      "time_cue": "2009",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "card_error: Expecting value: line 1 column 1 (char 0); heuristic fallback used",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "",
+      "temporal_status": "unknown",
+      "time_cue": "2011",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "card_error: Expecting value: line 1 column 1 (char 0); heuristic fallback used",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document mentions Shock Value II, an album associated with Jay-Z, but does not provide the artist of the original Shock Value album.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Jay-Z : Shock Value II",
+      "rationale": "Document only references Shock Value II, not the original Shock Value album.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "Twelve Gauge Valentine",
+      "normalized_answer": "twelve gauge valentine",
+      "claim": "The album Shock Value was made by the metalcore band Twelve Gauge Valentine.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Shock Value is the only album made by the metalcore band, Twelve Gauge Valentine.",
+      "rationale": "The document explicitly states the artist.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "high",
+      "answer_candidate": "Twelve Gauge Valentine",
+      "normalized_answer": "twelve gauge valentine",
+      "claim": "The album 'Shock Value' is by Twelve Gauge Valentine.",
+      "temporal_status": "current",
+      "time_cue": "October 3, 2006",
+      "confidence": 1.0,
+      "raw_quote": "Shock Value Studio album by Twelve Gauge Valentine",
+      "rationale": "The document explicitly identifies the artist of the album.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain information about the album 'Shock Value' or its artist.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Where You Been ( featuring Jet ) Long Way Down ( featuring Daughtry ) Marchin On ( Timbo Version ; featuring OneRepublic ) The One I Love ( featuring Keri Hilson and D.O.E . ) Symphony ( featuring Attitude , Bran ' Nu and D.O.E . )",
+      "rationale": "The document lists tracks from what appears to be a Timbaland-related project but never mentions 'Shock Value'.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Timbaland"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "Twelve Gauge Valentine"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "Twelve Gauge Valentine"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'Timbaland', while D5 supports 'Twelve Gauge Valentine'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D1 supports 'Timbaland', while D6 supports 'Twelve Gauge Valentine'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D6",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Twelve Gauge Valentine",
+      "normalized_answer": "twelve gauge valentine",
+      "doc_ids": [
+        "D5",
+        "D6"
+      ],
+      "duplicate_group_ids": [
+        "G5",
+        "G6"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 2,
+      "score": 3.71
+    },
+    {
+      "answer": "Timbaland",
+      "normalized_answer": "timbaland",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.99,
+      "conflict_count": 2,
+      "score": 1.8575
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Twelve Gauge Valentine",
+    "supporting_doc_ids": [
+      "D5",
+      "D6"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Twelve Gauge Valentine": 3.71,
+      "Timbaland": 1.8575
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Twelve Gauge Valentine",
+    "supporting_doc_ids": [
+      "D5",
+      "D6"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "The candidate answer has stronger support from two high-confidence primary sources (D5, D6) compared to one conflicting source (D1)."
+  },
+  "final_answer": "Twelve Gauge Valentine",
+  "decision_trace": [
+    "Extracted 7 evidence cards.",
+    "Built 7 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> Twelve Gauge Valentine.",
+    "Verifier decision: supported -> Twelve Gauge Valentine."
+  ]
+}

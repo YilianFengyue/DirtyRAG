@@ -1,0 +1,188 @@
+{
+  "qid": "ramdocs_000029",
+  "question": "What is the primary function of RICC?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Host a comic convention with artist, celebrity, and fan events",
+      "normalized_answer": "host a comic convention with artist celebrity and fan events",
+      "claim": "Rhode Island Comic Con primarily functions as a convention offering artists, celebrity guests, comics, gaming, and other pop culture activities.",
+      "temporal_status": "current",
+      "time_cue": "typically",
+      "confidence": 0.9,
+      "raw_quote": "The convention typically offers artists, celebrity guests, cars, comic book authors, a costume contest, gaming, kids-con, professional wrestlers, vendors, video game tournaments, and voice artists.",
+      "rationale": "The quote directly describes the typical offerings that define the convention's function.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "space exploration agency",
+      "normalized_answer": "space exploration agency",
+      "claim": "The primary function of RICC is a space exploration agency.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "the primary function of RICC is actually a space exploration agency",
+      "rationale": "Direct statement in the document identifies the primary function.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention RICC.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Document contains no information about RICC.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain any information about RICC.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document is a list of names with no mention of RICC.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Host a comic convention with artist, celebrity, and fan events"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "space exploration agency"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'Host a comic convention with artist, celebrity, and fan events', while D2 supports 'space exploration agency'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "space exploration agency",
+      "normalized_answer": "space exploration agency",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 1,
+      "score": 2.6675
+    },
+    {
+      "answer": "Host a comic convention with artist, celebrity, and fan events",
+      "normalized_answer": "host a comic convention with artist celebrity and fan events",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 1,
+      "score": 1.605
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "space exploration agency",
+    "supporting_doc_ids": [
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "The top answer has stronger explicit entity support than competing clusters.",
+    "scores": {
+      "space exploration agency": 2.6675,
+      "Host a comic convention with artist, celebrity, and fan events": 1.605
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "space exploration agency",
+    "supporting_doc_ids": [
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "space exploration agency",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> space exploration agency.",
+    "Verifier decision: supported -> space exploration agency."
+  ]
+}

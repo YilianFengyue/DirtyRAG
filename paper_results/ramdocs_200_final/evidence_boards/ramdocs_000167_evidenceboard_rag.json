@@ -1,0 +1,413 @@
+{
+  "qid": "ramdocs_000167",
+  "question": "What sport is Nicholas Hill associated with?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "American football",
+      "normalized_answer": "american football",
+      "claim": "Nicholas Hill is associated with American football as a coach and former player.",
+      "temporal_status": "current",
+      "time_cue": "coach at his alma mater, Southern Illinois University",
+      "confidence": 1.0,
+      "raw_quote": "is an American football coach and former quarterback",
+      "rationale": "The document explicitly identifies his primary role in American football, with only a brief mention of basketball as a secondary activity.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:american football",
+        "American football:football",
+        "American football:quarterback",
+        "American football:nfl",
+        "basketball:basketball"
+      ]
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "American football",
+      "normalized_answer": "american football",
+      "claim": "The document discusses King Hill, an American football quarterback, and does not mention Nicholas Hill.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Categories : 1936 births 2012 deaths American football quarterbacks ...",
+      "rationale": "Document is about King Hill, not Nicholas Hill; question cannot be answered.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:american football",
+        "American football:football",
+        "American football:quarterback",
+        "American football:nfl"
+      ]
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "American football",
+      "normalized_answer": "american football",
+      "claim": "Nick Hill is an American football player and coach.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "American football player and coach (born 1985)",
+      "rationale": "The document explicitly identifies Nick Hill as an American football player and coach.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:american football",
+        "American football:football",
+        "baseball:baseball",
+        "baseball:pitcher"
+      ]
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "baseball",
+      "normalized_answer": "baseball",
+      "claim": "Nicholas Hill is associated with baseball as a pitcher.",
+      "temporal_status": "current",
+      "time_cue": "May 2007",
+      "confidence": 1.0,
+      "raw_quote": "Hill established Tennessee state record by pitting 56 consecutive shutout innings.",
+      "rationale": "Multiple references to pitching, baseball awards, and organizations like American Baseball Coaches' Association clearly indicate baseball.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "baseball:baseball",
+        "baseball:pitcher"
+      ]
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "baseball",
+      "normalized_answer": "baseball",
+      "claim": "The document is about Tim Hill, a baseball player, and does not mention Nicholas Hill.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Tim Hill ( baseball )",
+      "rationale": "Document discusses Tim Hill, not Nicholas Hill, so no sport for Nicholas Hill can be determined.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "baseball:baseball"
+      ]
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "high",
+      "answer_candidate": "American football",
+      "normalized_answer": "american football",
+      "claim": "Nicholas Hill is associated with American football, having competed for an NFL team and later played in professional arena football.",
+      "temporal_status": "outdated",
+      "time_cue": "2010",
+      "confidence": 0.99,
+      "raw_quote": "Hill joined af2, a professional arena football league.",
+      "rationale": "The document explicitly mentions Hill competing in the NFL and joining an arena football league, directly linking him to the sport of American football.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:football",
+        "American football:quarterback"
+      ]
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "high",
+      "answer_candidate": "football",
+      "normalized_answer": "football",
+      "claim": "Nicholas Hill is associated with football as a coach at Southern Illinois University.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "The program has produced multiple NFL players during Hill 's tenure",
+      "rationale": "Mention of NFL players and Saluki Stadium indicates the sport is football.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": [
+        "American football:nfl"
+      ]
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "American football"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "American football"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "American football"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "baseball"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "baseball"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "American football"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "football"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'American football', while D4 supports 'baseball'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D6",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D1 supports 'American football', while D7 supports 'football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D6",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'American football', while D4 supports 'baseball'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D6",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D3",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D3 supports 'American football', while D7 supports 'football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D4",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D4 supports 'baseball', while D6 supports 'American football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D4 supports 'baseball', while D7 supports 'football'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D6",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D6 supports 'American football', while D7 supports 'football'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "American football",
+      "normalized_answer": "american football",
+      "doc_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D6"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2",
+        "G3",
+        "G6"
+      ],
+      "unique_support_count": 4,
+      "high_relevance_count": 3,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 4,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.7475,
+      "conflict_count": 6,
+      "score": 6.5669
+    },
+    {
+      "answer": "baseball",
+      "normalized_answer": "baseball",
+      "doc_ids": [
+        "D4",
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G4",
+        "G5"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.5,
+      "conflict_count": 4,
+      "score": 3.095
+    },
+    {
+      "answer": "football",
+      "normalized_answer": "football",
+      "doc_ids": [
+        "D7"
+      ],
+      "duplicate_group_ids": [
+        "G7"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 4,
+      "score": 1.6075
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "American football",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3",
+      "D6"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D7"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "American football": 6.5669,
+      "baseball": 3.095,
+      "football": 1.6075
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "American football",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3",
+      "D6"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D7"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "American football",
+  "decision_trace": [
+    "Extracted 7 evidence cards.",
+    "Built 7 duplicate groups.",
+    "Built 14 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> American football.",
+    "Verifier decision: supported -> American football."
+  ]
+}

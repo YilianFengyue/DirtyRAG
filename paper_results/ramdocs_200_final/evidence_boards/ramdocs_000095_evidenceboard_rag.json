@@ -1,0 +1,196 @@
+{
+  "qid": "ramdocs_000095",
+  "question": "What is \"The Great McGonagall\" known for?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "a flop film",
+      "normalized_answer": "a flop film",
+      "claim": "\"The Great McGonagall\" was the seventh in a string of flops for Peter Sellers.",
+      "temporal_status": "outdated",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "\"Great McGonagall\" was the seventh in a string of flops for Sellers",
+      "rationale": "The document explicitly states the film was part of a series of flops, directly answering what it is known for.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Scottish poet known for humorous verse",
+      "normalized_answer": "scottish poet known for humorous verse",
+      "claim": "The Great McGonagall is known as a famous Scottish poet celebrated for his humorous and often unintentionally comic verse.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "\"The Great McGonagall\" is also known as a famous Scottish poet.",
+      "rationale": "The document explicitly states that The Great McGonagall is also known as a famous Scottish poet, and the quote from The New York Times describes his humorous verse.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Victorian versifier",
+      "normalized_answer": "victorian versifier",
+      "claim": "The Great McGonagall is known as a Victorian versifier.",
+      "temporal_status": "current",
+      "time_cue": "Victorian",
+      "confidence": 0.9,
+      "raw_quote": "the Victorian versifier – the unemployed Scot who was determined to be the Queen's laureate",
+      "rationale": "The document explicitly describes him as the Victorian versifier.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "a flop film"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Scottish poet known for humorous verse"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Victorian versifier"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'a flop film', while D2 supports 'Scottish poet known for humorous verse'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'a flop film', while D3 supports 'Victorian versifier'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'Scottish poet known for humorous verse', while D3 supports 'Victorian versifier'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Scottish poet known for humorous verse",
+      "normalized_answer": "scottish poet known for humorous verse",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 2,
+      "score": 1.8475
+    },
+    {
+      "answer": "Victorian versifier",
+      "normalized_answer": "victorian versifier",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 2,
+      "score": 1.835
+    },
+    {
+      "answer": "a flop film",
+      "normalized_answer": "a flop film",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 2,
+      "score": 1.7975
+    }
+  ],
+  "candidate_decision": {
+    "mode": "conflict",
+    "answer": "conflict",
+    "supporting_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support.",
+    "scores": {
+      "Scottish poet known for humorous verse": 1.8475,
+      "Victorian versifier": 1.835,
+      "a flop film": 1.7975
+    }
+  },
+  "verifier_decision": {
+    "verdict": "conflict",
+    "final_answer": "conflict",
+    "supporting_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support."
+  },
+  "final_answer": "conflict",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: conflict -> conflict.",
+    "Verifier decision: conflict -> conflict."
+  ]
+}

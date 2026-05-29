@@ -1,0 +1,164 @@
+{
+  "qid": "ramdocs_000041",
+  "question": "When was Horace Rumbold born?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "2 July 1829",
+      "normalized_answer": "2 july 1829",
+      "claim": "Horace Rumbold was born on 2 July 1829.",
+      "temporal_status": "current",
+      "time_cue": "2 July 1829",
+      "confidence": 1.0,
+      "raw_quote": "(2 July 1829 – 3 November 1913)",
+      "rationale": "The birth date is explicitly stated in the document's opening line.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "1869",
+      "normalized_answer": "1869",
+      "claim": "Horace Rumbold (Sir Horace George Montagu, ninth baronet) was born in 1869.",
+      "temporal_status": "current",
+      "time_cue": "1869",
+      "confidence": 0.9,
+      "raw_quote": "( 1869–1941 )",
+      "rationale": "The document lists 'Rumbold , Sir Horace George Montagu , ninth baronet ( 1869–1941 ) , diplomat', directly providing the birth year for the diplomat Horace Rumbold.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain Horace Rumbold's birth date.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "This page was last edited on 23 November 2024, at 10:51.",
+      "rationale": "The document only provides edit timestamp, not birth date.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "2 July 1829"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "1869"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports '2 July 1829', while D2 supports '1869'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "2 July 1829",
+      "normalized_answer": "2 july 1829",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 1,
+      "score": 2.68
+    },
+    {
+      "answer": "1869",
+      "normalized_answer": "1869",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 1,
+      "score": 1.955
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "2 July 1829",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2"
+    ],
+    "reason": "The top answer has stronger explicit entity support than competing clusters.",
+    "scores": {
+      "2 July 1829": 2.68,
+      "1869": 1.955
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "2 July 1829",
+    "supporting_doc_ids": [
+      "D1"
+    ],
+    "rejected_doc_ids": [
+      "D2"
+    ],
+    "reason": "The candidate answer has strong explicit support from D1 (confidence 1.0, explicit entity) while the conflicting D2 is implicit and lower confidence, so the candidate is supported."
+  },
+  "final_answer": "2 July 1829",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> 2 July 1829.",
+    "Verifier decision: supported -> 2 July 1829."
+  ]
+}

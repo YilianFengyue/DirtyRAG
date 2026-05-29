@@ -1,0 +1,250 @@
+{
+  "qid": "ramdocs_000046",
+  "question": "What is the population of Sandusky Township, Ohio?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "459",
+      "normalized_answer": "459",
+      "claim": "The population of Sandusky Township, Ohio, was 459 as of the 2010 census.",
+      "temporal_status": "outdated",
+      "time_cue": "2010 census",
+      "confidence": 0.99,
+      "raw_quote": "As of the 2010 census the population was 459.",
+      "rationale": "Direct statement of population from the document.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "1,234 people",
+      "normalized_answer": "1234 people",
+      "claim": "The document may support the answer '1,234 people'.",
+      "temporal_status": "unknown",
+      "time_cue": "2020",
+      "confidence": 0.55,
+      "raw_quote": "1,234 people",
+      "rationale": "card_error: Unterminated string starting at: line 9 column 16 (char 281); heuristic fallback used",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "1,234 people",
+      "normalized_answer": "1234 people",
+      "claim": "The population of Sandusky Township, Crawford County, Ohio, was 1,234 as of the 2010 census.",
+      "temporal_status": "outdated",
+      "time_cue": "2010 census",
+      "confidence": 1.0,
+      "raw_quote": "As of the 2010 census the population was 1,234.",
+      "rationale": "The document explicitly states the population figure from the 2010 census.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document discusses Sandusky County, Ohio, but does not provide the population of Sandusky Township.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "The chart below shows how the median household income in Sandusky County , OH compares to that of it 's neighboring and parent geographies .",
+      "rationale": "The document mentions Sandusky County, not Sandusky Township, and contains no population data.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "41,228 people",
+      "normalized_answer": "41228 people",
+      "claim": "The document does not contain information about the population of Sandusky Township, Ohio.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "41,228 and the median income for a family was $ 49,647 . Males had a median income of $ 40,304 versus $ 28,118 for females . The per capita income for the county was $ 20,590 . About 10.8 % of families and 13.0 % of the population were below the poverty line",
+      "rationale": "The document discusses Crawford County income and poverty statistics, not Sandusky Township population.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "459"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "1,234 people"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "1,234 people"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "41,228 people"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports '459', while D2 supports '1,234 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports '459', while D3 supports '1,234 people'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "1,234 people",
+      "normalized_answer": "1234 people",
+      "doc_ids": [
+        "D2",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G2",
+        "G3"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.775,
+      "conflict_count": 2,
+      "score": 3.2538
+    },
+    {
+      "answer": "459",
+      "normalized_answer": "459",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.99,
+      "conflict_count": 2,
+      "score": 1.8075
+    },
+    {
+      "answer": "41,228 people",
+      "normalized_answer": "41228 people",
+      "doc_ids": [
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G5"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.25
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "1,234 people",
+    "supporting_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "1,234 people": 3.2538,
+      "459": 1.8075,
+      "41,228 people": 1.25
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "1,234 people",
+    "supporting_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "1,234 people",
+  "decision_trace": [
+    "Extracted 5 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> 1,234 people.",
+    "Verifier decision: supported -> 1,234 people."
+  ]
+}

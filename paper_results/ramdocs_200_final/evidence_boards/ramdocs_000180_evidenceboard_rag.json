@@ -1,0 +1,188 @@
+{
+  "qid": "ramdocs_000180",
+  "question": "What is the location of Mooretown?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Blue Mountains and John Crow Mountains, Portland, Jamaica",
+      "normalized_answer": "blue mountains and john crow mountains portland jamaica",
+      "claim": "Moore Town is located in the Blue Mountains and John Crow Mountains of Portland, Jamaica.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "located in the Blue Mountains and John Crow Mountains of Portland, Jamaica",
+      "rationale": "The document explicitly states the location.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Oroville East, California",
+      "normalized_answer": "oroville east california",
+      "claim": "Mooretown Rancheria is located in the community of Oroville East, in suburban Oroville, California.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "It is located in the community of Oroville East, in suburban Oroville.",
+      "rationale": "The document directly states the specific location of Mooretown Rancheria.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "No information about the location of Mooretown was found in the document.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Document contains garbled data and no readable text mentioning Mooretown or its location.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document contains no readable information about Mooretown's location.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Document text is garbled and provides no location details for Mooretown.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Blue Mountains and John Crow Mountains, Portland, Jamaica"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Oroville East, California"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'Blue Mountains and John Crow Mountains, Portland, Jamaica', while D2 supports 'Oroville East, California'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Oroville East, California",
+      "normalized_answer": "oroville east california",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 1,
+      "score": 2.68
+    },
+    {
+      "answer": "Blue Mountains and John Crow Mountains, Portland, Jamaica",
+      "normalized_answer": "blue mountains and john crow mountains portland jamaica",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 1,
+      "score": 1.6175
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Oroville East, California",
+    "supporting_doc_ids": [
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "The top answer has stronger explicit entity support than competing clusters.",
+    "scores": {
+      "Oroville East, California": 2.68,
+      "Blue Mountains and John Crow Mountains, Portland, Jamaica": 1.6175
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Oroville East, California",
+    "supporting_doc_ids": [
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "D2 provides explicit and strong support for Oroville East, California, while D1's conflicting support is less explicit."
+  },
+  "final_answer": "Oroville East, California",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> Oroville East, California.",
+    "Verifier decision: supported -> Oroville East, California."
+  ]
+}

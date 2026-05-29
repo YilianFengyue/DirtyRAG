@@ -10,7 +10,7 @@ from typing import Any
 from tqdm import tqdm
 
 from dirtyrag.config import load_config
-from dirtyrag.data.io import read_jsonl, write_jsonl
+from dirtyrag.data.io import append_jsonl, read_jsonl
 from dirtyrag.evaluation.metrics import score_prediction, write_metrics
 from dirtyrag.llm_client import LLMClient
 from dirtyrag.methods import METHOD_REGISTRY
@@ -26,6 +26,7 @@ def parse_args() -> argparse.Namespace:
     run_parser.add_argument("--methods", type=str, default="")
     run_parser.add_argument("--limit", type=int, default=None)
     run_parser.add_argument("--mock", action="store_true")
+    run_parser.add_argument("--resume-run", type=Path, default=None)
 
     eval_parser = subparsers.add_parser("evaluate")
     eval_parser.add_argument("--run-dir", type=Path, required=True)
@@ -75,23 +76,25 @@ def run_command(args: argparse.Namespace) -> None:
         examples = examples[: int(limit)]
 
     method_names = parse_methods(args.methods, config)
-    run_dir = make_run_dir(Path(config.get("run", {}).get("output_dir", "outputs/runs")))
-    shutil.copyfile(args.config, run_dir / "config.yaml")
-    (run_dir / "dataset_path.txt").write_text(str(dataset_path), encoding="utf-8")
+    run_dir = prepare_run_dir(args, config, dataset_path)
 
     llm = LLMClient.from_config(config.get("llm", {}), cache_path=run_dir / "llm_calls.jsonl")
     max_tokens = int(config.get("llm", {}).get("max_tokens", 512))
-    predictions = []
+    predictions_path = run_dir / "predictions.jsonl"
+    completed = read_completed_predictions(predictions_path)
     for method_name in method_names:
         method_cls = METHOD_REGISTRY[method_name]
         method = method_cls(llm, max_tokens=max_tokens, run_dir=run_dir)
         for example in tqdm(examples, desc=method_name):
+            key = (example.qid, method_name)
+            if key in completed:
+                continue
             result = method.run(example)
-            predictions.append(result)
+            append_jsonl(predictions_path, result)
+            completed.add(key)
 
-    write_jsonl(run_dir / "predictions.jsonl", predictions)
     sync_latest(run_dir)
-    print(f"Wrote {run_dir / 'predictions.jsonl'}")
+    print(f"Wrote {predictions_path}")
     print(f"Run dir: {run_dir}")
 
 
@@ -243,6 +246,29 @@ def make_run_dir(output_root: Path) -> Path:
         run_dir = output_root / f"run_{timestamp}_{suffix}"
     run_dir.mkdir(parents=True)
     return run_dir
+
+
+def prepare_run_dir(args: argparse.Namespace, config: dict[str, Any], dataset_path: Path) -> Path:
+    if args.resume_run is not None:
+        run_dir = args.resume_run
+        run_dir.mkdir(parents=True, exist_ok=True)
+        if not (run_dir / "config.yaml").exists():
+            shutil.copyfile(args.config, run_dir / "config.yaml")
+        (run_dir / "dataset_path.txt").write_text(str(dataset_path), encoding="utf-8")
+        return run_dir
+    run_dir = make_run_dir(Path(config.get("run", {}).get("output_dir", "outputs/runs")))
+    shutil.copyfile(args.config, run_dir / "config.yaml")
+    (run_dir / "dataset_path.txt").write_text(str(dataset_path), encoding="utf-8")
+    return run_dir
+
+
+def read_completed_predictions(predictions_path: Path) -> set[tuple[str, str]]:
+    if not predictions_path.exists():
+        return set()
+    completed = set()
+    for row in read_jsonl(predictions_path):
+        completed.add((str(row.get("qid")), str(row.get("method"))))
+    return completed
 
 
 def sync_latest(run_dir: Path) -> None:

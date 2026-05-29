@@ -1,0 +1,196 @@
+{
+  "qid": "ramdocs_000053",
+  "question": "When was Guerin High School established?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "1962",
+      "normalized_answer": "1962",
+      "claim": "Guerin High School was established in 1962.",
+      "temporal_status": "current",
+      "time_cue": "1962",
+      "confidence": 1.0,
+      "raw_quote": "Guerin was established in 1962",
+      "rationale": "The document explicitly states the establishment year.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "",
+      "temporal_status": "unknown",
+      "time_cue": "1962",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "card_error: Expecting value: line 1 column 1 (char 0); heuristic fallback used",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "1962",
+      "normalized_answer": "1962",
+      "claim": "Guerin High School was established in 1962.",
+      "temporal_status": "current",
+      "time_cue": "1962",
+      "confidence": 1.0,
+      "raw_quote": "founded as an all-girls school in 1962",
+      "rationale": "Document explicitly states the founding year.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain information about Guerin High School's establishment date.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "schools Chicago area Aqsa School ( Bridgeview ) ... Closed Lourdes High School ( Chicago",
+      "rationale": "Document lists various Chicago area schools but does not mention Guerin High School or its establishment date.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain information about Guerin High School's establishment.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document is a form with fields and a list of countries, with no mention of Guerin High School.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "1962"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "1962"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "1962",
+      "normalized_answer": "1962",
+      "doc_ids": [
+        "D1",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G3"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 0,
+      "score": 3.95
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "1962",
+    "supporting_doc_ids": [
+      "D1",
+      "D3"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "1962": 3.95
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "1962",
+    "supporting_doc_ids": [
+      "D1",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D2",
+      "D4",
+      "D5"
+    ],
+    "reason": "The candidate answer is directly supported by two high-confidence, high-relevance documents with no conflicting evidence."
+  },
+  "final_answer": "1962",
+  "decision_trace": [
+    "Extracted 5 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> 1962.",
+    "Verifier decision: supported -> 1962."
+  ]
+}

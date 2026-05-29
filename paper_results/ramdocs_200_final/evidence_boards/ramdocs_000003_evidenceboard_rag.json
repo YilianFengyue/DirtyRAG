@@ -1,0 +1,335 @@
+{
+  "qid": "ramdocs_000003",
+  "question": "Who are the directors of the film \"Lahu Ke Do Rang\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Mahesh Bhatt",
+      "normalized_answer": "mahesh bhatt",
+      "claim": "The film Lahu Ke Do Rang was directed by Mahesh Bhatt.",
+      "temporal_status": "current",
+      "time_cue": "1979",
+      "confidence": 1.0,
+      "raw_quote": "directed by Mahesh Bhatt",
+      "rationale": "The document explicitly states the director.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Mahesh Bhatt",
+      "normalized_answer": "mahesh bhatt",
+      "claim": "Mahesh Bhatt directed the 1979 film Lahu Ke Do Rang.",
+      "temporal_status": "current",
+      "time_cue": "1979",
+      "confidence": 0.98,
+      "raw_quote": "1979 film by Mahesh Bhatt",
+      "rationale": "The document directly states the film is by Mahesh Bhatt.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Mahesh Bhatt",
+      "normalized_answer": "mahesh bhatt",
+      "claim": "Mahesh Bhatt directed the 1979 Hindi film Lahu Ke Do Rang.",
+      "temporal_status": "current",
+      "time_cue": "1979",
+      "confidence": 1.0,
+      "raw_quote": "Directed by Mahesh Bhatt",
+      "rationale": "The document explicitly states the director.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "Raj Kapoor",
+      "normalized_answer": "raj kapoor",
+      "claim": "Lahu Ke Do Rang was directed by Raj Kapoor.",
+      "temporal_status": "current",
+      "time_cue": "1979",
+      "confidence": 0.95,
+      "raw_quote": "Films and television series by Raj Kapoor Director ... Lahu Ke Do Rang ( 1979 )",
+      "rationale": "The document includes Lahu Ke Do Rang in a list of films directed by Raj Kapoor.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "Raj Kapoor",
+      "normalized_answer": "raj kapoor",
+      "claim": "Lahu Ke Do Rang was directed by Raj Kapoor.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Films directed by Raj Kapoor",
+      "rationale": "The document categorizes the film under 'Films directed by Raj Kapoor', directly indicating the director.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not list any directors for the film 'Lahu Ke Do Rang'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document consists of a list of films and TV shows, none of which is 'Lahu Ke Do Rang'.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention the directors of 'Lahu Ke Do Rang'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "betrayed by Shamsher who never returned to fetch them back to India as promised . On his quest to solve a murder case , Raj goes to Darjeeling where he meets Roma ( Shabana Azmi ) and falls in love with her . Suraj who is also in Darjeeling falls in love with Roma too , but hesitant to communicate . Roma tells Raj of how her mother had been hooked to drugs by Devi Dayal . A series of incidents reveal all the secrets and Raj and Suraj unite to take revenge for their father 's death . Cast",
+      "rationale": "The document discusses plot and characters but provides no director information.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Mahesh Bhatt"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Mahesh Bhatt"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Mahesh Bhatt"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Raj Kapoor"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "Raj Kapoor"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'Mahesh Bhatt', while D4 supports 'Raj Kapoor'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'Mahesh Bhatt', while D5 supports 'Raj Kapoor'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'Mahesh Bhatt', while D4 supports 'Raj Kapoor'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports 'Mahesh Bhatt', while D5 supports 'Raj Kapoor'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'Mahesh Bhatt', while D4 supports 'Raj Kapoor'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports 'Mahesh Bhatt', while D5 supports 'Raj Kapoor'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Mahesh Bhatt",
+      "normalized_answer": "mahesh bhatt",
+      "doc_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9933,
+      "conflict_count": 6,
+      "score": 5.0783
+    },
+    {
+      "answer": "Raj Kapoor",
+      "normalized_answer": "raj kapoor",
+      "doc_ids": [
+        "D4",
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G4",
+        "G5"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.975,
+      "conflict_count": 6,
+      "score": 3.2237
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Mahesh Bhatt",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D5"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Mahesh Bhatt": 5.0783,
+      "Raj Kapoor": 3.2237
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Mahesh Bhatt",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D5"
+    ],
+    "reason": "Mahesh Bhatt cluster has stronger support (3 high-confidence docs, score 5.078) than competing Raj Kapoor cluster (2 docs, score 3.224)."
+  },
+  "final_answer": "Mahesh Bhatt",
+  "decision_trace": [
+    "Extracted 7 evidence cards.",
+    "Built 7 duplicate groups.",
+    "Built 10 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> Mahesh Bhatt.",
+    "Verifier decision: supported -> Mahesh Bhatt."
+  ]
+}

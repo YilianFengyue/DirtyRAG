@@ -1,0 +1,162 @@
+{
+  "qid": "ramdocs_000023",
+  "question": "Where is the Kate Chopin House located?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Cloutierville, Louisiana",
+      "normalized_answer": "cloutierville louisiana",
+      "claim": "The Kate Chopin House was located on Main Street in Cloutierville, Natchitoches Parish, Louisiana.",
+      "temporal_status": "outdated",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "was a house in Cloutierville, Louisiana. ... located on Main Street (Louisiana Highway 1) in Cloutierville, in Natchitoches Parish, Louisiana",
+      "rationale": "The document explicitly states the house's location.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Main Street, New Orleans, Louisiana",
+      "normalized_answer": "main street new orleans louisiana",
+      "claim": "The Kate Chopin House was located on Main Street in New Orleans, Louisiana.",
+      "temporal_status": "outdated",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "The house was located on Main Street (Louisiana Highway 1) in New Orleans, in Orleans Parish, Louisiana.",
+      "rationale": "The document directly states the location of the house.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document contains no information about the location of the Kate Chopin House.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "No relevant quote.",
+      "rationale": "Document is a bibliography of works about Kate Chopin and does not mention a house.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Cloutierville, Louisiana"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Main Street, New Orleans, Louisiana"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'Cloutierville, Louisiana', while D2 supports 'Main Street, New Orleans, Louisiana'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Cloutierville, Louisiana",
+      "normalized_answer": "cloutierville louisiana",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 1,
+      "score": 1.93
+    },
+    {
+      "answer": "Main Street, New Orleans, Louisiana",
+      "normalized_answer": "main street new orleans louisiana",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 1,
+      "score": 1.93
+    }
+  ],
+  "candidate_decision": {
+    "mode": "conflict",
+    "answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support.",
+    "scores": {
+      "Cloutierville, Louisiana": 1.93,
+      "Main Street, New Orleans, Louisiana": 1.93
+    }
+  },
+  "verifier_decision": {
+    "verdict": "conflict",
+    "final_answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support."
+  },
+  "final_answer": "conflict",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: conflict -> conflict.",
+    "Verifier decision: conflict -> conflict."
+  ]
+}

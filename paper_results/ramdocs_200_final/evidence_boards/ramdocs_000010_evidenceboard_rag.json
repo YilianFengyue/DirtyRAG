@@ -1,0 +1,208 @@
+{
+  "qid": "ramdocs_000010",
+  "question": "What is the population of Pilzno?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "4,411 people",
+      "normalized_answer": "4411 people",
+      "claim": "The population of Pilzno is 4,411 as of 2006.",
+      "temporal_status": "outdated",
+      "time_cue": "as of 2006",
+      "confidence": 0.98,
+      "raw_quote": "the population of Pilzno amounts to 4,411",
+      "rationale": "Directly stated in the document.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "4,411 people",
+      "normalized_answer": "4411 people",
+      "claim": "The population of the town of Pilzno was 4,411 in 2006.",
+      "temporal_status": "outdated",
+      "time_cue": "2006",
+      "confidence": 0.95,
+      "raw_quote": "Population (2006) • Urban 4,411",
+      "rationale": "The document provides separate urban and rural figures; urban corresponds to the town of Pilzno.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "10,000 people",
+      "normalized_answer": "10000 people",
+      "claim": "No information about the population of Pilzno is present in the document.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "— 2025 10,000 2,169 2,309 44 2026 10,000 2,164 2,304 — 2027 10,000 2,158 2,297 — 2028 10,000 2,151 2,290 — 2029 10,000 2,144 2,283 — 2030 10,000 2,136 2,275 46 2031 10,000 2,128 2,266 — 2032 10,000 2,119 2,257 — 2033 10,000 2,111 2,247 — 2034 10,000",
+      "rationale": "Document D3 contains numerical tables with years but does not mention Pilzno.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "38,544,000 people",
+      "normalized_answer": "38544000 people",
+      "claim": "The document does not contain the population of Pilzno; it provides national demographic data for Poland.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document only includes Poland's total population figures, not specific to Pilzno.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "4,411 people"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "4,411 people"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "10,000 people"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "38,544,000 people"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "4,411 people",
+      "normalized_answer": "4411 people",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 2,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.965,
+      "conflict_count": 0,
+      "score": 5.2412
+    },
+    {
+      "answer": "10,000 people",
+      "normalized_answer": "10000 people",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.25
+    },
+    {
+      "answer": "38,544,000 people",
+      "normalized_answer": "38544000 people",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 0,
+      "explicit_support_count": 0,
+      "missing_entity_count": 1,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.0,
+      "conflict_count": 0,
+      "score": 1.25
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "4,411 people",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "4,411 people": 5.2412,
+      "10,000 people": 1.25,
+      "38,544,000 people": 1.25
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "4,411 people",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "verifier_error_fallback: Expecting value: line 1 column 1 (char 0)"
+  },
+  "final_answer": "4,411 people",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 4 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> 4,411 people.",
+    "Verifier decision: supported -> 4,411 people."
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "qid": "ramdocs_000172",
+  "question": "When was the Museum of Applied Arts established?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "1874",
+      "normalized_answer": "1874",
+      "claim": "The Museum of Applied Arts was founded in 1874 as the Kunstgewerbemuseum.",
+      "temporal_status": "current",
+      "time_cue": "1874",
+      "confidence": 1.0,
+      "raw_quote": "The museum was founded in 1874",
+      "rationale": "Document explicitly states the founding year.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "built between 1893 and 1896",
+      "normalized_answer": "built between 1893 and 1896",
+      "claim": "The Museum of Applied Arts was built between 1893 and 1896.",
+      "temporal_status": "current",
+      "time_cue": "between 1893 and 1896",
+      "confidence": 0.95,
+      "raw_quote": "It was built between 1893 and 1896",
+      "rationale": "The document directly states the construction years, which indicate establishment.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "1893-1896",
+      "normalized_answer": "18931896",
+      "claim": "The main Museum building was designed and built between 1893 and 1896, indicating the museum's establishment period.",
+      "temporal_status": "current",
+      "time_cue": "1893-1896",
+      "confidence": 0.7,
+      "raw_quote": "View of the main Museum building designed by Ödön Lechner and Gyula Pártos 1893-1896",
+      "rationale": "The document provides the building's construction years, which are the only temporal information relevant to the museum's establishment.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "1874"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "built between 1893 and 1896"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "1893-1896"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports '1874', while D2 supports 'built between 1893 and 1896'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports '1874', while D3 supports '1893-1896'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'built between 1893 and 1896', while D3 supports '1893-1896'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "1874",
+      "normalized_answer": "1874",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 2,
+      "score": 1.86
+    },
+    {
+      "answer": "built between 1893 and 1896",
+      "normalized_answer": "built between 1893 and 1896",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 2,
+      "score": 1.8475
+    },
+    {
+      "answer": "1893-1896",
+      "normalized_answer": "18931896",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.7,
+      "conflict_count": 2,
+      "score": 1.785
+    }
+  ],
+  "candidate_decision": {
+    "mode": "conflict",
+    "answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support.",
+    "scores": {
+      "1874": 1.86,
+      "built between 1893 and 1896": 1.8475,
+      "1893-1896": 1.785
+    }
+  },
+  "verifier_decision": {
+    "verdict": "conflict",
+    "final_answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support."
+  },
+  "final_answer": "conflict",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: conflict -> conflict.",
+    "Verifier decision: conflict -> conflict."
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "qid": "ramdocs_000185",
+  "question": "What is the estimated population of Lost Springs?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "70",
+      "normalized_answer": "70",
+      "claim": "The population of Lost Springs was 70 as of the 2010 census.",
+      "temporal_status": "outdated",
+      "time_cue": "As of the 2010 census",
+      "confidence": 1.0,
+      "raw_quote": "As of the 2010 census, the city population was 70.",
+      "rationale": "The document directly states the population figure from the 2010 census.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "4",
+      "normalized_answer": "4",
+      "claim": "The population of Lost Springs was 4 as of the 2010 census.",
+      "temporal_status": "outdated",
+      "time_cue": "2010",
+      "confidence": 0.9,
+      "raw_quote": "As of the 2010 census, the city population was 4.",
+      "rationale": "The document explicitly states the population from the 2010 census.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "4",
+      "normalized_answer": "4",
+      "claim": "The estimated 2025 population of Lost Springs is 4.",
+      "temporal_status": "current",
+      "time_cue": "2025 projected population",
+      "confidence": 0.95,
+      "raw_quote": "The 2025 projected population for Lost Springs is 4",
+      "rationale": "The document directly states the projected population for 2025.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention Lost Springs or its population.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "and institutions for the physically handicapped ( % ) People in Group quarters - Wards in general hospitals for patients who have no usual home elsewhere ( % ) People in Group quarters - Wards in military hospitals for patients who have no usual home elsewhere ( % ) People in Group quarters - Juvenile institutions ( % ) People in Group quarters - Long-term care ( % ) People in Group quarters - Homes for abused , dependent , and neglected children ( % ) People in Group quarters - Residential trea",
+      "rationale": "The document is about group quarters percentages and has no information about Lost Springs or its population.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document contains information about poverty rates in Lost Springs, Wyoming, but does not provide an estimated population.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "The most common racial or ethnic group living below the poverty line in Lost Springs, WY is White, followed by Black and Native American.",
+      "rationale": "The document discusses poverty data, not population numbers.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "70"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "4"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "4"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports '70', while D2 supports '4'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports '70', while D3 supports '4'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "4",
+      "normalized_answer": "4",
+      "doc_ids": [
+        "D2",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G2",
+        "G3"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 2,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.925,
+      "conflict_count": 2,
+      "score": 5.0412
+    },
+    {
+      "answer": "70",
+      "normalized_answer": "70",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 2,
+      "score": 2.51
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "4",
+    "supporting_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "4": 5.0412,
+      "70": 2.51
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "4",
+    "supporting_doc_ids": [
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D1"
+    ],
+    "reason": "Answer '4' has stronger explicit support from two primary documents (D2, D3) compared to the conflicting cluster for '70' with only one support."
+  },
+  "final_answer": "4",
+  "decision_trace": [
+    "Extracted 5 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> 4.",
+    "Verifier decision: supported -> 4."
+  ]
+}

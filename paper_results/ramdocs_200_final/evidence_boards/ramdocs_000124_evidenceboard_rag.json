@@ -1,0 +1,182 @@
+{
+  "qid": "ramdocs_000124",
+  "question": "What is the profession of Peter Bergman?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "actor",
+      "normalized_answer": "actor",
+      "claim": "Peter Bergman is an American actor.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "is an American actor",
+      "rationale": "The document explicitly states his profession as actor.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Actor",
+      "normalized_answer": "actor",
+      "claim": "Peter Bergman is an actor.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "The Bold and the Beautiful Stream Actor Jack Abbott Soap 1987",
+      "rationale": "The document lists Peter Bergman as Actor in multiple entries, indicating his profession.",
+      "entity_explicitness": "missing",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "writer and comedian",
+      "normalized_answer": "writer and comedian",
+      "claim": "Peter Bergman was an American writer and comedian.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Peter Paul Bergman ... was an American writer and comedian",
+      "rationale": "The document explicitly states his profession as writer and comedian.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "actor"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Actor"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "writer and comedian"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'actor', while D3 supports 'writer and comedian'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'Actor', while D3 supports 'writer and comedian'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "actor",
+      "normalized_answer": "actor",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 1,
+      "missing_entity_count": 1,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.975,
+      "conflict_count": 2,
+      "score": 4.0538
+    },
+    {
+      "answer": "writer and comedian",
+      "normalized_answer": "writer and comedian",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 2,
+      "score": 2.56
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "actor",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "actor": 4.0538,
+      "writer and comedian": 2.56
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "actor",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "Candidate answer has stronger explicit support from two high-confidence documents, outweighing the conflicting weaker cluster."
+  },
+  "final_answer": "actor",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> actor.",
+    "Verifier decision: supported -> actor."
+  ]
+}

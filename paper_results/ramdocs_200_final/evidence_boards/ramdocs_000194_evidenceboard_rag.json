@@ -1,0 +1,273 @@
+{
+  "qid": "ramdocs_000194",
+  "question": "When was Egg Rock Light constructed?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "1875",
+      "normalized_answer": "1875",
+      "claim": "Egg Rock Light was built in 1875.",
+      "temporal_status": "current",
+      "time_cue": "1875",
+      "confidence": 1.0,
+      "raw_quote": "Built in 1875",
+      "rationale": "The document explicitly states the construction year.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "No information about Egg Rock Light construction date.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "Document does not mention Egg Rock Light.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "1920",
+      "normalized_answer": "1920",
+      "claim": "The present Egg Rock Light was constructed in 1920.",
+      "temporal_status": "current",
+      "time_cue": "1920",
+      "confidence": 1.0,
+      "raw_quote": "In 1920, the present Egg Rock Light was constructed",
+      "rationale": "Document explicitly states the construction year of the present lighthouse.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "1920",
+      "normalized_answer": "1920",
+      "claim": "Egg Rock Light was built in 1920.",
+      "temporal_status": "current",
+      "time_cue": "1920",
+      "confidence": 1.0,
+      "raw_quote": "Built in 1920",
+      "rationale": "The document explicitly states the lighthouse was built in 1920.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "1856",
+      "normalized_answer": "1856",
+      "claim": "Egg Rock Light was first established in 1856.",
+      "temporal_status": "current",
+      "time_cue": "1856",
+      "confidence": 0.95,
+      "raw_quote": "Egg Rock Light was first established in 1856",
+      "rationale": "The document directly states the year of establishment.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "1875"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "1920"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "1920"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "1856"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports '1875', while D3 supports '1920'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports '1875', while D4 supports '1920'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports '1875', while D5 supports '1856'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports '1920', while D5 supports '1856'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D4 supports '1920', while D5 supports '1856'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "1920",
+      "normalized_answer": "1920",
+      "doc_ids": [
+        "D3",
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G3",
+        "G4"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 4,
+      "score": 3.47
+    },
+    {
+      "answer": "1875",
+      "normalized_answer": "1875",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 1.74
+    },
+    {
+      "answer": "1856",
+      "normalized_answer": "1856",
+      "doc_ids": [
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G5"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 3,
+      "score": 1.7275
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "1920",
+    "supporting_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D5"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "1920": 3.47,
+      "1875": 1.74,
+      "1856": 1.7275
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "1920",
+    "supporting_doc_ids": [
+      "D3",
+      "D4"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D5"
+    ],
+    "reason": "The candidate answer has stronger explicit support from two high-confidence primary sources (D3, D4) compared to conflicting claims, and the cluster score justifies it."
+  },
+  "final_answer": "1920",
+  "decision_trace": [
+    "Extracted 5 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> 1920.",
+    "Verifier decision: supported -> 1920."
+  ]
+}

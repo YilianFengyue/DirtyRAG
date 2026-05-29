@@ -1,0 +1,162 @@
+{
+  "qid": "ramdocs_000146",
+  "question": "What is the primary product or industry associated with Heubach?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "porcelain-headed bisque dolls",
+      "normalized_answer": "porcelainheaded bisque dolls",
+      "claim": "Ernst Heubach manufactured porcelain-headed bisque dolls.",
+      "temporal_status": "outdated",
+      "time_cue": "from 1885 onwards",
+      "confidence": 0.95,
+      "raw_quote": "manufactured porcelain-headed bisque dolls from 1885 onwards",
+      "rationale": "The document explicitly states the primary product manufactured by Heubach.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "underwear manufacturing",
+      "normalized_answer": "underwear manufacturing",
+      "claim": "Heubach is primarily associated with a leading underwear manufacturer.",
+      "temporal_status": "current",
+      "time_cue": "2009",
+      "confidence": 0.9,
+      "raw_quote": "one of the leading underwear manufacturers in the world",
+      "rationale": "The document highlights a company in Heubach as a leading underwear manufacturer with significant sales and employees, indicating the primary industry.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain any information about Heubach's primary product or industry.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "and customized solutions . To learn more about our global manufacturing footprint and our sales offices across the world click on the dots in the map",
+      "rationale": "The document is a snippet of CSS and generic text about global manufacturing and sales, with no mention of Heubach or its specific products.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "porcelain-headed bisque dolls"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "underwear manufacturing"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'porcelain-headed bisque dolls', while D2 supports 'underwear manufacturing'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "underwear manufacturing",
+      "normalized_answer": "underwear manufacturing",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 1,
+      "score": 1.955
+    },
+    {
+      "answer": "porcelain-headed bisque dolls",
+      "normalized_answer": "porcelainheaded bisque dolls",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 1,
+      "score": 1.9175
+    }
+  ],
+  "candidate_decision": {
+    "mode": "conflict",
+    "answer": "conflict",
+    "supporting_doc_ids": [
+      "D2",
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support.",
+    "scores": {
+      "underwear manufacturing": 1.955,
+      "porcelain-headed bisque dolls": 1.9175
+    }
+  },
+  "verifier_decision": {
+    "verdict": "conflict",
+    "final_answer": "conflict",
+    "supporting_doc_ids": [
+      "D2",
+      "D1"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support."
+  },
+  "final_answer": "conflict",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: conflict -> conflict.",
+    "Verifier decision: conflict -> conflict."
+  ]
+}

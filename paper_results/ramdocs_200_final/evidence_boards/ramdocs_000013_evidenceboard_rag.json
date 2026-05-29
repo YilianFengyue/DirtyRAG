@@ -1,0 +1,335 @@
+{
+  "qid": "ramdocs_000013",
+  "question": "Who is the artist of the album \"VII\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Blitzen Trapper",
+      "normalized_answer": "blitzen trapper",
+      "claim": "The album 'VII' is by American alternative country band Blitzen Trapper.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "VII is the seventh studio album by American alternative country band Blitzen Trapper.",
+      "rationale": "The document explicitly states the artist of the album.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Blitzen Trapper",
+      "normalized_answer": "blitzen trapper",
+      "claim": "Blitzen Trapper is the artist of the album 'VII'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "session centering on VII ... Blitzen Trapper",
+      "rationale": "The document mentions a session centering on VII in the context of Blitzen Trapper.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Blitzen Trapper",
+      "normalized_answer": "blitzen trapper",
+      "claim": "Blitzen Trapper is the artist of the album 'VII'.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Blitzen Trapper : VII",
+      "rationale": "The document explicitly pairs 'Blitzen Trapper' with 'VII', indicating the artist.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "The Beatles",
+      "normalized_answer": "the beatles",
+      "claim": "The album 'VII' is by The Beatles.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.9,
+      "raw_quote": "VII was well received by critics. An enthusiastic review by Paste magazine calls the record `` The Beatles’ strongest album to date...",
+      "rationale": "The document explicitly refers to 'VII' as The Beatles' album.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "The Beatles",
+      "normalized_answer": "the beatles",
+      "claim": "The album 'VII' is by The Beatles.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.99,
+      "raw_quote": "The album \"VII\" by The Beatles",
+      "rationale": "The document directly states the artist of the album 'VII' as The Beatles.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document discusses the album VII and mentions songwriter Eric Earley, but does not explicitly state the artist.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "VII took many writing and stylistic departures from its predecessor , 2011's country-rock American Goldwing . Songwriter Eric Earley explains",
+      "rationale": "The document does not name the artist of VII; it only references the songwriter.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document mentions the album \"VII\" but does not name the artist.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "all but the final are from VII.",
+      "rationale": "No artist name is provided in the document for the album 'VII'.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Blitzen Trapper"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Blitzen Trapper"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Blitzen Trapper"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "The Beatles"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "The Beatles"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'Blitzen Trapper', while D4 supports 'The Beatles'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'Blitzen Trapper', while D5 supports 'The Beatles'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'Blitzen Trapper', while D4 supports 'The Beatles'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports 'Blitzen Trapper', while D5 supports 'The Beatles'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'Blitzen Trapper', while D4 supports 'The Beatles'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports 'Blitzen Trapper', while D5 supports 'The Beatles'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Blitzen Trapper",
+      "normalized_answer": "blitzen trapper",
+      "doc_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9667,
+      "conflict_count": 6,
+      "score": 5.0717
+    },
+    {
+      "answer": "The Beatles",
+      "normalized_answer": "the beatles",
+      "doc_ids": [
+        "D4",
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G4",
+        "G5"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.945,
+      "conflict_count": 6,
+      "score": 3.9163
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Blitzen Trapper",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D5"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Blitzen Trapper": 5.0717,
+      "The Beatles": 3.9163
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Blitzen Trapper",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D5"
+    ],
+    "reason": "verifier_error_fallback: Unterminated string starting at: line 6 column 13 (char 157)"
+  },
+  "final_answer": "Blitzen Trapper",
+  "decision_trace": [
+    "Extracted 7 evidence cards.",
+    "Built 7 duplicate groups.",
+    "Built 10 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> Blitzen Trapper.",
+    "Verifier decision: supported -> Blitzen Trapper."
+  ]
+}

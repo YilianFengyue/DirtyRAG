@@ -1,0 +1,146 @@
+{
+  "qid": "ramdocs_000073",
+  "question": "When was the Zook House built?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "about 1820",
+      "normalized_answer": "about 1820",
+      "claim": "The Jacob Zook House was built about 1820.",
+      "temporal_status": "current",
+      "time_cue": "about 1820",
+      "confidence": 1.0,
+      "raw_quote": "The house was built about 1820 in the Federal style.",
+      "rationale": "Direct statement of the construction date.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "about 1820",
+      "normalized_answer": "about 1820",
+      "claim": "The Jacob Zook House was built about 1820.",
+      "temporal_status": "current",
+      "time_cue": "about 1820",
+      "confidence": 1.0,
+      "raw_quote": "The house was built about 1820",
+      "rationale": "Document explicitly states the construction date.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain the construction date of the Jacob Zook House.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document is a navigation menu listing destinations, with no information about the Zook House's construction date.",
+      "entity_explicitness": "unknown",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "about 1820"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "about 1820"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "about 1820",
+      "normalized_answer": "about 1820",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 0,
+      "score": 3.95
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "about 1820",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "about 1820": 3.95
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "about 1820",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "Two high-confidence primary evidence cards directly state the answer, and no conflicting evidence exists."
+  },
+  "final_answer": "about 1820",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> about 1820.",
+    "Verifier decision: supported -> about 1820."
+  ]
+}

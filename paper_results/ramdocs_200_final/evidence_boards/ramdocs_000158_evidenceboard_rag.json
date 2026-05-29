@@ -1,0 +1,285 @@
+{
+  "qid": "ramdocs_000158",
+  "question": "What is the release date of Every Mother Counts?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "April 12, 2011",
+      "normalized_answer": "april 12 2011",
+      "claim": "The album Every Mother Counts was released on April 12, 2011.",
+      "temporal_status": "current",
+      "time_cue": "April 12, 2011",
+      "confidence": 1.0,
+      "raw_quote": "released by Starbucks record label Hear Music on April 12, 2011.",
+      "rationale": "The document explicitly states the release date.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "January 1, 2010",
+      "normalized_answer": "january 1 2010",
+      "claim": "The album Every Mother Counts was released on January 1, 2010.",
+      "temporal_status": "current",
+      "time_cue": "January 1, 2010",
+      "confidence": 1.0,
+      "raw_quote": "released by Starbucks record label Hear Music on January 1, 2010",
+      "rationale": "The document explicitly states the release date.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "May 1, 2012",
+      "normalized_answer": "may 1 2012",
+      "claim": "The album Every Mother Counts 2012 was released on May 1, 2012.",
+      "temporal_status": "current",
+      "time_cue": "May 1, 2012",
+      "confidence": 1.0,
+      "raw_quote": "released by Hear Music on May 1, 2012",
+      "rationale": "The document explicitly states the release date.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not mention Every Mother Counts.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "the sensitive-cyborg vibe that pulses through the song . '' [ 10 ] Track listing [ edit ] 1983 release [ edit ] 7 '' : Mute / 7Bong3 ( UK ) & Sire / 7-29482 ( US ) `` Everything Counts '' – 3:58 `` Work Hard '' – 4:21 12 '' : Mute / 12Bong3 ( UK ) & Sire / 0-20165 ( US ) `` Everything Counts '' ( In Larger Amounts ) – 7:18 `` Work Hard '' ( East End remix ) – 6:57 12 '' : Mute / L12Bong3 ( UK ) `` Everything",
+      "rationale": "The document is about Depeche Mode's 'Everything Counts' and has no information on Every Mother Counts.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "2012",
+      "normalized_answer": "2012",
+      "claim": "Every Mother Counts was released in 2012.",
+      "temporal_status": "current",
+      "time_cue": "2012",
+      "confidence": 0.9,
+      "raw_quote": "Every Mother Counts 2012",
+      "rationale": "The citation mentions 'Every Mother Counts 2012', indicating the release year.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "April 12, 2011"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "January 1, 2010"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "May 1, 2012"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "2012"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "contradict",
+      "reason": "D1 supports 'April 12, 2011', while D2 supports 'January 1, 2010'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'April 12, 2011', while D3 supports 'May 1, 2012'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'April 12, 2011', while D5 supports '2012'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'January 1, 2010', while D3 supports 'May 1, 2012'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports 'January 1, 2010', while D5 supports '2012'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports 'May 1, 2012', while D5 supports '2012'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "April 12, 2011",
+      "normalized_answer": "april 12 2011",
+      "doc_ids": [
+        "D1"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 2.44
+    },
+    {
+      "answer": "January 1, 2010",
+      "normalized_answer": "january 1 2010",
+      "doc_ids": [
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 2.44
+    },
+    {
+      "answer": "May 1, 2012",
+      "normalized_answer": "may 1 2012",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G3"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 3,
+      "score": 2.44
+    },
+    {
+      "answer": "2012",
+      "normalized_answer": "2012",
+      "doc_ids": [
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G5"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9,
+      "conflict_count": 3,
+      "score": 2.415
+    }
+  ],
+  "candidate_decision": {
+    "mode": "conflict",
+    "answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support.",
+    "scores": {
+      "April 12, 2011": 2.44,
+      "January 1, 2010": 2.44,
+      "May 1, 2012": 2.44,
+      "2012": 2.415
+    }
+  },
+  "verifier_decision": {
+    "verdict": "conflict",
+    "final_answer": "conflict",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Multiple answer clusters have similar support."
+  },
+  "final_answer": "conflict",
+  "decision_trace": [
+    "Extracted 5 evidence cards.",
+    "Built 5 duplicate groups.",
+    "Built 6 evidence graph edges.",
+    "Built 4 answer clusters.",
+    "Candidate decision: conflict -> conflict.",
+    "Verifier decision: conflict -> conflict."
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "qid": "ramdocs_000091",
+  "question": "Who is the artist associated with the album \"Out of the Box\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Jade Valerie",
+      "normalized_answer": "jade valerie",
+      "claim": "Out of the Box is the debut mini-album by Jade Valerie.",
+      "temporal_status": "current",
+      "time_cue": "October 17, 2007",
+      "confidence": 1.0,
+      "raw_quote": "Out Of The Box the title of the debut mini-album released by Jade Valerie.",
+      "rationale": "The document explicitly states that the album was released by Jade Valerie.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Jade Valerie",
+      "normalized_answer": "jade valerie",
+      "claim": "The debut mini-album was released by Jade Valerie.",
+      "temporal_status": "current",
+      "time_cue": "October 17, 2007",
+      "confidence": 0.9,
+      "raw_quote": "debut mini-album released by Jade Valerie",
+      "rationale": "The document explicitly states the artist who released the debut mini-album.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Taylor Swift",
+      "normalized_answer": "taylor swift",
+      "claim": "The album 'Out of the Box' is by Taylor Swift.",
+      "temporal_status": "current",
+      "time_cue": "October 17, 2007",
+      "confidence": 0.95,
+      "raw_quote": "Out of the Box Álbum de estudio de Taylor Swift",
+      "rationale": "The document explicitly attributes the album to Taylor Swift.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain any information about an album titled 'Out of the Box' or its associated artist.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "Out of the Box — was a Disney Channel show for kids aged 3 8",
+      "rationale": "The document mentions a television show named 'Out of the Box', not an album, and provides no artist information.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Jade Valerie"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Taylor Swift"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "duplicate",
+      "reason": "The two documents support the same answer with highly similar text.",
+      "confidence": 0.95
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D1 supports 'Jade Valerie', while D3 supports 'Taylor Swift'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "contradict",
+      "reason": "D2 supports 'Jade Valerie', while D3 supports 'Taylor Swift'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Jade Valerie",
+      "normalized_answer": "jade valerie",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 2,
+      "score": 2.5475
+    },
+    {
+      "answer": "Taylor Swift",
+      "normalized_answer": "taylor swift",
+      "doc_ids": [
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G2"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 2,
+      "score": 1.8475
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Jade Valerie",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "The top answer cluster has the highest evidence score.",
+    "scores": {
+      "Jade Valerie": 2.5475,
+      "Taylor Swift": 1.8475
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Jade Valerie",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "Two high-confidence documents explicitly support Jade Valerie, outweighing the single conflicting document for Taylor Swift."
+  },
+  "final_answer": "Jade Valerie",
+  "decision_trace": [
+    "Extracted 4 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 3 evidence graph edges.",
+    "Built 2 answer clusters.",
+    "Candidate decision: answer -> Jade Valerie.",
+    "Verifier decision: supported -> Jade Valerie."
+  ]
+}

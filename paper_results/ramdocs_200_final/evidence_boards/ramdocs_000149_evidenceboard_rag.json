@@ -1,0 +1,368 @@
+{
+  "qid": "ramdocs_000149",
+  "question": "What is the broadcast format of WCMA?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Spanish Tropical",
+      "normalized_answer": "spanish tropical",
+      "claim": "WCMA broadcasts a Spanish Tropical format.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "WCMA (AM) WCMA (1600 AM, \"Cima 103.7\") is a radio station broadcasting a Spanish Tropical format.",
+      "rationale": "The document explicitly states the broadcast format.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Spanish Tropical",
+      "normalized_answer": "spanish tropical",
+      "claim": "WCMA broadcasts in Spanish Tropical format.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "Programming Format Spanish Tropical",
+      "rationale": "The document explicitly states the programming format.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "high",
+      "answer_candidate": "Spanish Tropical",
+      "normalized_answer": "spanish tropical",
+      "claim": "WCMA broadcasts a Spanish Tropical format.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.95,
+      "raw_quote": "broadcasting a Spanish Tropical format",
+      "rationale": "Document explicitly states the station's broadcast format.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "Classical Music",
+      "normalized_answer": "classical music",
+      "claim": "WCMA broadcasts in Classical Music format.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Format Classical Music",
+      "rationale": "The document explicitly states the format as Classical Music.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "Classical Music",
+      "normalized_answer": "classical music",
+      "claim": "WCMA broadcasts a Classical Music format.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 0.98,
+      "raw_quote": "WCMA (AM) ... is a radio station broadcasting a Classical Music format.",
+      "rationale": "The document explicitly states the broadcast format.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "high",
+      "answer_candidate": "1980s and 1990s pop music",
+      "normalized_answer": "1980s and 1990s pop music",
+      "claim": "WCMA-FM broadcast a 1980s and 1990s pop music format until February 2008.",
+      "temporal_status": "outdated",
+      "time_cue": "until February 2008",
+      "confidence": 1.0,
+      "raw_quote": "its format was an 1980s and 1990s pop music station",
+      "rationale": "The document directly states the format of WCMA-FM was 1980s and 1990s pop music before February 2008.",
+      "entity_explicitness": "explicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Spanish Tropical"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Spanish Tropical"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "Spanish Tropical"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Classical Music"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "Classical Music"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "1980s and 1990s pop music"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'Spanish Tropical', while D4 supports 'Classical Music'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'Spanish Tropical', while D5 supports 'Classical Music'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D1 supports 'Spanish Tropical', while D6 supports '1980s and 1990s pop music'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D3",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'Spanish Tropical', while D4 supports 'Classical Music'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports 'Spanish Tropical', while D5 supports 'Classical Music'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D2 supports 'Spanish Tropical', while D6 supports '1980s and 1990s pop music'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D3 supports 'Spanish Tropical', while D4 supports 'Classical Music'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D3 supports 'Spanish Tropical', while D5 supports 'Classical Music'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D3",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D3 supports 'Spanish Tropical', while D6 supports '1980s and 1990s pop music'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D4",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D4 supports 'Classical Music', while D6 supports '1980s and 1990s pop music'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D5 supports 'Classical Music', while D6 supports '1980s and 1990s pop music'.",
+      "confidence": 0.85
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Spanish Tropical",
+      "normalized_answer": "spanish tropical",
+      "doc_ids": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 3,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.9667,
+      "conflict_count": 9,
+      "score": 6.8117
+    },
+    {
+      "answer": "Classical Music",
+      "normalized_answer": "classical music",
+      "doc_ids": [
+        "D4",
+        "D5"
+      ],
+      "duplicate_group_ids": [
+        "G4",
+        "G5"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 2,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.99,
+      "conflict_count": 8,
+      "score": 4.3875
+    },
+    {
+      "answer": "1980s and 1990s pop music",
+      "normalized_answer": "1980s and 1990s pop music",
+      "doc_ids": [
+        "D6"
+      ],
+      "duplicate_group_ids": [
+        "G6"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 1,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 5,
+      "score": 2.15
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Spanish Tropical",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D5",
+      "D6"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Spanish Tropical": 6.8117,
+      "Classical Music": 4.3875,
+      "1980s and 1990s pop music": 2.15
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Spanish Tropical",
+    "supporting_doc_ids": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "rejected_doc_ids": [
+      "D4",
+      "D5",
+      "D6"
+    ],
+    "reason": "Spanish Tropical cluster has strongest explicit support (3 primary documents) and outweighs conflicting Classical Music and pop music clusters."
+  },
+  "final_answer": "Spanish Tropical",
+  "decision_trace": [
+    "Extracted 6 evidence cards.",
+    "Built 6 duplicate groups.",
+    "Built 15 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> Spanish Tropical.",
+    "Verifier decision: supported -> Spanish Tropical."
+  ]
+}

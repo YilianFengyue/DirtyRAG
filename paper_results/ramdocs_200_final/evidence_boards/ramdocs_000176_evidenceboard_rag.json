@@ -1,0 +1,443 @@
+{
+  "qid": "ramdocs_000176",
+  "question": "Who is the artist of the \"David with the Head of Goliath\" work?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Caravaggio",
+      "normalized_answer": "caravaggio",
+      "claim": "The artist of the 'David with the Head of Goliath' work is Caravaggio.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Caravaggio also treated this subject",
+      "rationale": "The document explicitly attributes the work to Caravaggio.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Caravaggio",
+      "normalized_answer": "caravaggio",
+      "claim": "The artwork 'David with the Head of Goliath' is by Caravaggio.",
+      "temporal_status": "current",
+      "time_cue": "27 February 2025",
+      "confidence": 0.98,
+      "raw_quote": "David holding the head of Goliath by Caravaggio ( Rome )",
+      "rationale": "The document explicitly attributes the artwork to Caravaggio.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document references Leonardo da Vinci but does not mention the artwork 'David with the Head of Goliath', so it cannot provide its artist.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "plate 180 ^ Leonardo da Vinci",
+      "rationale": "The question asks for the artist of a specific work not mentioned in the document; only Leonardo da Vinci is cited, unrelated to that work.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D4",
+      "relevance": "high",
+      "answer_candidate": "Leonardo da Vinci",
+      "normalized_answer": "leonardo da vinci",
+      "claim": "Leonardo da Vinci created a work depicting David with the head of Goliath.",
+      "temporal_status": "current",
+      "time_cue": "c. 1607",
+      "confidence": 0.95,
+      "raw_quote": "Leonardo da Vinci also treated this subject in a work dated c. 1607 in the Kunsthistorisches Museum in Vienna",
+      "rationale": "The document explicitly states Leonardo da Vinci treated the subject of David with the head of Goliath.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D5",
+      "relevance": "high",
+      "answer_candidate": "Massimo Stanzione",
+      "normalized_answer": "massimo stanzione",
+      "claim": "The artist of 'David with the Head of Goliath' is Massimo Stanzione.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "Massimo Stanzione's David with the Head of Goliath",
+      "rationale": "The document explicitly attributes the work to Massimo Stanzione.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D6",
+      "relevance": "high",
+      "answer_candidate": "Massimo Stanzione",
+      "normalized_answer": "massimo stanzione",
+      "claim": "The painting \"David with the Head of Goliath\" was created by Massimo Stanzione.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "David_with_the_Head_of_Goliath_ ( Massimo_Stanzione )",
+      "rationale": "The article title and categories indicate Massimo Stanzione as the artist.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D7",
+      "relevance": "high",
+      "answer_candidate": "Massimo Stanzione",
+      "normalized_answer": "massimo stanzione",
+      "claim": "The artist of 'David with the Head of Goliath' is Massimo Stanzione.",
+      "temporal_status": "current",
+      "time_cue": "c. 1642-1643",
+      "confidence": 1.0,
+      "raw_quote": "David with the Head of Goliath Artist Massimo Stanzione",
+      "rationale": "The document explicitly lists Massimo Stanzione as the artist of the painting.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D8",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not contain information about the artist of 'David with the Head of Goliath'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "David with the Head of Goliath - Wikipedia Jump to content Main menu ...",
+      "rationale": "The document only includes navigation elements and no article text about the painting's artist.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D9",
+      "relevance": "high",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "David with the Head of Goliath may refer to many paintings, including works by Caravaggio, Castagno, and Leyster.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "David with the Head of Goliath may refer to many paintings , including : David with the Head of Goliath ( Caravaggio , Rome ) David with the Head of Goliath ( Caravaggio , Vienna ) David with the Head of Goliath ( Castagno ) David with the head of Goliath ( Leyster )",
+      "rationale": "The document does not attribute the work to a single artist; it lists multiple artists and specific paintings, indicating the title refers to multiple distinct works.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Caravaggio"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Caravaggio"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G4",
+      "doc_ids": [
+        "D4"
+      ],
+      "representative_doc_id": "D4",
+      "answer_candidate": "Leonardo da Vinci"
+    },
+    {
+      "group_id": "G5",
+      "doc_ids": [
+        "D5"
+      ],
+      "representative_doc_id": "D5",
+      "answer_candidate": "Massimo Stanzione"
+    },
+    {
+      "group_id": "G6",
+      "doc_ids": [
+        "D6"
+      ],
+      "representative_doc_id": "D6",
+      "answer_candidate": "Massimo Stanzione"
+    },
+    {
+      "group_id": "G7",
+      "doc_ids": [
+        "D7"
+      ],
+      "representative_doc_id": "D7",
+      "answer_candidate": "Massimo Stanzione"
+    },
+    {
+      "group_id": "G8",
+      "doc_ids": [
+        "D8"
+      ],
+      "representative_doc_id": "D8",
+      "answer_candidate": "unknown"
+    },
+    {
+      "group_id": "G9",
+      "doc_ids": [
+        "D9"
+      ],
+      "representative_doc_id": "D9",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D1",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D1 supports 'Caravaggio', while D4 supports 'Leonardo da Vinci'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D1 supports 'Caravaggio', while D5 supports 'Massimo Stanzione'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D1 supports 'Caravaggio', while D6 supports 'Massimo Stanzione'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D1",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D1 supports 'Caravaggio', while D7 supports 'Massimo Stanzione'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D4",
+      "relation": "contradict",
+      "reason": "D2 supports 'Caravaggio', while D4 supports 'Leonardo da Vinci'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D2 supports 'Caravaggio', while D5 supports 'Massimo Stanzione'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D2 supports 'Caravaggio', while D6 supports 'Massimo Stanzione'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D2",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D2 supports 'Caravaggio', while D7 supports 'Massimo Stanzione'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D5",
+      "relation": "contradict",
+      "reason": "D4 supports 'Leonardo da Vinci', while D5 supports 'Massimo Stanzione'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D6",
+      "relation": "contradict",
+      "reason": "D4 supports 'Leonardo da Vinci', while D6 supports 'Massimo Stanzione'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D4",
+      "dst": "D7",
+      "relation": "contradict",
+      "reason": "D4 supports 'Leonardo da Vinci', while D7 supports 'Massimo Stanzione'.",
+      "confidence": 0.85
+    },
+    {
+      "src": "D5",
+      "dst": "D6",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D5",
+      "dst": "D7",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    },
+    {
+      "src": "D6",
+      "dst": "D7",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Massimo Stanzione",
+      "normalized_answer": "massimo stanzione",
+      "doc_ids": [
+        "D5",
+        "D6",
+        "D7"
+      ],
+      "duplicate_group_ids": [
+        "G5",
+        "G6",
+        "G7"
+      ],
+      "unique_support_count": 3,
+      "high_relevance_count": 3,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 3,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 9,
+      "score": 4.72
+    },
+    {
+      "answer": "Caravaggio",
+      "normalized_answer": "caravaggio",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.99,
+      "conflict_count": 8,
+      "score": 2.9875
+    },
+    {
+      "answer": "Leonardo da Vinci",
+      "normalized_answer": "leonardo da vinci",
+      "doc_ids": [
+        "D4"
+      ],
+      "duplicate_group_ids": [
+        "G4"
+      ],
+      "unique_support_count": 1,
+      "high_relevance_count": 1,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 1,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 0.95,
+      "conflict_count": 5,
+      "score": 1.4875
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Massimo Stanzione",
+    "supporting_doc_ids": [
+      "D5",
+      "D6",
+      "D7"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D2",
+      "D4"
+    ],
+    "reason": "The top answer has stronger independent support than competing conflicting clusters.",
+    "scores": {
+      "Massimo Stanzione": 4.72,
+      "Caravaggio": 2.9875,
+      "Leonardo da Vinci": 1.4875
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Massimo Stanzione",
+    "supporting_doc_ids": [
+      "D5",
+      "D6",
+      "D7"
+    ],
+    "rejected_doc_ids": [
+      "D1",
+      "D2",
+      "D4",
+      "D3",
+      "D8",
+      "D9"
+    ],
+    "reason": "The candidate answer has stronger independent support (3 high-confidence primary sources) than competing clusters (Caravaggio with 2, Leonardo da Vinci with 1)."
+  },
+  "final_answer": "Massimo Stanzione",
+  "decision_trace": [
+    "Extracted 9 evidence cards.",
+    "Built 9 duplicate groups.",
+    "Built 15 evidence graph edges.",
+    "Built 3 answer clusters.",
+    "Candidate decision: answer -> Massimo Stanzione.",
+    "Verifier decision: supported -> Massimo Stanzione."
+  ]
+}

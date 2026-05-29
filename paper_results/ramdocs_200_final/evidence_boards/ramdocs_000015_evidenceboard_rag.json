@@ -1,0 +1,146 @@
+{
+  "qid": "ramdocs_000015",
+  "question": "Who is the artist of the album \"The Heat\"?",
+  "cards": [
+    {
+      "doc_id": "D1",
+      "relevance": "high",
+      "answer_candidate": "Needtobreathe",
+      "normalized_answer": "needtobreathe",
+      "claim": "The album The Heat was recorded by the American rock band Needtobreathe.",
+      "temporal_status": "current",
+      "time_cue": "released on August 28, 2007",
+      "confidence": 1.0,
+      "raw_quote": "The Heat is the second studio album by American rock band Needtobreathe",
+      "rationale": "The document directly identifies the artist of the album.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D2",
+      "relevance": "high",
+      "answer_candidate": "Needtobreathe",
+      "normalized_answer": "needtobreathe",
+      "claim": "The album 'The Heat' is by the band Needtobreathe.",
+      "temporal_status": "current",
+      "time_cue": "unknown",
+      "confidence": 1.0,
+      "raw_quote": "The Heat ( Needtobreathe album )",
+      "rationale": "The document title explicitly identifies the artist as Needtobreathe.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    },
+    {
+      "doc_id": "D3",
+      "relevance": "low",
+      "answer_candidate": "unknown",
+      "normalized_answer": "unknown",
+      "claim": "The document does not identify the artist of the album 'The Heat'.",
+      "temporal_status": "unknown",
+      "time_cue": "unknown",
+      "confidence": 0.0,
+      "raw_quote": "",
+      "rationale": "The document is a track listing with producer credits but lacks any mention of an artist or the album title 'The Heat'.",
+      "entity_explicitness": "implicit",
+      "answer_role": "primary",
+      "contamination_risk": 0.0,
+      "domain_cues": []
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "group_id": "G1",
+      "doc_ids": [
+        "D1"
+      ],
+      "representative_doc_id": "D1",
+      "answer_candidate": "Needtobreathe"
+    },
+    {
+      "group_id": "G2",
+      "doc_ids": [
+        "D2"
+      ],
+      "representative_doc_id": "D2",
+      "answer_candidate": "Needtobreathe"
+    },
+    {
+      "group_id": "G3",
+      "doc_ids": [
+        "D3"
+      ],
+      "representative_doc_id": "D3",
+      "answer_candidate": "unknown"
+    }
+  ],
+  "conflict_edges": [
+    {
+      "src": "D1",
+      "dst": "D2",
+      "relation": "support",
+      "reason": "The two documents support the same answer candidate.",
+      "confidence": 0.9
+    }
+  ],
+  "answer_clusters": [
+    {
+      "answer": "Needtobreathe",
+      "normalized_answer": "needtobreathe",
+      "doc_ids": [
+        "D1",
+        "D2"
+      ],
+      "duplicate_group_ids": [
+        "G1",
+        "G2"
+      ],
+      "unique_support_count": 2,
+      "high_relevance_count": 2,
+      "explicit_support_count": 0,
+      "missing_entity_count": 0,
+      "primary_support_count": 2,
+      "mean_contamination_risk": 0.0,
+      "mean_confidence": 1.0,
+      "conflict_count": 0,
+      "score": 3.95
+    }
+  ],
+  "candidate_decision": {
+    "mode": "answer",
+    "answer": "Needtobreathe",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [],
+    "reason": "Only one supported answer cluster was found.",
+    "scores": {
+      "Needtobreathe": 3.95
+    }
+  },
+  "verifier_decision": {
+    "verdict": "supported",
+    "final_answer": "Needtobreathe",
+    "supporting_doc_ids": [
+      "D1",
+      "D2"
+    ],
+    "rejected_doc_ids": [
+      "D3"
+    ],
+    "reason": "Two high–relevance, high–confidence documents explicitly attribute 'The Heat' to Needtobreathe. No conflicting evidence."
+  },
+  "final_answer": "Needtobreathe",
+  "decision_trace": [
+    "Extracted 3 evidence cards.",
+    "Built 3 duplicate groups.",
+    "Built 1 evidence graph edges.",
+    "Built 1 answer clusters.",
+    "Candidate decision: answer -> Needtobreathe.",
+    "Verifier decision: supported -> Needtobreathe."
+  ]
+}
